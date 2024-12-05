@@ -1,0 +1,214 @@
+/*
+** ###################################################################
+**     Processor:           
+**     Compiler:            IAR ANSI C/C++ Compiler for ARM
+**
+**     Abstract:
+**         Linker file for the IAR ANSI C/C++ Compiler for ARM
+**
+**     Copyright 2018 NXP
+**     All rights reserved.
+**
+**     THIS SOFTWARE IS PROVIDED BY NXP "AS IS" AND ANY EXPRESSED OR
+**     IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+**     OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+**     IN NO EVENT SHALL NXP OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+**     INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+**     (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+**     SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+**     HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+**     STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+**     IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+**     THE POSSIBILITY OF SUCH DAMAGE.
+**
+**     http:                 www.freescale.com
+**     mail:                 support@freescale.com
+**
+** ###################################################################
+*/
+
+/* If symbol __flash_vector_table__=1 is defined at link time
+ * the interrupt vector will not be copied to RAM.
+ * Warning: Using the interrupt vector from FLASH will not allow
+ * INT_SYS_InstallHandler because the section is Read Only.
+ */
+define symbol __ram_vector_table_size__ =  isdefinedsymbol(__flash_vector_table__) ? 0 : 0x000000C0;
+define symbol __ram_vector_table_offset__ =  isdefinedsymbol(__flash_vector_table__) ? 0 : 0x000000BF;
+
+/* Flash */
+define symbol m_interrupts_start       = 0x00008100;
+define symbol m_interrupts_end         = 0x000081BF;
+
+define symbol m_flash_config_start     = 0x00008500;
+define symbol m_flash_config_end       = 0x0000850F;
+
+define symbol m_text_start             = 0x00008510;
+define symbol m_text_end               = 0x00013FEF;  //
+
+define symbol m_text_start1             = 0x00014000;
+define symbol m_text_end1               = 0x0001C6FF;  //  for code asil 
+
+define symbol m_text_start2             = 0x0001C700;   // for rom data asil
+define symbol m_text_end2               = 0x0001CBCB;  //
+
+define symbol m_text_start3             = 0x00015BCC;   // for uds data
+define symbol m_text_end3               = 0x00015FCB;  //
+
+define symbol m_text_start5             = 0x00015FCC;   // for app res 
+define symbol m_text_end5               = 0x00015FCF;  //
+
+define symbol m_text_start6             = 0x00008000;   // for app valid 1
+define symbol m_text_end6               = 0x000080FF;  //
+
+/* SRAM_L */
+define symbol m_custom_start           = 0x1FFFFC00;
+define symbol m_custom_end             = 0x1FFFFEFF;
+
+/* SRAM_U */
+define symbol m_interrupts_ram_start   = 0x20000000;
+define symbol m_interrupts_ram_end     = 0x20000000 + __ram_vector_table_offset__;
+
+define symbol m_data_start             = m_interrupts_ram_start + __ram_vector_table_size__;
+define symbol m_data_end               = 0x200038FF;
+
+define symbol m_data_2_start           = 0x20003A00;   //for asil ram
+define symbol m_data_2_end             = 0x20005FFF;
+
+define symbol m_data_3_start           = 0x20006000;   //for eeprom
+define symbol m_data_3_end             = 0x20006FFF;
+
+define symbol m_data_4_start           = 0x20007800;   //for  wdog
+define symbol m_data_4_end             = 0x20007BFF;
+
+define symbol m_data_5_start           = 0x20007C00;		//for no init 
+define symbol m_data_5_end             = 0x20007DFF;
+
+define symbol m_data_6_start           = 0x20007FC0;		//for PROGRAM FLAG
+define symbol m_data_6_end             = 0x20007FCF;
+
+
+/* Sizes */
+if (isdefinedsymbol(__stack_size__)) {
+  define symbol __size_cstack__        = __stack_size__;
+} else {
+  define symbol __size_cstack__        = 0x00000800;
+}
+
+if (isdefinedsymbol(__heap_size__)) {
+  define symbol __size_heap__          = __heap_size__;
+} else {
+  define symbol __size_heap__          = 0x00000200;
+}
+
+define exported symbol __VECTOR_TABLE          = m_interrupts_start;
+define exported symbol __VECTOR_RAM            = isdefinedsymbol(__flash_vector_table__) ? m_interrupts_start : m_interrupts_ram_start;
+define exported symbol __RAM_VECTOR_TABLE_SIZE = __ram_vector_table_size__;
+
+define exported symbol __RAM_START             = m_interrupts_ram_start;
+define exported symbol __RAM_END               = m_data_4_end;
+
+define memory mem with size = 4G;
+define region m_flash_config_region   = mem:[from m_flash_config_start to m_flash_config_end];
+define region TEXT_region             = mem:[from m_interrupts_start to m_interrupts_end]
+                                      | mem:[from m_text_start to m_text_end];
+define region TEXT_region1            = mem:[from m_text_start1 to m_text_end1];
+define region TEXT_region2            = mem:[from m_text_start2 to m_text_end2];
+define region TEXT_region3            = mem:[from m_text_start3 to m_text_end3];
+define region TEXT_region5            = mem:[from m_text_start5 to m_text_end5];
+define region TEXT_region6            = mem:[from m_text_start6 to m_text_end6];
+define region DATA_region             = mem:[from m_data_start to m_data_end-__size_cstack__];
+define region DATA_region_2           = mem:[from m_data_2_start to m_data_2_end];
+define region DATA_region_3           = mem:[from m_data_3_start to m_data_3_end];
+define region DATA_region_4           = mem:[from m_data_4_start to m_data_4_end];
+define region DATA_region_5           = mem:[from m_data_5_start to m_data_5_end];
+define region DATA_region_6           = mem:[from m_data_6_start to m_data_6_end];
+define region CSTACK_region           = mem:[from m_data_end-__size_cstack__+1 to m_data_end];
+define region CSTACK_region_check           = mem:[from m_data_end-__size_cstack__+1-16 to m_data_end-__size_cstack__];
+define region m_interrupts_ram_region = mem:[from m_interrupts_ram_start to m_interrupts_ram_end];
+define region CUSTOM_region           = mem:[from m_custom_start to m_custom_end];
+
+
+define block CSTACK    with alignment = 8, size = __size_cstack__   { };
+define block HEAP      with alignment = 8, size = __size_heap__     { };
+define block RW        { readwrite };
+define block ZI        { zi };
+
+/* Custom Section Block that can be used to place data at absolute address. */
+/* Use __attribute__((section (".customSection"))) to place data here. */
+/* Use this section only when MTB (Micro Trace Buffer) is not used, because MTB uses the same RAM area, as described in S32K Reference Manual. */
+define block customSectionBlock { section .customSection };
+define block stack_check_Block { section .STACK_CHECK_ADDR };
+
+define block __CODE_ROM   { section .textrw_init };
+define block __CODE_RAM   { section .textrw  };
+
+
+define block m0_scst_test_code    with alignment = 4 { section .m0_scst_test_code};
+define block m0_scst_exception_wrappers    with alignment = 4 { section .m0_scst_exception_wrappers};
+define block m0_scst_test_code_unprivileged    with alignment = 4 { section .m0_scst_test_code_unprivileged};
+define block m0_scst_test_shell_code    with alignment = 4 { section .m0_scst_test_shell_code};
+define block m0_scst_vector_table    with alignment = 4 { section .m0_scst_vector_table};
+define block m0_scst_rom_data    with alignment = 4 { section .m0_scst_rom_data};
+define block m0_scst_test_code1_unprivileged    with alignment = 4 { section .m0_scst_test_code1_unprivileged};
+
+define block m0_scst_ram_data    with alignment = 4 { section .m0_scst_ram_data};
+define block m0_scst_ram_data_target0    with alignment = 4 { section .m0_scst_ram_data_target0};
+define block m0_scst_ram_data_target1    with alignment = 4 { section .m0_scst_ram_data_target1};
+define block m0_scst_ram_test_code    with alignment = 4 { section .m0_scst_ram_test_code};
+define block m0_scst_test_shell_data    with alignment = 4 { section .m0_scst_test_shell_data};
+
+initialize manually       { section .textrw };
+initialize manually       { section .bss };
+initialize manually       { section .customSection };
+initialize manually       { section .RAM_FLAG_NOLINT };
+initialize manually       { section .RAM_ASIL };
+initialize manually       { section .STACK_CHECK_ADDR };
+initialize manually       { section .data };
+initialize manually       { section __DLIB_PERTHREAD };
+initialize manually       { section .m0_scst_ram_data };
+initialize manually       { section .m0_scst_ram_data_target0 };
+initialize manually       { section .m0_scst_ram_data_target1 };
+initialize manually       { section .m0_scst_ram_test_code };
+initialize manually       { section .m0_scst_test_shell_data };
+
+do not initialize         { section .noinit, section .bss, section .data, section __DLIB_PERTHREAD, section .customSection,section .STACK_CHECK_ADDR  ,section .RAM_ASIL,section .RAM_FLAG_NOLINT,section .m0_scst_ram_data,section .m0_scst_ram_data_target0
+	,section .m0_scst_ram_data_target1, section .m0_scst_ram_test_code,section .m0_scst_test_shell_data};
+
+
+place at address mem: m_interrupts_start    { readonly section .intvec };
+place in m_flash_config_region              { section FlashConfig };
+place in TEXT_region                        { readonly };
+place in TEXT_region                        { block __CODE_ROM };
+place in TEXT_region1     			{ section .ROM_ASIL};
+place in TEXT_region1     			{ block m0_scst_test_code};
+place in TEXT_region1     			{ block m0_scst_exception_wrappers};
+place in TEXT_region1     			{ block m0_scst_test_code_unprivileged};
+place in TEXT_region1     			{ block m0_scst_test_shell_code};
+place in TEXT_region1     			{ block m0_scst_vector_table};
+place in TEXT_region1     			{ block m0_scst_rom_data};
+place in TEXT_region1     			{ block m0_scst_test_code1_unprivileged};
+place in TEXT_region2                        { section .ROM_DATA_ASIL};
+place in TEXT_region3                        { section .ROM_DATA_UDS};
+place in TEXT_region5                        { section .ROM_APP_RES};
+place in TEXT_region6                        { section .ROM_APP_VALID};
+place in DATA_region                        { block RW };
+place in DATA_region                        { block __CODE_RAM };
+/*place in DATA_region                      	{ section .RAM_L};*/
+place in CUSTOM_region                      { first block customSectionBlock };
+place in DATA_region                      { block ZI };
+place in DATA_region                      { last block HEAP };
+place in DATA_region_2                      { section .RAM_ASIL };
+place in DATA_region_2                      { block m0_scst_ram_data };
+place in DATA_region_2                      { block m0_scst_ram_data_target0 };
+place in DATA_region_2                      { block m0_scst_ram_data_target1 };
+place in DATA_region_2                      { block m0_scst_ram_test_code };
+place in DATA_region_2                      { block m0_scst_test_shell_data };
+place in DATA_region_3                      { section .RAM_EEPROM };
+place in DATA_region_4                      { section .RAM_WDOG };
+place in DATA_region_5                      { section .RAM_FLAG_NOLINT };
+place in DATA_region_6                      { section .RAM_FLAG_PROG };
+place in CSTACK_region                      { block CSTACK };
+place in CSTACK_region_check                {  block stack_check_Block};
+place in m_interrupts_ram_region            { section m_interrupts_ram };
+
+

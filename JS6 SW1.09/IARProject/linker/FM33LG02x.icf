@@ -1,0 +1,63 @@
+/*###ICF### Section handled by ICF editor, don't touch! ****/
+/*-Editor annotation file-*/
+/* IcfEditorFile="$TOOLKIT_DIR$\config\ide\IcfEditor\cortex_v1_0.xml" */
+/*-Specials-*/
+define symbol __ICFEDIT_intvec_start__ = 0x00008100;
+/*-Memory Regions-*/
+define symbol __ICFEDIT_region_ROM_start__ = 0x00008100;
+define symbol __ICFEDIT_region_ROM_end__   = 0x0001B7FF;
+
+define symbol __ICFEDIT_region_SYS_DID_start__ = 0x0001BC00;
+define symbol __ICFEDIT_region_SYS_DID_end__ = 0x0001BFFB;
+
+
+define symbol __ICFEDIT_region_APP_VALID_FLAG_start__ = 0x0001B7FC;
+define symbol __ICFEDIT_region_APP_VALID_FLAG_end__   = 0x0001B7FF;
+
+define symbol __ICFEDIT_region_APP_VALID_CRC32_start__ = 0x0001B7F8;
+define symbol __ICFEDIT_region_APP_VALID_CRC32_end__   = 0x0001B7FB;
+
+define symbol __ICFEDIT_region_EE_FALSH_start__ = 0x0001C000;
+define symbol __ICFEDIT_region_EE_FALSH_end__   = 0x0001FFFF;
+
+define symbol __ICFEDIT_region_RAM_start__ = 0x20000000;
+define symbol __ICFEDIT_region_RAM_end__   = 0x20005FFF;
+
+define symbol __ICFEDIT_region_EE_FLASH_RAM_start__ = 0x20006000;
+define symbol __ICFEDIT_region_EE_FLASH_RAM_end__   = 0x20006FFF;
+
+define symbol __ICFEDIT_region_REPROGRAM_FLAG_start__ = 0x20007FC0;
+define symbol __ICFEDIT_region_REPROGRAM_FLAG_end__   = 0x20007FCF;
+/*-Sizes-*/
+define symbol __ICFEDIT_size_cstack__ = 0x800;
+define symbol __ICFEDIT_size_heap__   = 0x00000200;
+/**** End of ICF editor section. ###ICF###*/
+
+define memory mem with size = 4G;
+define region ROM_region   = mem:[from __ICFEDIT_region_ROM_start__   to __ICFEDIT_region_ROM_end__];							
+define region RAM_region   = mem:[from __ICFEDIT_region_RAM_start__   to __ICFEDIT_region_RAM_end__];	
+define region REPROGRAM_FLAG_region   = mem:[from __ICFEDIT_region_REPROGRAM_FLAG_start__   to __ICFEDIT_region_REPROGRAM_FLAG_end__];				
+define region APP_VALID_FLAG_region   = mem:[from __ICFEDIT_region_APP_VALID_FLAG_start__   to __ICFEDIT_region_APP_VALID_FLAG_end__];		
+define region APP_VALID_CRC32_region   = mem:[from __ICFEDIT_region_APP_VALID_CRC32_start__   to __ICFEDIT_region_APP_VALID_CRC32_end__];		
+define region EE_FLASH_region   = mem:[from __ICFEDIT_region_EE_FALSH_start__   to __ICFEDIT_region_EE_FALSH_end__];		
+define region EE_FLASH_RAM_region   = mem:[from __ICFEDIT_region_EE_FLASH_RAM_start__   to __ICFEDIT_region_EE_FLASH_RAM_end__];
+								
+define block CSTACK    with alignment = 8, size = __ICFEDIT_size_cstack__   { };
+define block HEAP      with alignment = 8, size = __ICFEDIT_size_heap__     { };
+
+initialize by copy { readwrite };
+do not initialize  { section .noinit,  section .ReprogramFlag};
+
+place at address mem:__ICFEDIT_intvec_start__ { readonly section .intvec };
+
+place in ROM_region   { readonly };
+place in RAM_region   { readwrite,
+                        block CSTACK, block HEAP };
+place in REPROGRAM_FLAG_region   {section .ReprogramFlag };
+place in APP_VALID_FLAG_region   {section .AppValidFlag };
+place in APP_VALID_CRC32_region   {section .AppValidCRC32 };
+place in EE_FLASH_region         {section .EE_Flash };
+place in EE_FLASH_RAM_region         {section .EE_Flash_Ram };
+
+export symbol __ICFEDIT_region_RAM_start__;
+export symbol __ICFEDIT_region_RAM_end__;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<flash_device>
+  <exe>$PROJ_DIR$\flashloader\fm33lg0xx.out</exe>
+  <page>1</page>
+  <block>256 0x400</block>
+  <flash_base>0x00000000</flash_base>
+  <online>1</online>
+  <aggregate>1</aggregate>
+</flash_device>

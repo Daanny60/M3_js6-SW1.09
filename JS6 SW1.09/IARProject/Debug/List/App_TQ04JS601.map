@@ -1,0 +1,2080 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  04/Dec/2024  08:11:45
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Exe\App_TQ04JS601.out
+#    Map file     =
+#        E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\List\App_TQ04JS601.map
+#    Command line =
+#        -f C:\Users\19858\AppData\Local\Temp\EW8604.tmp
+#        ("E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Adc_Drv.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\App_Boot.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\App_BootCfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\App_Can.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\App_Ccp.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\App_Com.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\App_Dcm.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\App_Demm.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\App_PID.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\App_WheelHeat.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Can.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Can_Cbk.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Can_PBcfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\CanIf.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\CanIf_Lcfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\CanTp.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\CanTp_PBcfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\CanTrcv.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Ccp.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Ccp_Cfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Com.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Com_Cfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Com_Lcfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Dcm.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Dcm_Cbk.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Dcm_Cfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Dcm_Lcfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Dem.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Dem_Cfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Demm.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Det.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\DMA.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\eeprom.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\eeprom_cfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Event.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_adc.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_aes.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_atim.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_bstim16.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_bstim32.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_can.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_cmu.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_comp.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_crc.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_dac.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_divas.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_dma.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_exti.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_flash.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_gpio.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_gptim.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_i2c.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_iwdt.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_lcd.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_lptim16.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_lptim32.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_lpuart.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_pmu.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_rng.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_rtca.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_spi.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_svd.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_uart.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_vao.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_vrefp.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\fm33lg0xx_fl_wwdt.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Gpio.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\LowPowerManage.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\main.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Memory.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\mf_config.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\OsekNm.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\OsekNm_App.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\OsekNm_Cfg.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\PduR.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Pll.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Sleep.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\startup_fm33lg0xx.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\svd.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\svd_interrupt.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\system_fm33lg0xx.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\system_voltage_manage.o"
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Obj\Tim.o" --no_out_extension -o
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\Exe\App_TQ04JS601.out" --map
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\Debug\List\App_TQ04JS601.map" --config
+#        "E:\Project\JAC\JS6\official_edition\JS6
+#        SW1.09\IARProject\linker\FM33LG02x.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x8100 { ro section .intvec };
+"P1":  place in [from 0x8100 to 0x1'b7ff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'5fff] {
+          rw, block CSTACK, block HEAP };
+"P3":  place in [from 0x2000'7fc0 to 0x2000'7fcf] { section .ReprogramFlag };
+"P4":  place in [from 0x1'b7fc to 0x1'b7ff] { section .AppValidFlag };
+"P5":  place in [from 0x1'b7f8 to 0x1'b7fb] { section .AppValidCRC32 };
+"P7":  place in [from 0x2000'6000 to 0x2000'6fff] { section .EE_Flash_Ram };
+do not initialize { section .noinit, section .ReprogramFlag };
+initialize by copy { rw };
+
+No sections matched the following patterns:
+
+  section .EE_Flash  in "P6"
+
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0xc0
+  .intvec            ro code       0x8100    0xc0  startup_fm33lg0xx.o [1]
+                                 - 0x81c0    0xc0
+
+"P1", part 1 of 2:                         0xb020
+  .text              ro code       0x81c0  0x1610  CanTp.o [1]
+  .text              ro code       0x97d0    0xbc  PduR.o [1]
+  .text              ro code       0x988c    0xe0  I32DivModFast.o [4]
+  .text              ro code       0x996c   0x3ec  CanIf.o [1]
+  .text              ro code       0x9d58   0x2a8  Dcm_Cbk.o [1]
+  .text              ro code       0xa000     0x2  IntDivZer.o [4]
+  .text              ro code       0xa002    0x7e  lz77_init_single.o [4]
+  .text              ro code       0xa080   0x478  Can.o [1]
+  .text              ro code       0xa4f8    0x14  memset.o [4]
+  .text              ro code       0xa50c     0x2  Dem.o [1]
+  .rodata            const         0xa50e     0x2  CanIf_Lcfg.o [1]
+  .text              ro code       0xa510  0x1016  Dcm.o [1]
+  .rodata            const         0xb526     0x2  CanIf_Lcfg.o [1]
+  .text              ro code       0xb528   0x2f8  App_Can.o [1]
+  .text              ro code       0xb820    0x5a  ABImemset.o [4]
+  .rodata            const         0xb87a     0x2  Com_Cfg.o [1]
+  .text              ro code       0xb87c    0x34  ABImemcpy.o [4]
+  .text              ro code       0xb8b0   0x8f0  Demm.o [1]
+  .text              ro code       0xc1a0   0xf24  App_Dcm.o [1]
+  .text              ro code       0xd0c4   0x1e4  App_Demm.o [1]
+  .text              ro code       0xd2a8    0xa8  Event.o [1]
+  .text              ro code       0xd350   0x200  system_voltage_manage.o [1]
+  .text              ro code       0xd550  0x13b0  OsekNm.o [1]
+  .text              ro code       0xe900   0x88c  Com.o [1]
+  .text              ro code       0xf18c    0x1c  Memory.o [1]
+  .text              ro code       0xf1a8   0x154  eeprom_cfg.o [1]
+  .text              ro code       0xf2fc    0x6e  App_Boot.o [1]
+  .rodata            const         0xf36a     0x2  Com_Cfg.o [1]
+  .text              ro code       0xf36c   0x30c  Adc_Drv.o [1]
+  .text              ro code       0xf678    0xa8  OsekNm_App.o [1]
+  .text              ro code       0xf720    0x58  App_Com.o [1]
+  .text              ro code       0xf778   0x3f0  eeprom.o [1]
+  .text              ro code       0xfb68   0x3d0  fm33lg0xx_fl_adc.o [1]
+  .text              ro code       0xff38    0x6c  DMA.o [1]
+  .text              ro code       0xffa4    0x32  I64Mul.o [4]
+  .text              ro code       0xffd6    0x6a  I64DivMod.o [4]
+  .text              ro code     0x1'0040    0x60  CanTrcv.o [1]
+  .text              ro code     0x1'00a0   0x278  fm33lg0xx_fl_flash.o [1]
+  .text              ro code     0x1'0318   0x25a  fm33lg0xx_fl_dma.o [1]
+  .rodata            const       0x1'0572     0x2  Com_Cfg.o [1]
+  .text              ro code     0x1'0574     0x2  I64DivZer.o [4]
+  .rodata            const       0x1'0576     0x2  Com_Cfg.o [1]
+  .text              ro code     0x1'0578   0x1b0  fm33lg0xx_fl_gpio.o [1]
+  .text              ro code     0x1'0728   0x5c8  App_WheelHeat.o [1]
+  .text              ro code     0x1'0cf0    0x40  App_PID.o [1]
+  .text              ro code     0x1'0d30    0xf8  Gpio.o [1]
+  .text              ro code     0x1'0e28   0x3fc  LowPowerManage.o [1]
+  .text              ro code     0x1'1224    0xa0  fm33lg0xx_fl_pmu.o [1]
+  .text              ro code     0x1'12c4    0x76  fm33lg0xx_fl_iwdt.o [1]
+  .rodata            const       0x1'133a     0x2  Com_Cfg.o [1]
+  .text              ro code     0x1'133c   0x172  fm33lg0xx_fl_bstim16.o [1]
+  .rodata            const       0x1'14ae     0x2  Com_Cfg.o [1]
+  .text              ro code     0x1'14b0    0xe0  fm33lg0xx_fl_gptim.o [1]
+  .text              ro code     0x1'1590    0x9c  fm33lg0xx_fl_atim.o [1]
+  .text              ro code     0x1'162c    0xc8  fm33lg0xx_fl.o [1]
+  .text              ro code     0x1'16f4   0x16c  Pll.o [1]
+  .text              ro code     0x1'1860   0x268  system_fm33lg0xx.o [1]
+  .text              ro code     0x1'1ac8   0x134  Tim.o [1]
+  .text              ro code     0x1'1bfc   0x26c  fm33lg0xx_fl_exti.o [1]
+  .text              ro code     0x1'1e68    0x18  fm33lg0xx_fl.o [1]
+  .text              ro code     0x1'1e80    0x3c  fm33lg0xx_fl.o [1]
+  .text              ro code     0x1'1ebc   0x274  main.o [1]
+  .text              ro code     0x1'2130    0xc2  svd.o [1]
+  .rodata            const       0x1'21f2     0x2  Com_Cfg.o [1]
+  .text              ro code     0x1'21f4    0xdc  svd_interrupt.o [1]
+  .text              ro code     0x1'22d0    0xcc  fm33lg0xx_fl_svd.o [1]
+  .rodata            const       0x1'239c   0x24c  Gpio.o [1]
+  .rodata            const       0x1'25e8   0x144  App_WheelHeat.o [1]
+  .rodata            const       0x1'272c   0x140  Dcm_Cfg.o [1]
+  .rodata            const       0x1'286c   0x140  Dcm_Lcfg.o [1]
+  .rodata            const       0x1'29ac    0xc0  CanIf_Lcfg.o [1]
+  .rodata            const       0x1'2a6c    0xc0  Dcm_Cfg.o [1]
+  .rodata            const       0x1'2b2c    0x8c  Dcm_Lcfg.o [1]
+  .text              ro code     0x1'2bb8    0x80  Com_Lcfg.o [1]
+  .rodata            const       0x1'2c38    0x58  Dcm_Lcfg.o [1]
+  .rodata            const       0x1'2c90    0x4c  fm33lg0xx_fl_exti.o [1]
+  .rodata            const       0x1'2cdc    0x48  Dcm_Cfg.o [1]
+  .rodata            const       0x1'2d24    0x40  Dcm_Lcfg.o [1]
+  .text              ro code     0x1'2d64    0x3c  zero_init3.o [4]
+  .rodata            const       0x1'2da0    0x30  CanIf_Lcfg.o [1]
+  .rodata            const       0x1'2dd0    0x30  CanTp_PBcfg.o [1]
+  .rodata            const       0x1'2e00    0x28  Com_Cfg.o [1]
+  .text              ro code     0x1'2e28    0x28  data_init.o [4]
+  .rodata            const       0x1'2e50    0x24  Dcm_Lcfg.o [1]
+  .iar.init_table    const       0x1'2e74    0x28  - Linker created -
+  .rodata            const       0x1'2e9c    0x20  Com_Cfg.o [1]
+  .rodata            const       0x1'2ebc    0x20  Dem_Cfg.o [1]
+  .rodata            const       0x1'2edc    0x20  Dem_Cfg.o [1]
+  .text              ro code     0x1'2efc    0x1e  cmain.o [4]
+  .text              ro code     0x1'2f1a     0x4  low_level_init.o [2]
+  .text              ro code     0x1'2f1e     0x8  exit.o [2]
+  .rodata            const       0x1'2f26     0x2  Com_Cfg.o [1]
+  .text              ro code     0x1'2f28     0xa  cexit.o [4]
+  .rodata            const       0x1'2f32     0x2  OsekNm_Cfg.o [1]
+  .text              ro code     0x1'2f34    0x14  exit.o [5]
+  .rodata            const       0x1'2f48    0x14  CanTp_PBcfg.o [1]
+  .rodata            const       0x1'2f5c    0x14  Com_Cfg.o [1]
+  .rodata            const       0x1'2f70    0x14  Com_Cfg.o [1]
+  .rodata            const       0x1'2f84    0x14  Com_Cfg.o [1]
+  .rodata            const       0x1'2f98    0x14  Com_Lcfg.o [1]
+  .text              ro code     0x1'2fac    0x10  startup_fm33lg0xx.o [1]
+  .rodata            const       0x1'2fbc     0xc  Can_PBcfg.o [1]
+  .rodata            const       0x1'2fc8     0xc  CanIf_Lcfg.o [1]
+  .rodata            const       0x1'2fd4     0xc  CanTp_PBcfg.o [1]
+  .rodata            const       0x1'2fe0     0xc  Com_Cfg.o [1]
+  .text              ro code     0x1'2fec     0xc  cstartup_M.o [4]
+  .rodata            const       0x1'2ff8     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3000     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3008     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3010     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3018     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3020     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3028     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3030     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3038     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3040     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3048     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3050     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3058     0x8  Com_Cfg.o [1]
+  .rodata            const       0x1'3060     0x8  Dem_Cfg.o [1]
+  .rodata            const       0x1'3068     0x4  Com_Cfg.o [1]
+  .rodata            const       0x1'306c     0x4  Com_Cfg.o [1]
+  .rodata            const       0x1'3070     0x4  Com_Lcfg.o [1]
+  .rodata            const       0x1'3074     0x4  Dcm_Cfg.o [1]
+  .rodata            const       0x1'3078     0x4  Dcm_Lcfg.o [1]
+  .rodata            const       0x1'307c     0x4  Dem_Cfg.o [1]
+  .rodata            const       0x1'3080     0x4  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'3084     0x4  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'3088     0x4  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'308c     0x4  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'3090     0x4  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'3094     0x2  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'3096     0x2  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'3098     0x2  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'309a     0x2  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'309c     0x2  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'309e     0x2  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'30a0     0x2  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'30a2     0x2  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'30a4     0x2  OsekNm_Cfg.o [1]
+  .text              ro code     0x1'30a6     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30a8     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30aa     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30ac     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30ae     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30b0     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30b2     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30b4     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30b6     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30b8     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30ba     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30bc     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30be     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30c0     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30c2     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30c4     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30c6     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30c8     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30ca     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30cc     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30ce     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30d0     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30d2     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30d4     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30d6     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30d8     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30da     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30dc     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30de     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30e0     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30e2     0x2  startup_fm33lg0xx.o [1]
+  .text              ro code     0x1'30e4     0x2  startup_fm33lg0xx.o [1]
+  .rodata            const       0x1'30e6     0x1  Can_PBcfg.o [1]
+  .rodata            const       0x1'30e7     0x1  Can_PBcfg.o [1]
+  .rodata            const       0x1'30e8     0x1  CanIf_Lcfg.o [1]
+  .rodata            const       0x1'30e9     0x1  CanTp_PBcfg.o [1]
+  .rodata            const       0x1'30ea     0x1  Com_Cfg.o [1]
+  .rodata            const       0x1'30eb     0x1  Com_Cfg.o [1]
+  .rodata            const       0x1'30ec     0x1  Com_Cfg.o [1]
+  .rodata            const       0x1'30ed     0x1  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'30ee     0x1  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'30ef     0x1  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'30f0     0x1  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'30f1     0x1  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'30f2     0x1  OsekNm_Cfg.o [1]
+  .rodata            const       0x1'30f3     0x1  OsekNm_Cfg.o [1]
+  Initializer bytes  const       0x1'30f4    0xec  <for P2-1>
+                               - 0x1'31e0  0xb020
+
+Absolute sections:                           0x16
+  .rodata            const       0x1'b400     0xc  App_Dcm.o [1]
+  .rodata            const       0x1'b40c     0x5  App_Dcm.o [1]
+  .rodata            const       0x1'b411     0x5  App_Dcm.o [1]
+                               - 0x1'b416    0x16
+
+"P5":                                         0x4
+  .AppValidCRC32     const       0x1'b7f8     0x4  main.o [1]
+                               - 0x1'b7fc     0x4
+
+"P1", part 2 of 2:                            0x0
+  .rodata            const       0x1'b7fc     0x0  zero_init3.o [4]
+  .rodata            const       0x1'b7fc     0x0  lz77_init_single.o [4]
+
+"P4":                                         0x4
+  .AppValidFlag      const       0x1'b7fc     0x4  main.o [1]
+                               - 0x1'b800     0x4
+
+"P2", part 1 of 3:                          0x20a
+  P2-1                        0x2000'0000   0x20a  <Init block>
+    .data            inited   0x2000'0000    0x30  App_Dcm.o [1]
+    .data            inited   0x2000'0030    0x20  App_Dcm.o [1]
+    .data            inited   0x2000'0050    0x10  App_Dcm.o [1]
+    .data            inited   0x2000'0060    0x10  App_Dcm.o [1]
+    .data            inited   0x2000'0070    0x30  App_Dcm.o [1]
+    .data            inited   0x2000'00a0    0x1c  App_Dcm.o [1]
+    .data            inited   0x2000'00bc    0x14  App_Dcm.o [1]
+    .data            inited   0x2000'00d0     0x4  App_Dcm.o [1]
+    .data            inited   0x2000'00d4     0x4  App_Dcm.o [1]
+    .data            inited   0x2000'00d8    0x48  App_WheelHeat.o [1]
+    .data            inited   0x2000'0120    0x10  Can.o [1]
+    .data            inited   0x2000'0130    0x30  Can_PBcfg.o [1]
+    .data            inited   0x2000'0160     0x4  Com_Cfg.o [1]
+    .data            inited   0x2000'0164    0x14  Com_Cfg.o [1]
+    .data            inited   0x2000'0178    0x14  Com_Cfg.o [1]
+    .data            inited   0x2000'018c    0x30  Dcm.o [1]
+    .data            inited   0x2000'01bc     0x4  Dcm_Cfg.o [1]
+    .data            inited   0x2000'01c0     0x4  Dcm_Cfg.o [1]
+    .data            inited   0x2000'01c4     0xc  system_fm33lg0xx.o [1]
+    .data            inited   0x2000'01d0    0x28  system_voltage_manage.o [1]
+    .data            inited   0x2000'01f8     0x4  eeprom_cfg.o [1]
+    .data            inited   0x2000'01fc     0xc  main.o [1]
+    .data            inited   0x2000'0208     0x1  App_Dcm.o [1]
+    .data            inited   0x2000'0209     0x1  svd_interrupt.o [1]
+                            - 0x2000'020a   0x20a
+
+"P2", part 2 of 3:                          0x638
+  .bss               zero     0x2000'020c   0x1b8  Dcm.o [1]
+  .bss               zero     0x2000'03c4    0x94  App_WheelHeat.o [1]
+  .bss               zero     0x2000'0458    0x80  Dcm.o [1]
+  .bss               zero     0x2000'04d8    0x60  Com.o [1]
+  .bss               zero     0x2000'0538    0x5c  Demm.o [1]
+  .bss               zero     0x2000'0594    0x44  Adc_Drv.o [1]
+  .bss               zero     0x2000'05d8    0x30  Demm.o [1]
+  .bss               zero     0x2000'0608    0x2c  OsekNm.o [1]
+  .bss               zero     0x2000'0634    0x28  CanTp.o [1]
+  .bss               zero     0x2000'065c    0x24  App_Can.o [1]
+  .bss               zero     0x2000'0680    0x24  CanIf_Lcfg.o [1]
+  .bss               zero     0x2000'06a4    0x24  Com.o [1]
+  .bss               zero     0x2000'06c8    0x20  CanTp.o [1]
+  .bss               zero     0x2000'06e8    0x20  CanTp.o [1]
+  .bss               zero     0x2000'0708    0x18  App_Dcm.o [1]
+  .bss               zero     0x2000'0720    0x18  CanIf_Lcfg.o [1]
+  .bss               zero     0x2000'0738    0x14  App_Dcm.o [1]
+  .bss               zero     0x2000'074c    0x14  OsekNm_Cfg.o [1]
+  .bss               zero     0x2000'0760    0x14  OsekNm_Cfg.o [1]
+  .bss               zero     0x2000'0774    0x10  App_Dcm.o [1]
+  .bss               zero     0x2000'0784    0x10  Com.o [1]
+  .bss               zero     0x2000'0794    0x10  Dcm.o [1]
+  .bss               zero     0x2000'07a4     0xc  App_PID.o [1]
+  .bss               zero     0x2000'07b0     0xc  OsekNm.o [1]
+  .bss               zero     0x2000'07bc     0xa  CanIf.o [1]
+  .bss               zero     0x2000'07c6     0x2  App_Can.o [1]
+  .bss               zero     0x2000'07c8     0x8  Com_Cfg.o [1]
+  .bss               zero     0x2000'07d0     0x8  Com_Cfg.o [1]
+  .bss               zero     0x2000'07d8     0x8  Com_Cfg.o [1]
+  .bss               zero     0x2000'07e0     0x8  Com_Cfg.o [1]
+  .bss               zero     0x2000'07e8     0x8  Com_Cfg.o [1]
+  .bss               zero     0x2000'07f0     0x8  Com_Cfg.o [1]
+  .bss               zero     0x2000'07f8     0x8  Dcm.o [1]
+  .bss               zero     0x2000'0800     0x8  Demm.o [1]
+  .bss               zero     0x2000'0808     0x8  Event.o [1]
+  .bss               zero     0x2000'0810     0x4  App_Dcm.o [1]
+  .bss               zero     0x2000'0814     0x4  App_Dcm.o [1]
+  .bss               zero     0x2000'0818     0x4  App_Demm.o [1]
+  .bss               zero     0x2000'081c     0x4  CanIf_Lcfg.o [1]
+  .bss               zero     0x2000'0820     0x4  Dcm.o [1]
+  .bss               zero     0x2000'0824     0x4  Dcm.o [1]
+  .bss               zero     0x2000'0828     0x4  eeprom.o [1]
+  .bss               zero     0x2000'082c     0x2  App_Dcm.o [1]
+  .bss               zero     0x2000'082e     0x2  App_Dcm.o [1]
+  .bss               zero     0x2000'0830     0x2  eeprom_cfg.o [1]
+  .bss               zero     0x2000'0832     0x2  Tim.o [1]
+  .bss               zero     0x2000'0834     0x1  App_Can.o [1]
+  .bss               zero     0x2000'0835     0x1  App_Dcm.o [1]
+  .bss               zero     0x2000'0836     0x1  App_Dcm.o [1]
+  .bss               zero     0x2000'0837     0x1  App_Dcm.o [1]
+  .bss               zero     0x2000'0838     0x1  App_Dcm.o [1]
+  .bss               zero     0x2000'0839     0x1  App_Demm.o [1]
+  .bss               zero     0x2000'083a     0x1  Com.o [1]
+  .bss               zero     0x2000'083b     0x1  Com.o [1]
+  .bss               zero     0x2000'083c     0x1  Com.o [1]
+  .bss               zero     0x2000'083d     0x1  Event.o [1]
+  .bss               zero     0x2000'083e     0x1  LowPowerManage.o [1]
+  .bss               zero     0x2000'083f     0x1  OsekNm_App.o [1]
+  .bss               zero     0x2000'0840     0x1  OsekNm_App.o [1]
+  .bss               zero     0x2000'0841     0x1  OsekNm_App.o [1]
+                            - 0x2000'0842   0x636
+
+"P2", part 3 of 3:                          0x800
+  CSTACK                      0x2000'0848   0x800  <Block>
+    CSTACK           uninit   0x2000'0848   0x800  <Block tail>
+                            - 0x2000'1048   0x800
+
+"P7":                                      0x1000
+  .EE_Flash_Ram      zero     0x2000'6000  0x1000  eeprom_cfg.o [1]
+                            - 0x2000'7000  0x1000
+
+"P3":                                         0x4
+  .ReprogramFlag     uninit   0x2000'7fc0     0x4  main.o [1]
+                            - 0x2000'7fc4     0x4
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+     0x1'31e0     0x1'b3ff  0x8220
+     0x1'b416     0x1'b7f7   0x3e2
+  0x2000'020a  0x2000'020b     0x2
+  0x2000'0844  0x2000'0847     0x4
+  0x2000'1048  0x2000'5fff  0x4fb8
+  0x2000'7fc4  0x2000'7fcf     0xc
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    2 destination ranges, total size 0x1636:
+          0x2000'020c   0x636
+          0x2000'6000  0x1000
+
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0xec (45% of destination):
+             0x1'30f4    0xec
+    1 destination range, total size 0x20a:
+          0x2000'0000   0x20a
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                   ro code  ro data  rw data  ro data
+                                                         (abs)
+    ------                   -------  -------  -------  -------
+command line/config:
+    -----------------------------------------------------------
+    Total:
+
+E:\Project\JAC\JS6\official_edition\JS6 SW1.09\IARProject\Debug\Obj: [1]
+    Adc_Drv.o                    780                68
+    App_Boot.o                   110
+    App_Can.o                    760                39
+    App_Com.o                     88
+    App_Dcm.o                  3'876       97      293       22
+    App_Demm.o                   484                 5
+    App_PID.o                     64                12
+    App_WheelHeat.o            1'480      357      220
+    Can.o                      1'144        7       16
+    CanIf.o                    1'004                10
+    CanIf_Lcfg.o                          257       64
+    CanTp.o                    5'648               104
+    CanTp_PBcfg.o                          81
+    CanTrcv.o                     96
+    Can_PBcfg.o                            36       48
+    Com.o                      2'188               151
+    Com_Cfg.o                             295       92
+    Com_Lcfg.o                   128       24
+    DMA.o                        108
+    Dcm.o                      4'118       21      648
+    Dcm_Cbk.o                    680
+    Dcm_Cfg.o                             592        8
+    Dcm_Lcfg.o                            652
+    Dem.o                          2
+    Dem_Cfg.o                              76
+    Demm.o                     2'288               148
+    Event.o                      168                 9
+    Gpio.o                       248      588
+    LowPowerManage.o           1'020                 1
+    Memory.o                      28
+    OsekNm.o                   5'040                56
+    OsekNm_App.o                 168                 3
+    OsekNm_Cfg.o                           47       40
+    PduR.o                       188
+    Pll.o                        364
+    Tim.o                        308                 2
+    eeprom.o                   1'008                 4
+    eeprom_cfg.o                 340        2    4'102
+    fm33lg0xx_fl.o               284
+    fm33lg0xx_fl_adc.o           976
+    fm33lg0xx_fl_atim.o          156
+    fm33lg0xx_fl_bstim16.o       370
+    fm33lg0xx_fl_dma.o           602
+    fm33lg0xx_fl_exti.o          620       76
+    fm33lg0xx_fl_flash.o         632
+    fm33lg0xx_fl_gpio.o          432
+    fm33lg0xx_fl_gptim.o         224
+    fm33lg0xx_fl_iwdt.o          118
+    fm33lg0xx_fl_pmu.o           160
+    fm33lg0xx_fl_svd.o           204
+    main.o                       628       14       16
+    startup_fm33lg0xx.o          272
+    svd.o                        194
+    svd_interrupt.o              220        1        1
+    system_fm33lg0xx.o           616        5       12
+    system_voltage_manage.o      512       18       40
+    -----------------------------------------------------------
+    Total:                    41'146    3'246    6'212       22
+
+dl6M_tln.a: [2]
+    exit.o                         8
+    low_level_init.o               4
+    -----------------------------------------------------------
+    Total:                        12
+
+m6M_tl.a: [3]
+    -----------------------------------------------------------
+    Total:
+
+rt6M_tl.a: [4]
+    ABImemcpy.o                   52
+    ABImemset.o                   90
+    I32DivModFast.o              224
+    I64DivMod.o                  106
+    I64DivZer.o                    2
+    I64Mul.o                      50
+    IntDivZer.o                    2
+    cexit.o                       10
+    cmain.o                       30
+    cstartup_M.o                  12
+    data_init.o                   40
+    lz77_init_single.o           126
+    memset.o                      20
+    zero_init3.o                  60
+    -----------------------------------------------------------
+    Total:                       824
+
+shb_l.a: [5]
+    exit.o                        20
+    -----------------------------------------------------------
+    Total:                        20
+
+    Linker created                         40    2'048
+---------------------------------------------------------------
+    Grand Total:              42'002    3'286    8'260       22
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address    Size  Type      Object
+-----                       -------    ----  ----      ------
+.iar.init_table$$Base      0x1'2e74           --   Gb  - Linker created -
+.iar.init_table$$Limit     0x1'2e9c           --   Gb  - Linker created -
+?main                      0x1'2efd          Code  Gb  cmain.o [4]
+ADC_Drv                 0x2000'0594    0x44  Data  Gb  Adc_Drv.o [1]
+ADC_Init                     0xf3dd    0x5e  Code  Gb  Adc_Drv.o [1]
+ADC_ResulFiltertMv_Get       0xf61f    0x3a  Code  Gb  Adc_Drv.o [1]
+ADC_ResultMv_Get             0xf5e7    0x38  Code  Gb  Adc_Drv.o [1]
+ADC_Result_Get               0xf5df     0x8  Code  Gb  Adc_Drv.o [1]
+ADC_Start                    0xf43b    0x40  Code  Gb  Adc_Drv.o [1]
+ADC_Task                     0xf47b   0x164  Code  Gb  Adc_Drv.o [1]
+AppDemmCanDisconnectedFailureEvent
+                             0xd2c9     0x6  Code  Gb  Event.o [1]
+AppDemmCanDisconnectedFailureEventGet
+                             0xd305     0xa  Code  Gb  Event.o [1]
+AppDemmCanDisconnectedFailureProcess
+                             0xd137    0x22  Code  Lc  App_Demm.o [1]
+AppDemmHarnessFractureOrShortFailureEvent
+                             0xd2c3     0x6  Code  Gb  Event.o [1]
+AppDemmHarnessFractureOrShortFailureEventGet
+                             0xd2fb     0xa  Code  Gb  Event.o [1]
+AppDemmHarnessFractureOrShortFailureProcess
+                             0xd115    0x22  Code  Lc  App_Demm.o [1]
+AppDemmHeatOpenFailureEvent
+                             0xd2cf     0x6  Code  Gb  Event.o [1]
+AppDemmHeatOpenFailureEventGet
+                             0xd30f     0xa  Code  Gb  Event.o [1]
+AppDemmHeatOpenFailureProcess
+                             0xd159    0x22  Code  Lc  App_Demm.o [1]
+AppDemmHeatShortFailureEvent
+                             0xd2d5     0x6  Code  Gb  Event.o [1]
+AppDemmHeatShortFailureEventGet
+                             0xd319     0xa  Code  Gb  Event.o [1]
+AppDemmHeatShortFailureProcess
+                             0xd17b    0x22  Code  Lc  App_Demm.o [1]
+AppDemmNtcShortOrOpenFailureEvent
+                             0xd2db     0x6  Code  Gb  Event.o [1]
+AppDemmNtcShortOrOpenFailureEventGet
+                             0xd323     0xa  Code  Gb  Event.o [1]
+AppDemmNtcShortOrOpenFailureProcess
+                             0xd19d    0x22  Code  Lc  App_Demm.o [1]
+AppDemmProcessFun            0xd288    0x20  Data  Gb  App_Demm.o [1]
+AppDemmSystemVoltageHighFailureEvent
+                             0xd2bd     0x6  Code  Gb  Event.o [1]
+AppDemmSystemVoltageHighFailureEventGet
+                             0xd2f1     0xa  Code  Gb  Event.o [1]
+AppDemmSystemVoltageHighFailureProcess
+                             0xd0f3    0x22  Code  Lc  App_Demm.o [1]
+AppDemmSystemVoltageLowFailureEvent
+                             0xd2b7     0x6  Code  Gb  Event.o [1]
+AppDemmSystemVoltageLowFailureEventGet
+                             0xd2e7     0xa  Code  Gb  Event.o [1]
+AppDemmSystemVoltageLowFailureProcess
+                             0xd0d1    0x22  Code  Lc  App_Demm.o [1]
+AppDemmTemOver37_5FailureEvent
+                             0xd2e1     0x6  Code  Gb  Event.o [1]
+AppDemmTemOver37_5FailureEventGet
+                             0xd32d     0xa  Code  Gb  Event.o [1]
+AppDemmTemOver37_5FailureProcess
+                             0xd1bf    0x22  Code  Lc  App_Demm.o [1]
+AppIpduADS_560_Ind           0xf72f     0x8  Code  Gb  App_Com.o [1]
+AppIpduADS_560_Ind_Process
+                             0xb665    0x64  Code  Gb  App_Can.o [1]
+AppIpduAds_560_TimeoutCheck
+                             0xb6ed    0x18  Code  Gb  App_Can.o [1]
+AppIpduSWS_36A_Conf          0xf727     0x8  Code  Gb  App_Com.o [1]
+AppIpduSWS_36A_ConfProcess
+                             0xb61b     0x2  Code  Gb  App_Can.o [1]
+AppIpduSWS_36A_TxTOIndication
+                             0xf725     0x2  Code  Gb  App_Com.o [1]
+AppIpdu_117_Ind              0xf737     0x8  Code  Gb  App_Com.o [1]
+AppIpdu_117_Ind_Process
+                             0xb61d     0xc  Code  Gb  App_Can.o [1]
+AppIpdu_193_Ind              0xf73f     0x8  Code  Gb  App_Com.o [1]
+AppIpdu_193_Ind_Process
+                             0xb629     0xc  Code  Gb  App_Can.o [1]
+AppIpdu_23C_Ind              0xf74f     0x8  Code  Gb  App_Com.o [1]
+AppIpdu_23C_Ind_Process
+                             0xb635     0xc  Code  Gb  App_Can.o [1]
+AppIpdu_2AB_Ind              0xf747     0x8  Code  Gb  App_Com.o [1]
+AppIpdu_2AB_Ind_Process
+                             0xb641    0x24  Code  Gb  App_Can.o [1]
+AppRxIpduADS_560_TimeOutInd
+                             0xf757     0x2  Code  Gb  App_Com.o [1]
+AppRxIpdu_117_TimeOutInd
+                             0xf759     0x8  Code  Gb  App_Com.o [1]
+AppRxIpdu_117_TimeOutProcess
+                             0xb6c9     0x8  Code  Gb  App_Can.o [1]
+AppRxIpdu_193_TimeOutInd
+                             0xf761     0x8  Code  Gb  App_Com.o [1]
+AppRxIpdu_193_TimeOutProcess
+                             0xb6d1     0x8  Code  Gb  App_Can.o [1]
+AppRxIpdu_23C_TimeOutInd
+                             0xf771     0x8  Code  Gb  App_Com.o [1]
+AppRxIpdu_23C_TimeOutProcess
+                             0xb6e5     0x8  Code  Gb  App_Can.o [1]
+AppRxIpdu_2AB_TimeOutInd
+                             0xf769     0x8  Code  Gb  App_Com.o [1]
+AppRxIpdu_2AB_TimeOutProcess
+                             0xb6d9     0xc  Code  Gb  App_Can.o [1]
+App_ClearDiagnosticInformation
+                             0xc3b9    0x3e  Code  Gb  App_Dcm.o [1]
+App_DTCRecordOff             0xd079    0x2c  Code  Gb  App_Dcm.o [1]
+App_DTCRecordOn              0xd049    0x2c  Code  Gb  App_Dcm.o [1]
+App_Default                  0xc1bd    0x3e  Code  Gb  App_Dcm.o [1]
+App_DefaultPost              0xc1fb    0x6c  Code  Gb  App_Dcm.o [1]
+App_Demm_Init                0xd259     0x8  Code  Gb  App_Demm.o [1]
+App_Demm_Task                0xd261    0x28  Code  Gb  App_Demm.o [1]
+App_DisableRxAndTx           0xcff7    0x4e  Code  Gb  App_Dcm.o [1]
+App_EnableRxAndTx            0xcfa9    0x4e  Code  Gb  App_Dcm.o [1]
+App_Extended_Diagnostic
+                             0xc28f    0x3e  Code  Gb  App_Dcm.o [1]
+App_Extended_DiagnosticPost
+                             0xc2cd    0x60  Code  Gb  App_Dcm.o [1]
+App_HardReset                0xc331     0xc  Code  Gb  App_Dcm.o [1]
+App_HardResetPost            0xc33d    0x50  Code  Gb  App_Dcm.o [1]
+App_HeatSignal_Task        0x1'0c35    0xa0  Code  Gb  App_WheelHeat.o [1]
+App_HeatSignal_Task::u8HeatSwitchFlag
+                        0x2000'00e0     0x1  Data  Lc  App_WheelHeat.o [1]
+App_HeatSignal_Task::u8sendsigcntr
+                        0x2000'00e1     0x1  Data  Lc  App_WheelHeat.o [1]
+App_PEPS_PwrMod_Get          0xb73b     0x6  Code  Gb  App_Can.o [1]
+App_Programming              0xc267    0x14  Code  Gb  App_Dcm.o [1]
+App_ProgrammingPost          0xc27b    0x14  Code  Gb  App_Dcm.o [1]
+App_Read0x040E               0xc8ad    0x54  Code  Gb  App_Dcm.o [1]
+App_Read0x040F               0xc909    0x38  Code  Gb  App_Dcm.o [1]
+App_Read0x0410               0xc949    0x3e  Code  Gb  App_Dcm.o [1]
+App_Read0xF183               0xc3f7    0x40  Code  Gb  App_Dcm.o [1]
+App_Read0xF186               0xc437    0x46  Code  Gb  App_Dcm.o [1]
+App_Read0xF187               0xc485    0x40  Code  Gb  App_Dcm.o [1]
+App_Read0xF188               0xc4cd    0x48  Code  Gb  App_Dcm.o [1]
+App_Read0xF189               0xc515    0x46  Code  Gb  App_Dcm.o [1]
+App_Read0xF18A               0xc55b    0x42  Code  Gb  App_Dcm.o [1]
+App_Read0xF18B               0xc59d    0x40  Code  Gb  App_Dcm.o [1]
+App_Read0xF18C               0xc5dd    0x42  Code  Gb  App_Dcm.o [1]
+App_Read0xF190               0xc625    0x40  Code  Gb  App_Dcm.o [1]
+App_Read0xF192               0xc665    0x42  Code  Gb  App_Dcm.o [1]
+App_Read0xF193               0xc6ad    0x46  Code  Gb  App_Dcm.o [1]
+App_Read0xF194               0xc6f3    0x42  Code  Gb  App_Dcm.o [1]
+App_Read0xF195               0xc739    0x46  Code  Gb  App_Dcm.o [1]
+App_Read0xF197               0xc785    0x42  Code  Gb  App_Dcm.o [1]
+App_Read0xF199               0xc7d1    0x40  Code  Gb  App_Dcm.o [1]
+App_Read0xF19D               0xc819    0x40  Code  Gb  App_Dcm.o [1]
+App_Read0xF1A8               0xc85d    0x40  Code  Gb  App_Dcm.o [1]
+App_ReportDTCByStatusMask
+                             0xcb49    0x76  Code  Gb  App_Dcm.o [1]
+App_ReportDTCExtendedDataRecordByDTCNumber
+                             0xcd59    0xde  Code  Gb  App_Dcm.o [1]
+App_ReportDTCSnapshotRecordByDTCNumber
+                             0xcc4d   0x106  Code  Gb  App_Dcm.o [1]
+App_ReportNumberOfDTCByStatusMask
+                             0xcadd    0x5c  Code  Gb  App_Dcm.o [1]
+App_ReportSupportedDTC       0xcbcd    0x5e  Code  Gb  App_Dcm.o [1]
+App_Request_Seed_L1          0xcf01    0x46  Code  Gb  App_Dcm.o [1]
+App_Send_Key_L1              0xcf47    0x5e  Code  Gb  App_Dcm.o [1]
+App_VehicleSpeed_Get         0xb741     0x8  Code  Gb  App_Can.o [1]
+App_WheelHeat_Task         0x1'0b21    0xf8  Code  Gb  App_WheelHeat.o [1]
+App_Write0xF190              0xc991    0x46  Code  Gb  App_Dcm.o [1]
+App_Write0xF199              0xc9e1    0x56  Code  Gb  App_Dcm.o [1]
+App_Write0xF19D              0xca3d    0x46  Code  Gb  App_Dcm.o [1]
+App_Write0xF1A8              0xca8d    0x46  Code  Gb  App_Dcm.o [1]
+App_stWheelHeat         0x2000'03c4    0x94  Data  Gb  App_WheelHeat.o [1]
+App_wheelHeatInit          0x1'07bb    0x6c  Code  Gb  App_WheelHeat.o [1]
+ApplNmBusOff                 0xf68b    0x12  Code  Gb  OsekNm_App.o [1]
+ApplNmBusOffEnd              0xf69d     0xc  Code  Gb  OsekNm_App.o [1]
+ApplNmBusOffRecoverySuccess
+                             0xf6a9     0x2  Code  Gb  OsekNm_App.o [1]
+ApplNmCanBusOffRecoveryFail
+                             0xf6ab     0x2  Code  Gb  OsekNm_App.o [1]
+ApplNmCanLimpHomeEnd         0xf689     0x2  Code  Gb  OsekNm_App.o [1]
+ApplNmCanLimpHomeStart       0xf685     0x2  Code  Gb  OsekNm_App.o [1]
+ApplNmCanSleep               0xf6ad    0x1e  Code  Gb  OsekNm_App.o [1]
+ApplNmCanStart               0xf679     0xc  Code  Gb  OsekNm_App.o [1]
+ApplNmCanWakeUp              0xf6cb    0x20  Code  Gb  OsekNm_App.o [1]
+ApplNmLimpHIndication        0xf705     0x2  Code  Gb  OsekNm_App.o [1]
+ApplNmLimpHomeState          0xf687     0x2  Code  Gb  OsekNm_App.o [1]
+ApplNmRingIndication         0xf703     0x2  Code  Gb  OsekNm_App.o [1]
+ApplNmShutDown               0xf701     0x2  Code  Gb  OsekNm_App.o [1]
+ApplNmWaitBusSleep           0xf6f9     0x8  Code  Gb  OsekNm_App.o [1]
+ApplNmWaitBusSleepCancel
+                             0xf6eb     0xe  Code  Gb  OsekNm_App.o [1]
+BSTIM16_Init               0x1'1b5f    0x42  Code  Gb  Tim.o [1]
+BSTIM_IRQHandler           0x1'1bbb    0x24  Code  Gb  Tim.o [1]
+Boot_CheckBLUpgrade          0xf30f     0x2  Code  Gb  App_Boot.o [1]
+Boot_MemCpy                  0xf355    0x16  Code  Lc  App_Boot.o [1]
+Boot_ReprogramCallBack       0xf311     0xe  Code  Gb  App_Boot.o [1]
+Boot_SetFlag                 0xf31f    0x24  Code  Lc  App_Boot.o [1]
+CAN_Controller_Rx_handler
+                             0xa15b    0x8a  Code  Lc  Can.o [1]
+CAN_Controller_Tx_handler
+                             0xa10d    0x4e  Code  Lc  Can.o [1]
+CAN_IRQHandler               0xa46d    0x7a  Code  Gb  Can.o [1]
+CMU_PLL_ConfigDomain_SYSTEM
+                           0x1'176d    0x1a  Code  Gb  Pll.o [1]
+COM_IdpuTxCycCntTable        0xb87a     0x2  Data  Gb  Com_Cfg.o [1]
+COM_IdpuTxFastCycleTable
+                             0xf36a     0x2  Data  Gb  Com_Cfg.o [1]
+COM_IpduRepetitionTxCycCntTable
+                           0x1'133a     0x2  Data  Gb  Com_Cfg.o [1]
+COM_IpduRepetitionTxNumTable
+                           0x1'30ec     0x1  Data  Gb  Com_Cfg.o [1]
+COM_IpduRxIndicationFunPtr
+                           0x1'2f70    0x14  Data  Gb  Com_Cfg.o [1]
+COM_IpduRxTOTimerTable     0x1'2e9c    0x20  Data  Gb  Com_Cfg.o [1]
+COM_IpduRxTimeoutFunPtr
+                           0x1'2f84    0x14  Data  Gb  Com_Cfg.o [1]
+COM_IpduRxTimeoutValue  0x2000'0178    0x14  Data  Gb  Com_Cfg.o [1]
+COM_IpduTxConfirmFunPtr
+                           0x1'306c     0x4  Data  Gb  Com_Cfg.o [1]
+COM_IpduTxDelayCntTable
+                           0x1'0576     0x2  Data  Gb  Com_Cfg.o [1]
+COM_IpduTxOffsetTimerTable
+                           0x1'21f2     0x2  Data  Gb  Com_Cfg.o [1]
+COM_IpduTxTimeOutCntTable
+                           0x1'14ae     0x2  Data  Gb  Com_Cfg.o [1]
+COM_IpduTxTimeOutFunPtr
+                           0x1'3068     0x4  Data  Gb  Com_Cfg.o [1]
+COM_IpduTxTypeTable        0x1'30eb     0x1  Data  Gb  Com_Cfg.o [1]
+COM_ReceiveSigADS_HeatCommand
+                           0x1'2bd5     0xe  Code  Gb  Com_Lcfg.o [1]
+COM_ReceiveSigHvtSts       0x1'2bf1    0x10  Code  Gb  Com_Lcfg.o [1]
+COM_ReceiveSigKeyState     0x1'2c01     0xc  Code  Gb  Com_Lcfg.o [1]
+COM_ReceiveSigVehSpd       0x1'2c0d    0x12  Code  Gb  Com_Lcfg.o [1]
+COM_ReceiveSig_EngineState
+                           0x1'2be3     0xe  Code  Gb  Com_Lcfg.o [1]
+COM_ReceivedSignalFunPrt
+                           0x1'2f98    0x14  Data  Gb  Com_Lcfg.o [1]
+COM_RxDataInitInfo         0x1'2e00    0x28  Data  Gb  Com_Cfg.o [1]
+COM_RxDataPtr           0x2000'04f0    0x28  Data  Lc  Com.o [1]
+COM_RxIpduDefaultValue  0x2000'0164    0x14  Data  Gb  Com_Cfg.o [1]
+COM_RxSigTable             0x1'2f5c    0x14  Data  Gb  Com_Cfg.o [1]
+COM_SendSigSWS_HeatStatus
+                           0x1'2bb9    0x1c  Code  Gb  Com_Lcfg.o [1]
+COM_SendSignalFunPrt       0x1'3070     0x4  Data  Gb  Com_Lcfg.o [1]
+COM_TpRxIpduBufferSize     0x1'2fe0     0xc  Data  Gb  Com_Cfg.o [1]
+COM_TxDataInitInfo         0x1'3000     0x8  Data  Gb  Com_Cfg.o [1]
+COM_TxDataPtr           0x2000'06ac     0x8  Data  Gb  Com.o [1]
+COM_TxIpduDefaultValue  0x2000'0160     0x4  Data  Gb  Com_Cfg.o [1]
+COM_TxIpduOffsetInTxSigTable
+                           0x1'0572     0x2  Data  Gb  Com_Cfg.o [1]
+COM_TxIpduSigNum           0x1'30ea     0x1  Data  Gb  Com_Cfg.o [1]
+COM_TxSigTable             0x1'3008     0x8  Data  Gb  Com_Cfg.o [1]
+COM_UnderlyHandle          0x1'2f26     0x2  Data  Gb  Com_Cfg.o [1]
+CSTACK$$Base            0x2000'0848           --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1048           --   Gb  - Linker created -
+CanBasisAddress         0x2000'012c     0x4  Data  Lc  Can.o [1]
+CanControllerIDtoHRH       0x1'30e7     0x1  Data  Gb  Can_PBcfg.o [1]
+CanControllerIDtoPhys      0x1'30e6     0x1  Data  Gb  Can_PBcfg.o [1]
+CanControllerInterruptCount
+                        0x2000'0120     0x1  Data  Lc  Can.o [1]
+CanControllerOldInterrupReg
+                        0x2000'0128     0x4  Data  Lc  Can.o [1]
+CanHardwareObjectConfig
+                           0x1'2fbc     0xc  Data  Gb  Can_PBcfg.o [1]
+CanIfHrhFirstRxPduID       0x1'30e8     0x1  Data  Gb  CanIf_Lcfg.o [1]
+CanIfInitNumberOfCanRxPduIds
+                             0xa50e     0x2  Data  Gb  CanIf_Lcfg.o [1]
+CanIfInitNumberOfCanTxPduIds
+                             0xb526     0x2  Data  Gb  CanIf_Lcfg.o [1]
+CanIfPduMode            0x2000'07be     0x1  Data  Lc  CanIf.o [1]
+CanIfRxPduCanIdRangeConfig
+                           0x1'2fc8     0xc  Data  Gb  CanIf_Lcfg.o [1]
+CanIfRxPduConfig           0x1'29ac    0xc0  Data  Gb  CanIf_Lcfg.o [1]
+CanIfTxBufferFillCount  0x2000'07c4     0x2  Data  Lc  CanIf.o [1]
+CanIfTxBufferPDUFillflag
+                        0x2000'081c     0x4  Data  Gb  CanIf_Lcfg.o [1]
+CanIfTxBufferPdu        0x2000'0680    0x24  Data  Gb  CanIf_Lcfg.o [1]
+CanIfTxBufferSdu        0x2000'0720    0x18  Data  Gb  CanIf_Lcfg.o [1]
+CanIfTxPduConfig           0x1'2da0    0x30  Data  Gb  CanIf_Lcfg.o [1]
+CanIf_ClearTransmitBuffer
+                             0x9d0b    0x2a  Code  Gb  CanIf.o [1]
+CanIf_ControllerBusOff       0x9ce3     0x2  Code  Gb  CanIf.o [1]
+CanIf_ControllerMode    0x2000'07bc     0x1  Data  Lc  CanIf.o [1]
+CanIf_ControllerModeIndication
+                             0x9ce5    0x26  Code  Gb  CanIf.o [1]
+CanIf_Init                   0x998f    0x5e  Code  Gb  CanIf.o [1]
+CanIf_InitStatus        0x2000'07bd     0x1  Data  Lc  CanIf.o [1]
+CanIf_MemCpy                 0x9979    0x16  Code  Lc  CanIf.o [1]
+CanIf_MemSet                 0x996d     0xc  Code  Lc  CanIf.o [1]
+CanIf_RxIndication           0x9c65    0x7e  Code  Gb  CanIf.o [1]
+CanIf_SetControllerMode
+                             0x99ed    0x78  Code  Gb  CanIf.o [1]
+CanIf_SetPduMode             0x9a65    0x5c  Code  Gb  CanIf.o [1]
+CanIf_TotalRxPduIds     0x2000'07c0     0x2  Data  Lc  CanIf.o [1]
+CanIf_TotalTxPduIds     0x2000'07c2     0x2  Data  Lc  CanIf.o [1]
+CanIf_Transmit               0x9ac1   0x10c  Code  Gb  CanIf.o [1]
+CanIf_TxConfirmation         0x9bd9    0x80  Code  Gb  CanIf.o [1]
+CanNm_BusOff                 0xe6d5    0x36  Code  Gb  OsekNm.o [1]
+CanNm_GetCurState            0xd9ab     0x8  Code  Lc  OsekNm.o [1]
+CanNm_GotoMode               0xda99    0x40  Code  Gb  OsekNm.o [1]
+CanNm_Init                   0xd551    0x84  Code  Gb  OsekNm.o [1]
+CanNm_MainFunction           0xe539    0x50  Code  Gb  OsekNm.o [1]
+CanNm_RxIndication           0xe81d    0x6e  Code  Gb  OsekNm.o [1]
+CanNm_SetNxtState            0xd9b3    0x12  Code  Lc  OsekNm.o [1]
+CanNm_Start                  0xd9e7    0x4e  Code  Gb  OsekNm.o [1]
+CanNm_Stop                   0xda41    0x58  Code  Gb  OsekNm.o [1]
+CanNm_Talk                   0xd9c5    0x22  Code  Gb  OsekNm.o [1]
+CanNm_TxConfirmation         0xe891    0x54  Code  Gb  OsekNm.o [1]
+CanRegInit              0x2000'0130    0x30  Data  Gb  Can_PBcfg.o [1]
+CanTpChannelMode           0x1'30e9     0x1  Data  Gb  CanTp_PBcfg.o [1]
+CanTp_AdminData         0x2000'0634     0x8  Data  Lc  CanTp.o [1]
+CanTp_AssembleFC             0x96dd    0xc6  Code  Lc  CanTp.o [1]
+CanTp_AssembleFC::TempFcMsg
+                        0x2000'064c     0x8  Data  Lc  CanTp.o [1]
+CanTp_Cfg                  0x1'2fd4     0xc  Data  Gb  CanTp_PBcfg.o [1]
+CanTp_ChannelInit            0x81c1    0x8c  Code  Lc  CanTp.o [1]
+CanTp_DataCopy               0x97b9    0x18  Code  Lc  CanTp.o [1]
+CanTp_Init                   0x824d    0x30  Code  Gb  CanTp.o [1]
+CanTp_MainFunction           0x8639    0x24  Code  Gb  CanTp.o [1]
+CanTp_RxBuf             0x2000'0654     0x8  Data  Lc  CanTp.o [1]
+CanTp_RxCFPdu                0x92f5   0x2d8  Code  Lc  CanTp.o [1]
+CanTp_RxFCPdu                0x95d9   0x104  Code  Lc  CanTp.o [1]
+CanTp_RxFFPdu                0x90d1   0x224  Code  Lc  CanTp.o [1]
+CanTp_RxIndication           0x83b5   0x11e  Code  Gb  CanTp.o [1]
+CanTp_RxMainFunction         0x8671   0x516  Code  Lc  CanTp.o [1]
+CanTp_RxNsduCfg            0x1'2dd0    0x30  Data  Gb  CanTp_PBcfg.o [1]
+CanTp_RxSFPdu                0x8f15   0x1b8  Code  Lc  CanTp.o [1]
+CanTp_RxState           0x2000'06c8    0x20  Data  Lc  CanTp.o [1]
+CanTp_SetFormatOffset        0x827d    0x70  Code  Lc  CanTp.o [1]
+CanTp_Transmit               0x82ed    0xbe  Code  Gb  CanTp.o [1]
+CanTp_TxBuf             0x2000'0640     0x8  Data  Lc  CanTp.o [1]
+CanTp_TxConfirmation         0x84dd   0x15c  Code  Gb  CanTp.o [1]
+CanTp_TxMainFunction         0x8b8d   0x380  Code  Lc  CanTp.o [1]
+CanTp_TxNsduCfg            0x1'2f48    0x14  Data  Gb  CanTp_PBcfg.o [1]
+CanTp_TxState           0x2000'06e8    0x20  Data  Lc  CanTp.o [1]
+CanTrcv_Disable            0x1'008d     0xe  Code  Gb  CanTrcv.o [1]
+CanTrcv_Init               0x1'0055    0x38  Code  Gb  CanTrcv.o [1]
+Can_BusoffRecovery           0xa10b     0x2  Code  Lc  Can.o [1]
+Can_Controller_Transmit_Abort
+                             0xa1e5     0x2  Code  Lc  Can.o [1]
+Can_Init                     0xa1e7    0xb2  Code  Gb  Can.o [1]
+Can_InitController           0xa299    0x3a  Code  Gb  Can.o [1]
+Can_MemSet                   0xa0ff     0xc  Code  Lc  Can.o [1]
+Can_ModeMonitor         0x2000'0122     0x1  Data  Lc  Can.o [1]
+Can_SetControllerMode        0xa2d3    0x96  Code  Gb  Can.o [1]
+Can_Write                    0xa389    0xda  Code  Gb  Can.o [1]
+ClearDTCCondition            0xd0c5     0xc  Code  Gb  App_Demm.o [1]
+ComRxTimeoutMoniCnts    0x2000'0786     0x2  Data  Lc  Com.o [1]
+ComRxTimeoutMoniFlag    0x2000'0785     0x1  Data  Lc  Com.o [1]
+Com_ActiveTxIpdu             0xebed    0x10  Code  Lc  Com.o [1]
+Com_CopyRxPDU                0xe92d    0x3a  Code  Lc  Com.o [1]
+Com_DisactiveSig             0xec35    0x10  Code  Gb  Com.o [1]
+Com_DisactiveTxIpdu          0xebfd    0x10  Code  Lc  Com.o [1]
+Com_GetRxIpduStatus          0xea1b    0x22  Code  Gb  Com.o [1]
+Com_GetTxIpduStatus          0xee51    0x14  Code  Gb  Com.o [1]
+Com_Init                     0xf171    0x12  Code  Gb  Com.o [1]
+Com_InitRxIpdu               0xe967    0x92  Code  Lc  Com.o [1]
+Com_InitTxIpdu               0xeda1    0x9a  Code  Lc  Com.o [1]
+Com_IpduActiveFlag      0x2000'083c     0x1  Data  Lc  Com.o [1]
+Com_IpduBeingSentFlag   0x2000'06ab     0x1  Data  Lc  Com.o [1]
+Com_IpduReceivedFlag    0x2000'04e0     0x8  Data  Lc  Com.o [1]
+Com_IpduRepetitionFlag  0x2000'06a9     0x1  Data  Lc  Com.o [1]
+Com_IpduRxTimeoutCounter
+                        0x2000'0788     0xc  Data  Lc  Com.o [1]
+Com_IpduTxCycCounter    0x2000'06b6     0x2  Data  Lc  Com.o [1]
+Com_IpduTxDelayCounter  0x2000'06b8     0x2  Data  Lc  Com.o [1]
+Com_IpduTxOffSetCounter
+                        0x2000'06bc     0x2  Data  Lc  Com.o [1]
+Com_IpduTxTimeOutCnt    0x2000'06ba     0x2  Data  Lc  Com.o [1]
+Com_MainFunctionRx           0xea63    0xf4  Code  Gb  Com.o [1]
+Com_MainFunctionTx           0xeec1    0x92  Code  Gb  Com.o [1]
+Com_ManageCyclicIpdu         0xecc5    0xdc  Code  Lc  Com.o [1]
+Com_NumOfTxRepetition   0x2000'06aa     0x1  Data  Lc  Com.o [1]
+Com_ReTransmit          0x2000'06a7     0x1  Data  Lc  Com.o [1]
+Com_ReceiveSignal            0xebb9    0x34  Code  Gb  Com.o [1]
+Com_RxIndication             0xeb5d    0x40  Code  Gb  Com.o [1]
+Com_RxInit                   0xe901    0x2c  Code  Lc  Com.o [1]
+Com_RxIpduCallout            0xf723     0x2  Code  Gb  App_Com.o [1]
+Com_RxIpduPreStatus     0x2000'04e8     0x8  Data  Lc  Com.o [1]
+Com_RxIpduStartedFlag   0x2000'083a     0x1  Data  Lc  Com.o [1]
+Com_RxIpduTimeOutFlag   0x2000'04d8     0x8  Data  Gb  Com.o [1]
+Com_RxStart                  0xea3d    0x12  Code  Gb  Com.o [1]
+Com_RxStop                   0xea4f    0x14  Code  Gb  Com.o [1]
+Com_SendSignal               0xf115    0x30  Code  Gb  Com.o [1]
+Com_SetSendRequest           0xefb5   0x158  Code  Gb  Com.o [1]
+Com_SigActivedFlag      0x2000'083b     0x1  Data  Lc  Com.o [1]
+Com_SigIsActived             0xec21    0x14  Code  Lc  Com.o [1]
+Com_StopRxIpdu               0xe9f9    0x22  Code  Gb  Com.o [1]
+Com_StopTxIpdu               0xee3b    0x10  Code  Gb  Com.o [1]
+Com_TpRxIpduAvailableBufferSize
+                        0x2000'0518     0xc  Data  Lc  Com.o [1]
+Com_TpRxIpduPtr         0x2000'0524    0x14  Data  Lc  Com.o [1]
+Com_TransmitIpdu             0xec49    0x46  Code  Lc  Com.o [1]
+Com_TriggerIPDUSend          0xee65    0x10  Code  Gb  Com.o [1]
+Com_TxConfirmation           0xef5d    0x34  Code  Gb  Com.o [1]
+Com_TxIdpuConfFlag      0x2000'06a5     0x1  Data  Gb  Com.o [1]
+Com_TxInit                   0xec95    0x26  Code  Lc  Com.o [1]
+Com_TxIpduCallout            0xf721     0x2  Code  Gb  App_Com.o [1]
+Com_TxIpduCycleCntBackup
+                        0x2000'06b4     0x2  Data  Lc  Com.o [1]
+Com_TxIpduInfo          0x2000'06c0     0x8  Data  Lc  Com.o [1]
+Com_TxIpduIsActived          0xec0d    0x14  Code  Lc  Com.o [1]
+Com_TxIpduPreStatus     0x2000'06a6     0x1  Data  Lc  Com.o [1]
+Com_TxIpduStartedFlag   0x2000'0784     0x1  Data  Lc  Com.o [1]
+Com_TxIpduTimeOutFlag   0x2000'06a4     0x1  Data  Gb  Com.o [1]
+Com_TxStart                  0xee79    0x20  Code  Gb  Com.o [1]
+Com_TxState             0x2000'06a8     0x1  Data  Lc  Com.o [1]
+Com_TxStop                   0xee9d    0x16  Code  Gb  Com.o [1]
+DATA_0x040E             0x2000'0836     0x1  Data  Gb  App_Dcm.o [1]
+DATA_0x040F             0x2000'0837     0x1  Data  Gb  App_Dcm.o [1]
+DATA_0x0410             0x2000'082e     0x2  Data  Gb  App_Dcm.o [1]
+DATA_0xF183             0x2000'00a0    0x10  Data  Gb  App_Dcm.o [1]
+DATA_0xF186             0x2000'0838     0x1  Data  Gb  App_Dcm.o [1]
+DATA_0xF187             0x2000'0070     0xc  Data  Gb  App_Dcm.o [1]
+DATA_0xF188             0x2000'0010    0x10  Data  Gb  App_Dcm.o [1]
+DATA_0xF189             0x2000'008c     0x8  Data  Gb  App_Dcm.o [1]
+DATA_0xF18A             0x2000'0060     0x8  Data  Gb  App_Dcm.o [1]
+DATA_0xF18B             0x2000'0810     0x4  Data  Gb  App_Dcm.o [1]
+DATA_0xF18C             0x2000'0774    0x10  Data  Gb  App_Dcm.o [1]
+DATA_0xF190             0x2000'00bc    0x14  Data  Gb  App_Dcm.o [1]
+DATA_0xF192             0x2000'0030    0x10  Data  Gb  App_Dcm.o [1]
+DATA_0xF193             0x2000'007c     0x8  Data  Gb  App_Dcm.o [1]
+DATA_0xF194             0x2000'0000    0x10  Data  Gb  App_Dcm.o [1]
+DATA_0xF195             0x2000'0084     0x8  Data  Gb  App_Dcm.o [1]
+DATA_0xF197             0x2000'0050     0x8  Data  Gb  App_Dcm.o [1]
+DATA_0xF199             0x2000'00d0     0x4  Data  Gb  App_Dcm.o [1]
+DATA_0xF19D             0x2000'00d4     0x4  Data  Gb  App_Dcm.o [1]
+DATA_0xF1A8             0x2000'0738    0x14  Data  Gb  App_Dcm.o [1]
+DCM_InitStatus          0x2000'0194     0x1  Data  Lc  Dcm.o [1]
+DMA_Init                     0xff43    0x58  Code  Gb  DMA.o [1]
+DTCEventFlag            0x2000'083d     0x1  Data  Gb  Event.o [1]
+DTCStatusAvailabilityMask
+                        0x2000'0208     0x1  Data  Lc  App_Dcm.o [1]
+DataVar                 0x2000'0828     0x4  Data  Gb  eeprom.o [1]
+DcmDspRoutineIdentifierTable_31
+                           0x1'2c38    0x58  Data  Gb  Dcm_Lcfg.o [1]
+Dcm_CopyRxData               0x9ddf    0x64  Code  Gb  Dcm_Cbk.o [1]
+Dcm_CopyTxData               0x9ec1    0x66  Code  Gb  Dcm_Cbk.o [1]
+Dcm_GetSecurityLevelMap
+                             0xa61d    0x66  Code  Lc  Dcm.o [1]
+Dcm_Init                     0xa511   0x10c  Code  Gb  Dcm.o [1]
+Dcm_MainFunction             0xa691    0x18  Code  Gb  Dcm.o [1]
+Dcm_ResetToDefaultSession
+                             0xa683     0xe  Code  Lc  Dcm.o [1]
+Dcm_RxIndication             0x9e43    0x7e  Code  Gb  Dcm_Cbk.o [1]
+Dcm_StartOfReception         0x9d59    0x86  Code  Gb  Dcm_Cbk.o [1]
+Dcm_TxConfirmation           0x9f2d    0x7a  Code  Gb  Dcm_Cbk.o [1]
+Dem_ReportErrorStatus        0xa50d     0x2  Code  Gb  Dem.o [1]
+DiagCopy                     0x9fed    0x14  Code  Lc  Dcm_Cbk.o [1]
+DidCounter              0x2000'0482     0x2  Data  Lc  Dcm.o [1]
+DidList                 0x2000'047c     0x4  Data  Lc  Dcm.o [1]
+DsdInternal_10_11_85         0xb331    0x18  Code  Lc  Dcm.o [1]
+DsdInternal_AccessAttemptNumberDec
+                             0xb34d    0x20  Code  Lc  Dcm.o [1]
+DsdInternal_DidDispatcher
+                             0xb211   0x120  Code  Lc  Dcm.o [1]
+DsdInternal_ProcessingDone
+                             0xae79    0xfc  Code  Gb  Dcm.o [1]
+DsdInternal_ProcessingDoneNoResponse
+                             0xaf7d     0xe  Code  Gb  Dcm.o [1]
+DsdInternal_RepeatTransmitCheck
+                             0xb191    0x66  Code  Lc  Dcm.o [1]
+DsdInternal_SecurityAccessKeyCompared
+                             0xb449    0x50  Code  Gb  Dcm.o [1]
+DsdInternal_SessionTransferPostProcessing
+                             0xb39d    0x64  Code  Lc  Dcm.o [1]
+DsdInternal_SetNegResponse
+                             0xae49    0x22  Code  Gb  Dcm.o [1]
+DsdInternal_UdsPostServiceProcessing
+                             0xb383    0x1a  Code  Lc  Dcm.o [1]
+DsdInternal_UdsRepeatServiceCall
+                             0xb36d    0x16  Code  Lc  Dcm.o [1]
+DsdInternal_UdsSidDispatcher
+                             0xafc1   0x1c8  Code  Lc  Dcm.o [1]
+DsdInternal_Uds_Common       0xb401    0x42  Code  Lc  Dcm.o [1]
+Dsd_GetSessionMapId          0xb4e9    0x3e  Code  Gb  Dcm.o [1]
+Dsd_InteralInit              0xb49d    0x28  Code  Gb  Dcm.o [1]
+DslInternal_RCRResponsePending
+                             0xa7e5    0x46  Code  Gb  Dcm.o [1]
+DslInternal_Timer_CallbackTask
+                             0xa6a9   0x126  Code  Lc  Dcm.o [1]
+DspInternal_Uds_ClearDiagnosticInformation
+                             0xa849    0x1c  Code  Gb  Dcm.o [1]
+DspInternal_Uds_CommunicationControl
+                             0xaa0d    0x2c  Code  Gb  Dcm.o [1]
+DspInternal_Uds_ControlDTCSetting
+                             0xae41     0x8  Code  Gb  Dcm.o [1]
+DspInternal_Uds_DiagnosticSessionControl
+                             0xa839     0x8  Code  Gb  Dcm.o [1]
+DspInternal_Uds_EcuReset
+                             0xa841     0x8  Code  Gb  Dcm.o [1]
+DspInternal_Uds_ReadDTCInformation
+                             0xa865    0x56  Code  Gb  Dcm.o [1]
+DspInternal_Uds_ReadDataByIdentifier
+                             0xa8bd    0x2a  Code  Gb  Dcm.o [1]
+DspInternal_Uds_RoutineControl
+                             0xab21   0x2f2  Code  Gb  Dcm.o [1]
+DspInternal_Uds_SecurityAccess
+                             0xa8ed   0x120  Code  Gb  Dcm.o [1]
+DspInternal_Uds_TesterPresent
+                             0xae19    0x28  Code  Gb  Dcm.o [1]
+DspInternal_Uds_WriteDataByIdentifier
+                             0xaa45    0xb6  Code  Gb  Dcm.o [1]
+ECU_HD_Number           0x2000'0040    0x10  Data  Gb  App_Dcm.o [1]
+ECU_SW_Number           0x2000'0020    0x10  Data  Gb  App_Dcm.o [1]
+EE_FindValidPage             0xf9ed    0x58  Code  Lc  eeprom.o [1]
+EE_Flash_Init                0xf1a9    0x56  Code  Gb  eeprom_cfg.o [1]
+EE_Flash_Task                0xf1ff    0x7c  Code  Gb  eeprom_cfg.o [1]
+EE_Flash_Task::ee_flash_addr
+                        0x2000'01fa     0x2  Data  Lc  eeprom_cfg.o [1]
+EE_Format                    0xf9c3    0x2a  Code  Lc  eeprom.o [1]
+EE_Init                      0xf7d1   0x194  Code  Gb  eeprom.o [1]
+EE_PageTransfer              0xfaad    0xac  Code  Lc  eeprom.o [1]
+EE_ReadVariable              0xf965    0x44  Code  Gb  eeprom.o [1]
+EE_VerifyPageFullWriteVariable
+                             0xfa51    0x54  Code  Lc  eeprom.o [1]
+EE_WriteVariable             0xf9a9    0x1a  Code  Gb  eeprom.o [1]
+EXTI_interrupt_init        0x1'10d3    0x7c  Code  Lc  LowPowerManage.o [1]
+Eeprom_RamRead               0xf27b    0x3a  Code  Gb  eeprom_cfg.o [1]
+Eeprom_RamWrite              0xf2b5    0x3a  Code  Gb  eeprom_cfg.o [1]
+EmptyFlagForHth         0x2000'0121     0x1  Data  Lc  Can.o [1]
+Event                   0x2000'0808     0x8  Data  Gb  Event.o [1]
+EventInit                    0xd2a9     0xe  Code  Gb  Event.o [1]
+FLASH_ErasePage              0xf78b    0x2e  Code  Lc  eeprom.o [1]
+FLASH_ProgramHalfWord        0xf7b9    0x18  Code  Lc  eeprom.o [1]
+FL_ADC_ClearFlag_EndOfCalibration
+                             0xfb75     0x6  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_ClearFlag_EndOfConversion
+                             0xf36d     0x6  Code  Lc  Adc_Drv.o [1]
+FL_ADC_CommonInit            0xfd37    0x5a  Code  Gb  fm33lg0xx_fl_adc.o [1]
+FL_ADC_DeInit                0xfd91    0x34  Code  Gb  fm33lg0xx_fl_adc.o [1]
+FL_ADC_Disable               0xf37d     0xa  Code  Lc  Adc_Drv.o [1]
+FL_ADC_Disable               0xfb85     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_DisableExternalConversion
+                             0xfbd3     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_DisableOverSampling
+                             0xfc51     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_DisableOverrunMode
+                             0xfc0d     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_DisableSequencerChannel
+                             0xf3a7     0xc  Code  Lc  Adc_Drv.o [1]
+FL_ADC_DisableWaitMode       0xfc2f     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_Enable                0xf373     0xa  Code  Lc  Adc_Drv.o [1]
+FL_ADC_Enable                0xfb7b     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_EnableCalibration
+                             0xfba5     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_EnableDMAReq          0xf391     0xa  Code  Lc  Adc_Drv.o [1]
+FL_ADC_EnableOverSampling
+                             0xfc45     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_EnableOverrunMode
+                             0xfc01     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_EnableSWConversion
+                             0xf387     0xa  Code  Lc  Adc_Drv.o [1]
+FL_ADC_EnableSequencerChannel
+                             0xf39b     0xc  Code  Lc  Adc_Drv.o [1]
+FL_ADC_EnableWaitMode        0xfc23     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_Init                  0xfdcd   0x12e  Code  Gb  fm33lg0xx_fl_adc.o [1]
+FL_ADC_IsActiveFlag_EndOfCalibration
+                             0xfb69     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_IsEnabled             0xfb8f     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetAPBPrescaler       0xfbdd     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetBitWidth           0xfbc7     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetClockSource        0xfbbb     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetConversionMode
+                             0xfc17     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetFastChannelSamplingTime
+                             0xfc7f     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetOverSamplingMultiplier
+                             0xfc5b     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetOverSamplingShift
+                             0xfc67     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetReferenceSource
+                             0xfbaf     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetSequenceScanDirection
+                             0xfbe9     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetSingleConversionAutoMode
+                             0xfc39     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetSlowChannelSamplingTime
+                             0xfc73     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetTriggerEdge        0xfb99     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ADC_SetTriggerSource
+                             0xfbf5     0xc  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_ATIM_DeInit             0x1'15e9    0x30  Code  Gb  fm33lg0xx_fl_atim.o [1]
+FL_ATIM_DisableALLOutput
+                           0x1'0ea3     0xa  Code  Lc  LowPowerManage.o [1]
+FL_BSTIM16_ClearFlag_Update
+                           0x1'1b59     0x6  Code  Lc  Tim.o [1]
+FL_BSTIM16_DeInit          0x1'1401    0x30  Code  Gb  fm33lg0xx_fl_bstim16.o [1]
+FL_BSTIM16_DisableARRPreload
+                           0x1'1347     0xa  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_BSTIM16_Enable          0x1'1b31     0xa  Code  Lc  Tim.o [1]
+FL_BSTIM16_EnableARRPreload
+                           0x1'133d     0xa  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_BSTIM16_EnableIT_Update
+                           0x1'1b3b     0xa  Code  Lc  Tim.o [1]
+FL_BSTIM16_EnableUpdateEvent
+                           0x1'1351     0xa  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_BSTIM16_GenerateUpdateEvent
+                           0x1'1365     0xa  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_BSTIM16_Init            0x1'144d    0x62  Code  Gb  fm33lg0xx_fl_bstim16.o [1]
+FL_BSTIM16_IsActiveFlag_Update
+                           0x1'135b     0xa  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_BSTIM16_IsActiveFlag_Update
+                           0x1'1b4f     0xa  Code  Lc  Tim.o [1]
+FL_BSTIM16_IsEnabledIT_Update
+                           0x1'1b45     0xa  Code  Lc  Tim.o [1]
+FL_BSTIM16_WriteAutoReload
+                           0x1'137b     0xc  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_BSTIM16_WritePrescaler
+                           0x1'136f     0xc  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_CAN_ClearFlag_BusOff
+                             0xa0c9     0x8  Code  Lc  Can.o [1]
+FL_CAN_ClearFlag_RXNotEmpty
+                             0xa0d1     0x6  Code  Lc  Can.o [1]
+FL_CAN_ClearFlag_TXOK        0xa0d7     0x6  Code  Lc  Can.o [1]
+FL_CAN_IsActiveFlag_BusOff
+                             0xa081     0xc  Code  Lc  Can.o [1]
+FL_CAN_IsActiveFlag_RXNotEmpty
+                             0xa08d     0xc  Code  Lc  Can.o [1]
+FL_CAN_IsActiveFlag_TXOK
+                             0xa099     0xc  Code  Lc  Can.o [1]
+FL_CAN_IsEnabledIT_BusOff
+                             0xa0a5     0xc  Code  Lc  Can.o [1]
+FL_CAN_IsEnabledIT_RXNotEmpty
+                             0xa0b1     0xc  Code  Lc  Can.o [1]
+FL_CAN_IsEnabledIT_TXOK
+                             0xa0bd     0xc  Code  Lc  Can.o [1]
+FL_CDIF_SetPrescaler       0x1'16f5     0xc  Code  Lc  Pll.o [1]
+FL_CMU_DisableGroup2BusClock
+                           0x1'0323     0xa  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_CMU_DisableGroup2BusClock
+                           0x1'00ab     0xa  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_CMU_DisableGroup3OperationClock
+                           0x1'159b     0xa  Code  Lc  fm33lg0xx_fl_atim.o [1]
+FL_CMU_DisableGroup3OperationClock
+                           0x1'13a5     0xa  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_CMU_DisableGroup3OperationClock
+                           0x1'00bf     0xa  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_CMU_DisableGroup4BusClock
+                           0x1'1591     0xa  Code  Lc  fm33lg0xx_fl_atim.o [1]
+FL_CMU_DisableGroup4BusClock
+                           0x1'1391     0xa  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_CMU_DisableGroup4BusClock
+                           0x1'14b1     0xa  Code  Lc  fm33lg0xx_fl_gptim.o [1]
+FL_CMU_EnableEXTIOnSleep
+                           0x1'0ead     0xe  Code  Lc  LowPowerManage.o [1]
+FL_CMU_EnableGroup1BusClock
+                             0xfc8b     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_CMU_EnableGroup1BusClock
+                           0x1'1c0f     0xa  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_CMU_EnableGroup1BusClock
+                           0x1'0579     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_CMU_EnableGroup1BusClock
+                           0x1'12c5     0xa  Code  Lc  fm33lg0xx_fl_iwdt.o [1]
+FL_CMU_EnableGroup1BusClock
+                           0x1'22d1     0xa  Code  Lc  fm33lg0xx_fl_svd.o [1]
+FL_CMU_EnableGroup1BusClock
+                           0x1'0ebb     0xa  Code  Lc  LowPowerManage.o [1]
+FL_CMU_EnableGroup2BusClock
+                             0xfc95     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_CMU_EnableGroup2BusClock
+                           0x1'0319     0xa  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_CMU_EnableGroup2BusClock
+                           0x1'00a1     0xa  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_CMU_EnableGroup3BusClock
+                             0xa0dd     0xa  Code  Lc  Can.o [1]
+FL_CMU_EnableGroup3OperationClock
+                             0xa0e7     0xa  Code  Lc  Can.o [1]
+FL_CMU_EnableGroup3OperationClock
+                             0xfc9f     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_CMU_EnableGroup3OperationClock
+                           0x1'139b     0xa  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_CMU_EnableGroup3OperationClock
+                           0x1'1c19     0xa  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_CMU_EnableGroup3OperationClock
+                           0x1'00b5     0xa  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_CMU_EnableGroup3OperationClock
+                           0x1'0ec5     0xa  Code  Lc  LowPowerManage.o [1]
+FL_CMU_EnableGroup4BusClock
+                           0x1'1387     0xa  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_CMU_IsActiveFlag_PLLReady
+                           0x1'1737     0xe  Code  Lc  Pll.o [1]
+FL_CMU_PLL_Enable          0x1'172b     0xc  Code  Lc  Pll.o [1]
+FL_CMU_SetADCClockSource
+                             0xfcb7     0xe  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_CMU_SetADCPrescaler       0xfca9     0xe  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_CMU_SetAHBPrescaler     0x1'170f     0xe  Code  Lc  Pll.o [1]
+FL_CMU_SetAPBPrescaler     0x1'1701     0xe  Code  Lc  Pll.o [1]
+FL_CMU_SetBSTIM16ClockSource
+                           0x1'13af     0xe  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_CMU_SetCANClockSource
+                             0xa0f1     0xe  Code  Lc  Can.o [1]
+FL_CMU_SetEXTIClockSource
+                           0x1'1c23     0xe  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_CMU_SetSystemClockSource
+                           0x1'171d     0xe  Code  Lc  Pll.o [1]
+FL_CMU_XTHF_Enable         0x1'1755     0xc  Code  Lc  Pll.o [1]
+FL_CMU_XTHF_WriteDriverStrength
+                           0x1'1745    0x10  Code  Lc  Pll.o [1]
+FL_DMA_ClearFlag_TransferComplete
+                             0xf3c9     0xa  Code  Lc  Adc_Drv.o [1]
+FL_DMA_ClearFlag_TransferComplete
+                           0x1'0449     0xa  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_ClearFlag_TransferHalfComplete
+                           0x1'0453     0x8  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_DeInit              0x1'0477    0x2a  Code  Gb  fm33lg0xx_fl_dma.o [1]
+FL_DMA_DisableCircularMode
+                           0x1'03f9    0x1c  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_Enable                0xff39     0xa  Code  Lc  DMA.o [1]
+FL_DMA_EnableChannel       0x1'0415    0x1a  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_EnableCircularMode
+                           0x1'03df    0x1a  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_Init                0x1'04cd    0x72  Code  Gb  fm33lg0xx_fl_dma.o [1]
+FL_DMA_IsActiveFlag_TransferComplete
+                             0xf3b3    0x16  Code  Lc  Adc_Drv.o [1]
+FL_DMA_SetBandwidth        0x1'03cb    0x14  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_SetFlashAddrIncremental
+                           0x1'038b     0xc  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_SetMemoryIncrementMode
+                           0x1'036b    0x20  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_SetPeripheralMap
+                           0x1'0397    0x14  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_SetPriority         0x1'034d    0x1e  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_SetTransmissionDirection
+                           0x1'03ab    0x20  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_StartTransmission
+                           0x1'053f    0x34  Code  Gb  fm33lg0xx_fl_dma.o [1]
+FL_DMA_WriteMemoryAddress
+                           0x1'042f    0x1a  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DMA_WriteTransmissionSize
+                           0x1'032d    0x20  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_DelayMs                 0x1'1e69    0x18  Code  Wk  fm33lg0xx_fl.o [1]
+FL_DelayUs                 0x1'1e81    0x3c  Code  Wk  fm33lg0xx_fl.o [1]
+FL_EXTI_CommonInit         0x1'1d67    0x1c  Code  Gb  fm33lg0xx_fl_exti.o [1]
+FL_EXTI_Init               0x1'1d85    0x8a  Code  Gb  fm33lg0xx_fl_exti.o [1]
+FL_FLASH_ClearFlag_AuthenticationError
+                           0x1'011b     0x8  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_ClearFlag_ClockError
+                           0x1'013b     0x8  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_ClearFlag_EraseComplete
+                           0x1'015f     0x6  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_ClearFlag_ProgramComplete
+                           0x1'014f     0x6  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_EnableErase       0x1'00e7    0x12  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_EnableProgram     0x1'00d5    0x12  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_GetFlashLockStatus
+                           0x1'0105     0xa  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_IsActiveFlag_AuthenticationError
+                           0x1'010f     0xc  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_IsActiveFlag_ClockError
+                           0x1'012f     0xc  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_IsActiveFlag_EraseComplete
+                           0x1'0155     0xa  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_IsActiveFlag_KeyError
+                           0x1'0123     0xc  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_IsActiveFlag_ProgramComplete
+                           0x1'0143     0xc  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_LockFlash         0x1'00fd     0x8  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_Program_Word      0x1'023d    0xc4  Code  Gb  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_SectorErase       0x1'0165    0xcc  Code  Gb  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_SetFlashEraseType
+                           0x1'00c9     0xc  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_FLASH_SetReadWait       0x1'1761     0xc  Code  Lc  Pll.o [1]
+FL_FLASH_UnlockFlash       0x1'00f9     0x4  Code  Lc  fm33lg0xx_fl_flash.o [1]
+FL_GPIO_ClearFlag_EXTI     0x1'1c7b     0x8  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_ClearFlag_EXTI     0x1'0ee7     0x8  Code  Lc  LowPowerManage.o [1]
+FL_GPIO_DeInit             0x1'05ff    0x50  Code  Gb  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_DisableDigitalFilter
+                           0x1'1c6f     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_DisablePinAnalogSwitch
+                           0x1'05dd     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_DisablePinInput
+                           0x1'058d     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_DisablePinOpenDrain
+                           0x1'05b5     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_DisablePinPullup
+                           0x1'05a1     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_DisablePinRemap
+                           0x1'05c9     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_EnableDigitalFilter
+                           0x1'1c63     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_EnablePinAnalogSwitch
+                           0x1'05d3     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_EnablePinInput     0x1'0583     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_EnablePinOpenDrain
+                           0x1'05ab     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_EnablePinPullup
+                           0x1'0597     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_EnablePinRemap     0x1'05bf     0xa  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_GetInputPin        0x1'0d31    0x14  Code  Lc  Gpio.o [1]
+FL_GPIO_Init               0x1'064f    0xd6  Code  Gb  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_IsActiveFlag_EXTI
+                           0x1'0ecf    0x18  Code  Lc  LowPowerManage.o [1]
+FL_GPIO_ResetOutputPin     0x1'004b     0xa  Code  Lc  CanTrcv.o [1]
+FL_GPIO_ResetOutputPin     0x1'0d4f     0xa  Code  Lc  Gpio.o [1]
+FL_GPIO_SetExtiLine0       0x1'1c83     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine1       0x1'1c8f     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine10      0x1'1cfb     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine11      0x1'1d07     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine12      0x1'1d13     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine13      0x1'1d1f     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine14      0x1'1d2b     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine15      0x1'1d37     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine16      0x1'1d43     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine17      0x1'1d4f     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine18      0x1'1d5b     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine2       0x1'1c9b     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine3       0x1'1ca7     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine4       0x1'1cb3     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine5       0x1'1cbf     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine6       0x1'1ccb     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine7       0x1'1cd7     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine8       0x1'1ce3     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetExtiLine9       0x1'1cef     0xc  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetOutputPin       0x1'0041     0xa  Code  Lc  CanTrcv.o [1]
+FL_GPIO_SetOutputPin       0x1'0d45     0xa  Code  Lc  Gpio.o [1]
+FL_GPIO_SetPinMode         0x1'05e7    0x18  Code  Lc  fm33lg0xx_fl_gpio.o [1]
+FL_GPIO_SetTriggerEdge0
+                           0x1'1c31    0x18  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPIO_SetTriggerEdge1
+                           0x1'1c49    0x1a  Code  Lc  fm33lg0xx_fl_exti.o [1]
+FL_GPTIM_DeInit            0x1'1505    0x74  Code  Gb  fm33lg0xx_fl_gptim.o [1]
+FL_IWDT_EnableFreezeWhileSleep
+                           0x1'0f01    0x18  Code  Lc  LowPowerManage.o [1]
+FL_IWDT_Init               0x1'1315    0x26  Code  Gb  fm33lg0xx_fl_iwdt.o [1]
+FL_IWDT_ReloadCounter        0xf779    0x12  Code  Lc  eeprom.o [1]
+FL_IWDT_ReloadCounter      0x1'12cf    0x12  Code  Lc  fm33lg0xx_fl_iwdt.o [1]
+FL_IWDT_ReloadCounter      0x1'0eef    0x12  Code  Lc  LowPowerManage.o [1]
+FL_IWDT_ReloadCounter      0x1'1f37    0x12  Code  Lc  main.o [1]
+FL_IWDT_SetPeriod          0x1'12e9    0x18  Code  Lc  fm33lg0xx_fl_iwdt.o [1]
+FL_IWDT_WriteWindow        0x1'1301    0x14  Code  Lc  fm33lg0xx_fl_iwdt.o [1]
+FL_Init                    0x1'16a5     0x8  Code  Gb  fm33lg0xx_fl.o [1]
+FL_NVIC_Init               0x1'16ad    0x26  Code  Gb  fm33lg0xx_fl.o [1]
+FL_PMU_DisableCoreVoltageScaling
+                           0x1'1255     0xa  Code  Lc  fm33lg0xx_fl_pmu.o [1]
+FL_PMU_EnableCoreVoltageScaling
+                           0x1'1249     0xc  Code  Lc  fm33lg0xx_fl_pmu.o [1]
+FL_PMU_SetLDOLowPowerMode
+                           0x1'1225     0xc  Code  Lc  fm33lg0xx_fl_pmu.o [1]
+FL_PMU_SetLowPowerMode     0x1'0f19     0xc  Code  Lc  LowPowerManage.o [1]
+FL_PMU_SetRCHFWakeupFrequency
+                           0x1'1231     0xc  Code  Lc  fm33lg0xx_fl_pmu.o [1]
+FL_PMU_SetSleepMode        0x1'123d     0xc  Code  Lc  fm33lg0xx_fl_pmu.o [1]
+FL_PMU_SetWakeupDelay      0x1'125f     0xc  Code  Lc  fm33lg0xx_fl_pmu.o [1]
+FL_PMU_Sleep_Init          0x1'126b    0x42  Code  Gb  fm33lg0xx_fl_pmu.o [1]
+FL_RMU_BOR_Enable          0x1'0f3b     0xa  Code  Lc  LowPowerManage.o [1]
+FL_RMU_BOR_Enable          0x1'1f55     0xa  Code  Lc  main.o [1]
+FL_RMU_BOR_SetThreshold
+                           0x1'0f2f     0xc  Code  Lc  LowPowerManage.o [1]
+FL_RMU_BOR_SetThreshold
+                           0x1'1f49     0xc  Code  Lc  main.o [1]
+FL_RMU_DisablePeripheralReset
+                             0xfcc5     0x6  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_RMU_DisablePeripheralReset
+                           0x1'15a5     0x6  Code  Lc  fm33lg0xx_fl_atim.o [1]
+FL_RMU_DisablePeripheralReset
+                           0x1'13bd     0x6  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_RMU_DisablePeripheralReset
+                           0x1'045b     0x6  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_RMU_DisablePeripheralReset
+                           0x1'14c1     0x6  Code  Lc  fm33lg0xx_fl_gptim.o [1]
+FL_RMU_DisableResetAHBPeripheral
+                           0x1'046f     0x8  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_RMU_DisableResetAPBPeripheral
+                             0xfced    0x1c  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_RMU_DisableResetAPBPeripheral
+                           0x1'15cd    0x1c  Code  Lc  fm33lg0xx_fl_atim.o [1]
+FL_RMU_DisableResetAPBPeripheral
+                           0x1'13e5    0x1c  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_RMU_DisableResetAPBPeripheral
+                           0x1'14e9    0x1c  Code  Lc  fm33lg0xx_fl_gptim.o [1]
+FL_RMU_EnablePeripheralReset
+                             0xfccb     0x6  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_RMU_EnablePeripheralReset
+                           0x1'15ab     0x6  Code  Lc  fm33lg0xx_fl_atim.o [1]
+FL_RMU_EnablePeripheralReset
+                           0x1'13c3     0x6  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_RMU_EnablePeripheralReset
+                           0x1'0461     0x6  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_RMU_EnablePeripheralReset
+                           0x1'14c7     0x6  Code  Lc  fm33lg0xx_fl_gptim.o [1]
+FL_RMU_EnableResetAHBPeripheral
+                           0x1'0467     0x8  Code  Lc  fm33lg0xx_fl_dma.o [1]
+FL_RMU_EnableResetAPBPeripheral
+                             0xfcd1    0x1c  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_RMU_EnableResetAPBPeripheral
+                           0x1'15b1    0x1c  Code  Lc  fm33lg0xx_fl_atim.o [1]
+FL_RMU_EnableResetAPBPeripheral
+                           0x1'13c9    0x1c  Code  Lc  fm33lg0xx_fl_bstim16.o [1]
+FL_RMU_EnableResetAPBPeripheral
+                           0x1'14cd    0x1c  Code  Lc  fm33lg0xx_fl_gptim.o [1]
+FL_RMU_PDR_Enable          0x1'0f25     0xa  Code  Lc  LowPowerManage.o [1]
+FL_SVD_ClearFlag_PowerFall
+                           0x1'2227     0x6  Code  Lc  svd_interrupt.o [1]
+FL_SVD_ClearFlag_PowerRise
+                           0x1'2237     0x6  Code  Lc  svd_interrupt.o [1]
+FL_SVD_DisableDigitalFilter
+                           0x1'22f1     0xa  Code  Lc  fm33lg0xx_fl_svd.o [1]
+FL_SVD_DisableDigitalFilter
+                           0x1'1f5f     0xa  Code  Lc  main.o [1]
+FL_SVD_DisableSVSChannel
+                           0x1'231d     0xa  Code  Lc  fm33lg0xx_fl_svd.o [1]
+FL_SVD_Enable              0x1'2131     0xa  Code  Lc  svd.o [1]
+FL_SVD_EnableDigitalFilter
+                           0x1'22e7     0xa  Code  Lc  fm33lg0xx_fl_svd.o [1]
+FL_SVD_EnableIT_PowerFall
+                           0x1'2207     0xa  Code  Lc  svd_interrupt.o [1]
+FL_SVD_EnableIT_PowerRise
+                           0x1'2211     0xa  Code  Lc  svd_interrupt.o [1]
+FL_SVD_EnableReference     0x1'2327     0x8  Code  Lc  fm33lg0xx_fl_svd.o [1]
+FL_SVD_EnableSVSChannel
+                           0x1'2313     0xa  Code  Lc  fm33lg0xx_fl_svd.o [1]
+FL_SVD_GetCurrentPowerStatus
+                           0x1'213b     0xa  Code  Lc  svd.o [1]
+FL_SVD_GetLatchedPowerStatus
+                           0x1'2145     0x8  Code  Lc  svd.o [1]
+FL_SVD_Init                0x1'232f    0x66  Code  Gb  fm33lg0xx_fl_svd.o [1]
+FL_SVD_IsActiveFlag_PowerFall
+                           0x1'221b     0xc  Code  Lc  svd_interrupt.o [1]
+FL_SVD_IsActiveFlag_PowerRise
+                           0x1'222d     0xa  Code  Lc  svd_interrupt.o [1]
+FL_SVD_SetEnablePeriod     0x1'2307     0xc  Code  Lc  fm33lg0xx_fl_svd.o [1]
+FL_SVD_SetWarningThreshold
+                           0x1'22db     0xc  Code  Lc  fm33lg0xx_fl_svd.o [1]
+FL_SVD_SetWorkMode         0x1'22fb     0xc  Code  Lc  fm33lg0xx_fl_svd.o [1]
+FL_VREF_ClearFlag_Ready
+                             0xfd31     0x6  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_VREF_Disable            0x1'0f4f     0xa  Code  Lc  LowPowerManage.o [1]
+FL_VREF_Enable               0xfd09     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_VREF_Enable             0x1'0f45     0xa  Code  Lc  LowPowerManage.o [1]
+FL_VREF_EnableTemperatureSensor
+                             0xfd1d     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_VREF_EnableVREFBuffer
+                             0xf3d3     0xa  Code  Lc  Adc_Drv.o [1]
+FL_VREF_IsActiveFlag_Ready
+                             0xfd27     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FL_VREF_IsEnabled            0xfd13     0xa  Code  Lc  fm33lg0xx_fl_adc.o [1]
+FindUdsSid                   0xaf8b    0x28  Code  Lc  Dcm.o [1]
+Flag_diag_session       0x2000'0199     0x1  Data  Gb  Dcm.o [1]
+GPIO_Config                0x1'239c   0x24c  Data  Gb  Gpio.o [1]
+GPIO_IRQHandler            0x1'10b3    0x20  Code  Gb  LowPowerManage.o [1]
+GPIO_Init                  0x1'0d59    0x60  Code  Gb  Gpio.o [1]
+GenerateKeyEx                0xce99    0x58  Code  Lc  App_Dcm.o [1]
+GetKey                       0xcef1     0xa  Code  Lc  App_Dcm.o [1]
+Get_SystemTime             0x1'1bab    0x10  Code  Gb  Tim.o [1]
+HardFault_Handler          0x1'1f69     0x8  Code  Gb  main.o [1]
+LogCanToNmChnAry           0x1'30ef     0x1  Data  Gb  OsekNm_Cfg.o [1]
+LowPowerManage          0x2000'083e     0x1  Data  Gb  LowPowerManage.o [1]
+LowPowerManageGotoSleepConditionIsTrue
+                           0x1'1169    0x12  Code  Gb  LowPowerManage.o [1]
+LowPowerManageInit         0x1'0fbf     0xe  Code  Gb  LowPowerManage.o [1]
+LowPowerManageSleepProcess
+                           0x1'0fcd    0x46  Code  Lc  LowPowerManage.o [1]
+LowPowerManageTask         0x1'117b    0x64  Code  Gb  LowPowerManage.o [1]
+LowPowerManageWakeUpProcess
+                           0x1'1013    0xa0  Code  Lc  LowPowerManage.o [1]
+MagicSeed               0x2000'0814     0x4  Data  Lc  App_Dcm.o [1]
+NVIC_ClearPendingIRQ       0x1'1bfd    0x12  Code  Lc  fm33lg0xx_fl_exti.o [1]
+NVIC_ClearPendingIRQ       0x1'0e4d    0x12  Code  Lc  LowPowerManage.o [1]
+NVIC_DisableIRQ            0x1'163f    0x12  Code  Lc  fm33lg0xx_fl.o [1]
+NVIC_DisableIRQ            0x1'0e3b    0x12  Code  Lc  LowPowerManage.o [1]
+NVIC_DisableIRQ            0x1'1ecf    0x12  Code  Lc  main.o [1]
+NVIC_DisableIRQ            0x1'1adb    0x12  Code  Lc  Tim.o [1]
+NVIC_EnableIRQ             0x1'162d    0x12  Code  Lc  fm33lg0xx_fl.o [1]
+NVIC_EnableIRQ             0x1'0e29    0x12  Code  Lc  LowPowerManage.o [1]
+NVIC_EnableIRQ             0x1'1ebd    0x12  Code  Lc  main.o [1]
+NVIC_EnableIRQ             0x1'1ac9    0x12  Code  Lc  Tim.o [1]
+NVIC_SetPriority           0x1'1651    0x44  Code  Lc  fm33lg0xx_fl.o [1]
+NVIC_SetPriority           0x1'0e5f    0x44  Code  Lc  LowPowerManage.o [1]
+NVIC_SetPriority           0x1'1ee1    0x44  Code  Lc  main.o [1]
+NVIC_SetPriority           0x1'1aed    0x44  Code  Lc  Tim.o [1]
+NVIC_SystemReset             0xf2fd    0x12  Code  Lc  App_Boot.o [1]
+NVIC_SystemReset             0xc1a1    0x12  Code  Lc  App_Dcm.o [1]
+NVIC_SystemReset           0x1'1f25    0x12  Code  Lc  main.o [1]
+NVIC_SystemReset           0x1'21f5    0x12  Code  Lc  svd_interrupt.o [1]
+NmBusErrorRecover            0xd5d5    0x94  Code  Lc  OsekNm.o [1]
+NmCanBusOffCheckFun          0xe589    0x60  Code  Lc  OsekNm.o [1]
+NmCancelAlarm                0xd939    0x72  Code  Lc  OsekNm.o [1]
+NmGotoModeAwake              0xdb49    0xde  Code  Lc  OsekNm.o [1]
+NmGotoModeSleep              0xdc27    0x34  Code  Lc  OsekNm.o [1]
+NmInitReset                  0xd6ef   0x124  Code  Lc  OsekNm.o [1]
+NmJudgeSkipped               0xe501    0x34  Code  Lc  OsekNm.o [1]
+NmModeCheckFun               0xdadd    0x4a  Code  Lc  OsekNm.o [1]
+NmReadyToBusSleep            0xd669    0x86  Code  Lc  OsekNm.o [1]
+NmResetConfig                0xe7bd    0x4c  Code  Lc  OsekNm.o [1]
+NmRxIndication               0xe0e5   0x2be  Code  Lc  OsekNm.o [1]
+NmRxPDUCopy                  0xd845    0x3c  Code  Lc  OsekNm.o [1]
+NmSetAlarm                   0xd88d    0xa2  Code  Lc  OsekNm.o [1]
+NmSetConfig                  0xe715    0xa4  Code  Lc  OsekNm.o [1]
+NmStandardNormal             0xe3a9   0x130  Code  Lc  OsekNm.o [1]
+NmTBusOffRecoveryTimeOutProc
+                             0xdff5     0x8  Code  Lc  OsekNm.o [1]
+NmTerrTimeOutProc            0xde1d   0x166  Code  Lc  OsekNm.o [1]
+NmTimerTBusOffCntFun         0xe6ad    0x28  Code  Lc  OsekNm.o [1]
+NmTimerTErrCntFun            0xe639    0x28  Code  Lc  OsekNm.o [1]
+NmTimerTMaxCntFun            0xe611    0x28  Code  Lc  OsekNm.o [1]
+NmTimerTTxCntFun             0xe661    0x20  Code  Lc  OsekNm.o [1]
+NmTimerTTypCntFun            0xe5e9    0x28  Code  Lc  OsekNm.o [1]
+NmTimerTWBSCntFun            0xe681    0x28  Code  Lc  OsekNm.o [1]
+NmTmaxTimeOutProc            0xddb5    0x62  Code  Lc  OsekNm.o [1]
+NmToLogCanChnAry           0x1'30ee     0x1  Data  Gb  OsekNm_Cfg.o [1]
+NmTtxTimeOutProc             0xdfc3    0x2c  Code  Lc  OsekNm.o [1]
+NmTtypTimeOutProc            0xdc69   0x14c  Code  Lc  OsekNm.o [1]
+NmTwbsTimeOutProc            0xdf89    0x3a  Code  Lc  OsekNm.o [1]
+NmTxBufferAry           0x2000'0624     0x8  Data  Lc  OsekNm.o [1]
+NmTxConfirmation             0xdffd    0xd8  Code  Lc  OsekNm.o [1]
+NmTxPDUCopy                  0xd81b    0x2a  Code  Lc  OsekNm.o [1]
+NmTxPDUCreat                 0xd813     0x8  Code  Lc  OsekNm.o [1]
+NmTxPduInfoAry          0x2000'062c     0x8  Data  Lc  OsekNm.o [1]
+NmUpdateLogSuc               0xe4d9    0x28  Code  Lc  OsekNm.o [1]
+PID_Init                   0x1'0cf1    0x3c  Code  Gb  App_PID.o [1]
+PduIdForHth             0x2000'0124     0x2  Data  Lc  Can.o [1]
+PduR_CanTpCopyRxData         0x9837    0x2a  Code  Gb  PduR.o [1]
+PduR_CanTpCopyTxData         0x97e5    0x18  Code  Gb  PduR.o [1]
+PduR_CanTpRxIndication       0x9861    0x28  Code  Gb  PduR.o [1]
+PduR_CanTpStartOfReception
+                             0x980d    0x2a  Code  Gb  PduR.o [1]
+PduR_CanTpTxConfirmation
+                             0x97fd    0x10  Code  Gb  PduR.o [1]
+PduR_DcmTransmit             0x97d1    0x14  Code  Gb  PduR.o [1]
+Region$$Table$$Base        0x1'2e74           --   Gb  - Linker created -
+Region$$Table$$Limit       0x1'2e9c           --   Gb  - Linker created -
+RetryInfoStruct         0x2000'0648     0x4  Data  Lc  CanTp.o [1]
+RimTempLookUp              0x1'25e8   0x144  Data  Lc  App_WheelHeat.o [1]
+RxFormatOffset          0x2000'063c     0x1  Data  Lc  CanTp.o [1]
+RxIpduADS_560           0x2000'07d0     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpduADS_560DefualtValue
+                           0x1'3010     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpduADS_560TimeoutValue
+                           0x1'3038     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_117              0x2000'07d8     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_117DefualtValue     0x1'3018     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_117TimeoutValue     0x1'3040     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_193              0x2000'07e0     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_193DefualtValue     0x1'3020     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_193TimeoutValue     0x1'3048     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_23C              0x2000'07f0     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_23CDefualtValue     0x1'3030     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_23CTimeoutValue     0x1'3058     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_2AB              0x2000'07e8     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_2ABDefualtValue     0x1'3028     0x8  Data  Gb  Com_Cfg.o [1]
+RxIpdu_2ABTimeoutValue     0x1'3050     0x8  Data  Gb  Com_Cfg.o [1]
+SVD_IRQHandler             0x1'223d    0x3c  Code  Gb  svd_interrupt.o [1]
+SVD_Init                   0x1'214d    0x40  Code  Gb  svd.o [1]
+SVD_Interrupt_Init         0x1'2289    0x38  Code  Gb  svd_interrupt.o [1]
+SVD_NVIC_Init              0x1'2279    0x10  Code  Gb  svd_interrupt.o [1]
+SVD_Result_Confirmed       0x1'21bd    0x36  Code  Gb  svd.o [1]
+SVD_SVDO_POLL              0x1'218d    0x18  Code  Gb  svd.o [1]
+SVD_SVDR_POLL              0x1'21a5    0x14  Code  Gb  svd.o [1]
+SelXTHFToPLL               0x1'17c1    0x72  Code  Gb  Pll.o [1]
+Sleep                      0x1'0f59    0x4c  Code  Lc  LowPowerManage.o [1]
+SupportedDTC               0x1'2ebc    0x20  Data  Gb  Dem_Cfg.o [1]
+SystemCoreClock         0x2000'01cc     0x4  Data  Gb  system_fm33lg0xx.o [1]
+SystemCoreClockUpdate      0x1'18f7    0xf6  Code  Gb  system_fm33lg0xx.o [1]
+SystemInit                 0x1'19ed    0xa4  Code  Gb  system_fm33lg0xx.o [1]
+SystemName              0x2000'0058     0x8  Data  Gb  App_Dcm.o [1]
+SystemPLLClockUpdate       0x1'1861    0x96  Code  Lc  system_fm33lg0xx.o [1]
+SystemTime              0x2000'0832     0x2  Data  Gb  Tim.o [1]
+SystemTime_Tick            0x1'1ba1     0xa  Code  Lc  Tim.o [1]
+SystemVoltageDTCTask         0xd375    0xae  Code  Gb  system_voltage_manage.o [1]
+SystemVoltageGetForDtcSnapShot
+                             0xd423    0x12  Code  Gb  system_voltage_manage.o [1]
+System_VoltageMv_Get         0xd545     0x6  Code  Gb  system_voltage_manage.o [1]
+TxFormatOffset          0x2000'063d     0x1  Data  Lc  CanTp.o [1]
+TxIpduSWS_36A           0x2000'07c8     0x8  Data  Gb  Com_Cfg.o [1]
+TxIpduSWS_36ADefualtValue
+                           0x1'2ff8     0x8  Data  Gb  Com_Cfg.o [1]
+XTHFClock               0x2000'01c8     0x4  Data  Gb  system_fm33lg0xx.o [1]
+XTHFInit                   0x1'1787    0x3a  Code  Gb  Pll.o [1]
+XTLFClock               0x2000'01c4     0x4  Data  Gb  system_fm33lg0xx.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'5fff          Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000          Data  Gb  <internal module>
+__aeabi_idiv                 0x98b9          Code  Gb  I32DivModFast.o [4]
+__aeabi_idiv0                0xa001          Code  Gb  IntDivZer.o [4]
+__aeabi_idivmod              0x98b9          Code  Gb  I32DivModFast.o [4]
+__aeabi_ldiv0              0x1'0575          Code  Gb  I64DivZer.o [4]
+__aeabi_lmul                 0xffa5          Code  Gb  I64Mul.o [4]
+__aeabi_memcpy4              0xb87d          Code  Gb  ABImemcpy.o [4]
+__aeabi_memcpy8              0xb87d          Code  Gb  ABImemcpy.o [4]
+__aeabi_memset               0xb821          Code  Gb  ABImemset.o [4]
+__aeabi_memset4              0xb841          Code  Gb  ABImemset.o [4]
+__aeabi_memset8              0xb841          Code  Gb  ABImemset.o [4]
+__aeabi_uidiv                0x98bf          Code  Gb  I32DivModFast.o [4]
+__aeabi_uidivmod             0x98bf          Code  Gb  I32DivModFast.o [4]
+__aeabi_uldivmod             0xffd7          Code  Gb  I64DivMod.o [4]
+__cmain                    0x1'2efd          Code  Gb  cmain.o [4]
+__exit                     0x1'2f35    0x14  Code  Gb  exit.o [5]
+__iar_Memset4_word           0xb84d          Code  Gb  ABImemset.o [4]
+__iar_Memset_word            0xb82d          Code  Gb  ABImemset.o [4]
+__iar_data_init3           0x1'2e29    0x28  Code  Gb  data_init.o [4]
+__iar_lz77_init_single3
+                             0xa003    0x7e  Code  Gb  lz77_init_single.o [4]
+__iar_program_start        0x1'2fed          Code  Gb  cstartup_M.o [4]
+__iar_zero_init3           0x1'2d65    0x3c  Code  Gb  zero_init3.o [4]
+__low_level_init           0x1'2f1b     0x4  Code  Gb  low_level_init.o [2]
+__vector_table               0x8100          Data  Gb  startup_fm33lg0xx.o [1]
+_call_main                 0x1'2f09          Code  Gb  cmain.o [4]
+_dem_clear_dtc               0xbd45    0x34  Code  Lc  Demm.o [1]
+_dem_get_state               0xbfed     0x6  Code  Gb  Demm.o [1]
+_exit                      0x1'2f29          Code  Gb  cexit.o [4]
+_main                      0x1'2f17          Code  Gb  cmain.o [4]
+app_read_data_add       0x2000'0094     0xc  Data  Gb  App_Dcm.o [1]
+boot_read_data_add      0x2000'00b0     0xc  Data  Gb  App_Dcm.o [1]
+c_dtc_extended_data_id     0x1'307c     0x4  Data  Gb  Dem_Cfg.o [1]
+c_dtc_snap_shot_data_id
+                           0x1'3060     0x8  Data  Gb  Dem_Cfg.o [1]
+clear_nm_can_sleep_flag
+                             0xf70d     0x8  Code  Gb  OsekNm_App.o [1]
+convertRimTemp             0x1'0729    0x8c  Code  Lc  App_WheelHeat.o [1]
+dem_check_sub                0xc005   0x116  Code  Lc  Demm.o [1]
+dem_clear_all_test_result
+                             0xbb15    0x2a  Code  Lc  Demm.o [1]
+dem_clear_dtc                0xbd79    0x96  Code  Gb  Demm.o [1]
+dem_clear_test_result        0xbb79    0x3e  Code  Gb  Demm.o [1]
+dem_disable_dtc_setting
+                             0xbfe1     0xc  Code  Gb  Demm.o [1]
+dem_dtc_extended_data_record
+                             0xba05    0x1c  Code  Lc  Demm.o [1]
+dem_dtc_record_storay        0xba21    0x38  Code  Lc  Demm.o [1]
+dem_dtc_snap_short_record
+                             0xb9a9    0x5c  Code  Lc  Demm.o [1]
+dem_enable_dtc_setting       0xbfbd    0x1c  Code  Gb  Demm.o [1]
+dem_get_dtc_handle           0xbd0d    0x38  Code  Lc  Demm.o [1]
+dem_get_stored_index         0xb96f    0x3a  Code  Gb  Demm.o [1]
+dem_get_test_result_updated
+                             0xbbbd    0x5c  Code  Lc  Demm.o [1]
+dem_init                     0xbca9    0x60  Code  Lc  Demm.o [1]
+dem_mem_clear                0xb8b1    0x20  Code  Lc  Demm.o [1]
+dem_mem_set                  0xb8d1    0x1c  Code  Lc  Demm.o [1]
+dem_set_test_result          0xbb3f    0x3a  Code  Gb  Demm.o [1]
+dem_stored_dtc_clear         0xb8ed    0x40  Code  Lc  Demm.o [1]
+dem_stored_dtc_index_init
+                             0xbc1d    0x42  Code  Lc  Demm.o [1]
+dem_stored_dtc_sets          0xb92d    0x42  Code  Lc  Demm.o [1]
+dem_stored_dtc_status_init
+                             0xbc69    0x40  Code  Lc  Demm.o [1]
+dem_stored_dtc_status_read
+                             0xba59    0xbc  Code  Lc  Demm.o [1]
+dem_task                     0xc11b    0x26  Code  Gb  Demm.o [1]
+dem_task_init                0xbe0f    0x26  Code  Gb  Demm.o [1]
+demm_dtc                0x2000'05d8    0x30  Data  Lc  Demm.o [1]
+demm_operation_cycle_chaned_event_proc
+                             0xc141    0x4a  Code  Gb  Demm.o [1]
+dtc_cfg_tbl                0x1'2edc    0x20  Data  Gb  Dem_Cfg.o [1]
+dtc_info_struct         0x2000'0538    0x5c  Data  Gb  Demm.o [1]
+dtc_process                  0xbe41   0x176  Code  Lc  Demm.o [1]
+dtc_record              0x2000'0800     0x8  Data  Lc  Demm.o [1]
+dtcoffflag                   0xd33f     0x8  Code  Gb  Event.o [1]
+dtconflag                    0xd337     0x8  Code  Gb  Event.o [1]
+eReadEngineState             0xb735     0x6  Code  Gb  App_Can.o [1]
+eReadKeyState                0xb72f     0x6  Code  Gb  App_Can.o [1]
+eSVDResult              0x2000'0209     0x1  Data  Lc  svd_interrupt.o [1]
+eeprom_write_status     0x2000'01f8     0x2  Data  Gb  eeprom_cfg.o [1]
+encipher                     0xce3d    0x56  Code  Gb  App_Dcm.o [1]
+exit                       0x1'2f1f     0x8  Code  Gb  exit.o [2]
+fStepBuffer             0x2000'07a4     0xc  Data  Lc  App_PID.o [1]
+gActiveProtocol         0x2000'018e     0x1  Data  Gb  Dcm.o [1]
+gCurentDcmDsdServiceTableSize
+                           0x1'3074     0x4  Data  Gb  Dcm_Cfg.o [1]
+gCurrentDcmDsdServiceTable
+                        0x2000'01c0     0x4  Data  Gb  Dcm_Cfg.o [1]
+gCurrentSecurityAccessRequestLevel
+                        0x2000'0191     0x1  Data  Gb  Dcm.o [1]
+gCurrentSessionType     0x2000'018c     0x1  Data  Gb  Dcm.o [1]
+gCurrentSidMap          0x2000'01bc     0x4  Data  Gb  Dcm_Cfg.o [1]
+gDTCSwitch              0x2000'0835     0x1  Data  Gb  App_Dcm.o [1]
+gDcmDsdSubService          0x1'272c   0x140  Data  Gb  Dcm_Cfg.o [1]
+gDcmDsdSubService_22       0x1'286c   0x140  Data  Gb  Dcm_Lcfg.o [1]
+gDcmDsdSubService_2E       0x1'2d24    0x40  Data  Gb  Dcm_Lcfg.o [1]
+gDcmDslAvailableBufferSize
+                        0x2000'01b4     0x8  Data  Gb  Dcm.o [1]
+gDcmDspNonDefaultSessionS3Server
+                           0x1'3078     0x4  Data  Gb  Dcm_Lcfg.o [1]
+gDcmDspSecurityRow         0x1'2b2c    0x8c  Data  Gb  Dcm_Lcfg.o [1]
+gDcmDspSessionRow          0x1'2e50    0x24  Data  Gb  Dcm_Lcfg.o [1]
+gDcm_CurrentServiceSubfuncAvail
+                        0x2000'0198     0x1  Data  Lc  Dcm.o [1]
+gDcm_RepeatTransmitFlag
+                        0x2000'0197     0x1  Data  Lc  Dcm.o [1]
+gDiagState              0x2000'0477     0x1  Data  Gb  Dcm.o [1]
+gDidPosition            0x2000'0195     0x1  Data  Lc  Dcm.o [1]
+gDidResDataLen          0x2000'04d4     0x4  Data  Lc  Dcm.o [1]
+gFunctionHandler        0x2000'04c4     0x4  Data  Gb  Dcm.o [1]
+gMaxNumberOfRCRRP       0x2000'04d0     0x4  Data  Lc  Dcm.o [1]
+gMsgContextType         0x2000'0458    0x1c  Data  Gb  Dcm.o [1]
+gNegativeResponseBuffer
+                        0x2000'0820     0x4  Data  Gb  Dcm.o [1]
+gNegativeResponseBufferForRRCP
+                        0x2000'0824     0x4  Data  Gb  Dcm.o [1]
+gNegativeResponseCode   0x2000'0476     0x1  Data  Gb  Dcm.o [1]
+gNumberOfWriteDID       0x2000'0196     0x1  Data  Lc  Dcm.o [1]
+gP2ServerTimer          0x2000'0484     0x4  Data  Gb  Dcm.o [1]
+gP2ServerTimerStartFlag
+                        0x2000'018f     0x1  Data  Gb  Dcm.o [1]
+gResponseLength         0x2000'0480     0x2  Data  Gb  Dcm.o [1]
+gRountineControlDidHandle
+                        0x2000'0193     0x1  Data  Gb  Dcm.o [1]
+gRountineControlSequence
+                        0x2000'019a     0x2  Data  Gb  Dcm.o [1]
+gS3ServerTimer          0x2000'0488     0x4  Data  Gb  Dcm.o [1]
+gS3ServerTimerStartFlag
+                        0x2000'0190     0x1  Data  Gb  Dcm.o [1]
+gSecLevelForCurrentSecurityAccessRequestLevel
+                        0x2000'018d     0x1  Data  Gb  Dcm.o [1]
+gSecLevelType           0x2000'0474     0x1  Data  Gb  Dcm.o [1]
+gSecurityAcessAttempNumber
+                        0x2000'01a4     0x8  Data  Gb  Dcm.o [1]
+gSecurityAcessAttempNumberExceeded
+                        0x2000'07f8     0x8  Data  Gb  Dcm.o [1]
+gSecurityAcessDelayTime
+                        0x2000'04a8    0x1c  Data  Gb  Dcm.o [1]
+gSecurityAcessDelayTimeOnBoot
+                        0x2000'048c    0x1c  Data  Gb  Dcm.o [1]
+gSecurityAcessSequence  0x2000'01ac     0x8  Data  Gb  Dcm.o [1]
+gSecurityDelayTimeOnBootFlag
+                        0x2000'0192     0x1  Data  Gb  Dcm.o [1]
+gServiceTable_1            0x1'2a6c    0xc0  Data  Lc  Dcm_Cfg.o [1]
+gSesCtrlType            0x2000'0475     0x1  Data  Gb  Dcm.o [1]
+gSidMap_1                  0x1'2cdc    0x48  Data  Gb  Dcm_Cfg.o [1]
+gSubFunctionHandler     0x2000'04c8     0x4  Data  Gb  Dcm.o [1]
+gSubFunctionPostHandler
+                        0x2000'04cc     0x4  Data  Lc  Dcm.o [1]
+gSubServicePosition     0x2000'0478     0x1  Data  Lc  Dcm.o [1]
+gUDS_Functional_DiagBuffer
+                        0x2000'019c     0x8  Data  Gb  Dcm.o [1]
+gUDS_Physical_DiagBuffer
+                        0x2000'020c   0x1b8  Data  Gb  Dcm.o [1]
+gs_FaultMature          0x2000'01dc    0x10  Data  Gb  system_voltage_manage.o [1]
+gs_SystemVoltageManage  0x2000'01d0     0xc  Data  Lc  system_voltage_manage.o [1]
+gs_SystemVoltageManageDtc
+                        0x2000'01ec     0x8  Data  Lc  system_voltage_manage.o [1]
+i                       0x2000'0830     0x2  Data  Gb  eeprom_cfg.o [1]
+kArray                  0x2000'0708    0x10  Data  Lc  App_Dcm.o [1]
+main                       0x1'1f71   0x190  Code  Gb  main.o [1]
+main::timer_100ms       0x2000'0206     0x2  Data  Lc  main.o [1]
+main::timer_10ms_b      0x2000'0200     0x2  Data  Lc  main.o [1]
+main::timer_1ms_a       0x2000'01fc     0x2  Data  Lc  main.o [1]
+main::timer_2ms_a       0x2000'0204     0x2  Data  Lc  main.o [1]
+main::timer_2ms_b       0x2000'0202     0x2  Data  Lc  main.o [1]
+main::timer_5ms_a       0x2000'01fe     0x2  Data  Lc  main.o [1]
+memory_copys                 0xf18d    0x1c  Code  Gb  Memory.o [1]
+memset                       0xa4f9    0x14  Code  Gb  memset.o [4]
+nmBusOffFastRecoveryAry
+                           0x1'30a2     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nmBusOffSlowRecoveryAry
+                           0x1'30a4     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nmChannelConfigAry         0x1'30ed     0x1  Data  Gb  OsekNm_Cfg.o [1]
+nmChannelNodeID            0x1'30f0     0x1  Data  Gb  OsekNm_Cfg.o [1]
+nmChn0LimpHomeCfgRecordAry
+                        0x2000'0760    0x14  Data  Lc  OsekNm_Cfg.o [1]
+nmChn0NormalCfgRecordAry
+                        0x2000'074c    0x14  Data  Lc  OsekNm_Cfg.o [1]
+nmCountBusoffFastTimerAry
+                           0x1'309e     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nmCountBusoffSlowTimerAry
+                           0x1'30a0     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nmCountErrAry              0x1'3098     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nmCountMaxAry              0x1'3096     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nmCountTxAry               0x1'309c     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nmCountTypAry              0x1'3094     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nmCountWbsAry              0x1'309a     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nmLimpHomeCfgPtrAry        0x1'3090     0x4  Data  Gb  OsekNm_Cfg.o [1]
+nmLogicalSuccessorAry   0x2000'061c     0x1  Data  Lc  OsekNm.o [1]
+nmNormalCfgPtrAry          0x1'308c     0x4  Data  Gb  OsekNm_Cfg.o [1]
+nmNumberOfCfgNodeAry       0x1'30f3     0x1  Data  Gb  OsekNm_Cfg.o [1]
+nmPduBasicIDAry            0x1'3080     0x4  Data  Gb  OsekNm_Cfg.o [1]
+nmPduBasicIDMaskAry        0x1'3084     0x4  Data  Gb  OsekNm_Cfg.o [1]
+nmPduSouceIDMaskAry        0x1'3088     0x4  Data  Gb  OsekNm_Cfg.o [1]
+nmRxCountAry            0x2000'061e     0x1  Data  Lc  OsekNm.o [1]
+nmRxDataFldAry          0x2000'0614     0x8  Data  Lc  OsekNm.o [1]
+nmRxLimitAry               0x1'30f1     0x1  Data  Gb  OsekNm_Cfg.o [1]
+nmRxSrcAddAry           0x2000'061d     0x1  Data  Lc  OsekNm.o [1]
+nmStatusAry             0x2000'0608     0x4  Data  Lc  OsekNm.o [1]
+nmTimerCntTbusoffAry    0x2000'07ba     0x2  Data  Lc  OsekNm.o [1]
+nmTimerCntTerrAry       0x2000'07b4     0x2  Data  Lc  OsekNm.o [1]
+nmTimerCntTmaxAry       0x2000'07b2     0x2  Data  Lc  OsekNm.o [1]
+nmTimerCntTtxAry        0x2000'07b8     0x2  Data  Lc  OsekNm.o [1]
+nmTimerCntTtypAry       0x2000'07b0     0x2  Data  Lc  OsekNm.o [1]
+nmTimerCntTwbsAry       0x2000'07b6     0x2  Data  Lc  OsekNm.o [1]
+nmTxCountAry            0x2000'061f     0x1  Data  Lc  OsekNm.o [1]
+nmTxDataFldAry          0x2000'060c     0x8  Data  Lc  OsekNm.o [1]
+nmTxLimitAry               0x1'30f2     0x1  Data  Gb  OsekNm_Cfg.o [1]
+nmTxPduIdAry               0x1'2f32     0x2  Data  Gb  OsekNm_Cfg.o [1]
+nm_can_sleep_flag       0x2000'083f     0x1  Data  Lc  OsekNm_App.o [1]
+nm_can_wake_up_flag     0x2000'0840     0x1  Data  Lc  OsekNm_App.o [1]
+nm_wait_bus_sleep_cancel_flag
+                        0x2000'0841     0x1  Data  Lc  OsekNm_App.o [1]
+nubNmBusOffCntAry       0x2000'0620     0x1  Data  Lc  OsekNm.o [1]
+pid                     0x2000'00e8    0x38  Data  Gb  App_WheelHeat.o [1]
+read_nm_can_sleep_flag       0xf707     0x6  Code  Gb  OsekNm_App.o [1]
+s16PidSetPoint          0x2000'00e4     0x2  Data  Gb  App_WheelHeat.o [1]
+seedArray               0x2000'0718     0x8  Data  Lc  App_Dcm.o [1]
+service                 0x2000'0794    0x10  Data  Lc  Dcm.o [1]
+setExtiLineFuncs           0x1'2c90    0x4c  Data  Lc  fm33lg0xx_fl_exti.o [1]
+setTrigEdgeFuncs           0x1'1e60     0x8  Data  Lc  fm33lg0xx_fl_exti.o [1]
+spbusoff                0x2000'065c     0xc  Data  Gb  App_Can.o [1]
+system_voltage          0x2000'01f4     0x4  Data  Lc  system_voltage_manage.o [1]
+system_voltage_manage_task
+                             0xd435    0xd8  Code  Gb  system_voltage_manage.o [1]
+system_voltage_mode_get
+                             0xd50d    0x38  Code  Gb  system_voltage_manage.o [1]
+u16BusOffRecoverCntr    0x2000'067e     0x2  Data  Gb  App_Can.o [1]
+u16Frame2ABRecovCntr    0x2000'067c     0x2  Data  Lc  App_Can.o [1]
+u16Frame2ABTimeoutCntr  0x2000'067a     0x2  Data  Lc  App_Can.o [1]
+u16IGNTimer             0x2000'081a     0x2  Data  Lc  App_Demm.o [1]
+u16VehicleSpeed         0x2000'07c6     0x2  Data  Gb  App_Can.o [1]
+u16delat                0x2000'00e2     0x2  Data  Gb  App_WheelHeat.o [1]
+u16readntcvalue            0x1'07b5     0x6  Code  Gb  App_WheelHeat.o [1]
+u32AppValidCRC32           0x1'b7f8     0x4  Data  Gb  main.o [1]
+u32AppValidFlag            0x1'b7fc     0x4  Data  Gb  main.o [1]
+u32ReprogramFlag        0x2000'7fc0     0x4  Data  Gb  main.o [1]
+u8BusOffFlag            0x2000'0670     0x1  Data  Lc  App_Can.o [1]
+u8CheckCondition           0x1'0827    0xfe  Code  Gb  App_WheelHeat.o [1]
+u8CheckHeatCmd             0x1'0ac5    0x4c  Code  Gb  App_WheelHeat.o [1]
+u8DTCMonitorCond        0x2000'0818     0x1  Data  Lc  App_Demm.o [1]
+u8ECU_HardwareVersionNumber
+                           0x1'b411     0x5  Data  Gb  App_Dcm.o [1]
+u8ECU_SoftwareVersionNumber
+                           0x1'b40c     0x5  Data  Gb  App_Dcm.o [1]
+u8ECU_facturepartnumber
+                           0x1'b400     0xc  Data  Gb  App_Dcm.o [1]
+u8EE_Flash_Ram          0x2000'6000  0x1000  Data  Gb  eeprom_cfg.o [1]
+u8EngineState           0x2000'0677     0x1  Data  Gb  App_Can.o [1]
+u8Flag_EnterProg        0x2000'082c     0x1  Data  Gb  App_Dcm.o [1]
+u8Frame2ABTimeoutFlag   0x2000'0671     0x1  Data  Lc  App_Can.o [1]
+u8Frame560RecvCntr      0x2000'0675     0x1  Data  Gb  App_Can.o [1]
+u8Frame560TimeoutCntr   0x2000'0674     0x1  Data  Gb  App_Can.o [1]
+u8GetMonitorDtcCondition
+                             0xd1e1     0x6  Code  Gb  App_Demm.o [1]
+u8GetNTCFaultFlag          0x1'0a15     0xe  Code  Gb  App_WheelHeat.o [1]
+u8HeatCmd_test          0x2000'00d8     0x1  Data  Gb  App_WheelHeat.o [1]
+u8HeatCommand           0x2000'0668     0x8  Data  Gb  App_Can.o [1]
+u8HeatEnableCondition   0x2000'0676     0x1  Data  Gb  App_Can.o [1]
+u8HeatFeedBack          0x2000'00db     0x1  Data  Gb  App_WheelHeat.o [1]
+u8HeatGetStatus            0x1'0c29     0x6  Code  Gb  App_WheelHeat.o [1]
+u8HeatStatusSignal      0x2000'00d9     0x1  Data  Gb  App_WheelHeat.o [1]
+u8HvtSts                0x2000'0678     0x1  Data  Gb  App_Can.o [1]
+u8KeyState              0x2000'0673     0x1  Data  Gb  App_Can.o [1]
+u8MonitorVoltDtcCondition
+                             0xd351    0x24  Code  Lc  system_voltage_manage.o [1]
+u8OldHeatCmd            0x2000'00dc     0x1  Data  Gb  App_WheelHeat.o [1]
+u8OldHeatVehlMode       0x2000'00dd     0x1  Data  Gb  App_WheelHeat.o [1]
+u8PidResult             0x2000'00da     0x1  Data  Gb  App_WheelHeat.o [1]
+u8ReadHeatEnableCondition
+                             0xb713    0x1c  Code  Gb  App_Can.o [1]
+u8ReadRemoteHeatSwitchStatus
+                             0xb705     0xe  Code  Gb  App_Can.o [1]
+u8RemoteHeatSwitchStatus
+                        0x2000'0672     0x1  Data  Gb  App_Can.o [1]
+u8SupplierCode          0x2000'0068     0x8  Data  Gb  App_Dcm.o [1]
+u8SystemVoltFaultFlag   0x2000'0834     0x1  Data  Lc  App_Can.o [1]
+u8adjustheat            0x2000'082d     0x1  Data  Gb  App_Dcm.o [1]
+u8flag_heat             0x2000'00df     0x1  Data  Gb  App_WheelHeat.o [1]
+u8flagheat              0x2000'00de     0x1  Data  Gb  App_WheelHeat.o [1]
+vAppCanInit                  0xb529    0x1c  Code  Gb  App_Can.o [1]
+vAppCanTask                  0xb5b3    0x68  Code  Gb  App_Can.o [1]
+vAppHeatInit                 0xc1b3     0xa  Code  Gb  App_Dcm.o [1]
+vBusoffCheck                 0xb769    0x70  Code  Gb  App_Can.o [1]
+vBusoffTimeFun               0xb7d9    0x34  Code  Gb  App_Can.o [1]
+vCheckBusOffDTC              0xb545    0x28  Code  Gb  App_Can.o [1]
+vCheckFrame2AB               0xb56d    0x46  Code  Gb  App_Can.o [1]
+vGpioDeinit                0x1'0db9    0x26  Code  Gb  Gpio.o [1]
+vHeatDiag                  0x1'09bd    0x58  Code  Gb  App_WheelHeat.o [1]
+vHeatGetInputIO            0x1'0e0f     0xe  Code  Gb  Gpio.o [1]
+vHeatOutputOff             0x1'0e03     0xc  Code  Gb  Gpio.o [1]
+vHeatOutputOn              0x1'0df7     0xc  Code  Gb  Gpio.o [1]
+vHeatShortOpenDiag         0x1'0925    0x90  Code  Gb  App_WheelHeat.o [1]
+vLedSwitchOff              0x1'0deb     0xc  Code  Gb  Gpio.o [1]
+vLedSwitchOn               0x1'0ddf     0xc  Code  Gb  Gpio.o [1]
+vMonitorDtcConditionTask
+                             0xd1e7    0x46  Code  Lc  App_Demm.o [1]
+vOverHeatDiag              0x1'0a29    0x7e  Code  Lc  App_WheelHeat.o [1]
+vSelfHealingProcess          0xd22d    0x1c  Code  Lc  App_Demm.o [1]
+vSelfHealingProcess::LastkeyState
+                        0x2000'0839     0x1  Data  Lc  App_Demm.o [1]
+vSendHeatStatusSignal      0x1'0c1d     0xc  Code  Lc  App_WheelHeat.o [1]
+vSetBusOk                    0xb751    0x10  Code  Gb  App_Can.o [1]
+vSetbusoffFlag               0xb749     0x8  Code  Gb  App_Can.o [1]
+vWdtInit                   0x1'0fa5    0x1a  Code  Gb  LowPowerManage.o [1]
+
+
+[1] = E:\Project\JAC\JS6\official_edition\JS6 SW1.09\IARProject\Debug\Obj
+[2] = dl6M_tln.a
+[3] = m6M_tl.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+  42'002 bytes of readonly  code memory
+   3'286 bytes of readonly  data memory (+ 22 absolute)
+   8'260 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

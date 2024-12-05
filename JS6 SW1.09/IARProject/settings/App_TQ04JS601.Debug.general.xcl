@@ -1,0 +1,13 @@
+"E:\IAR 8.40.2\arm\bin\armproc.dll" 
+
+"E:\IAR 8.40.2\arm\bin\armjlink2.dll" 
+
+"E:\Project\JAC\JS6\official_edition\JS6 SW1.09\IARProject\Debug\Exe\App_TQ04JS601.out" 
+
+--plugin="E:\IAR 8.40.2\arm\bin\armbat.dll" 
+
+--flash_loader="E:\IAR 8.40.2\arm\config\flashloader\FMSH\FM33LG02x.board" 
+
+
+
+

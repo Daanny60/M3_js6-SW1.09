@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<flash_board>
+ <pass>
+    <range>CODE 0x00000000 0x0003FFFF</range>
+    <loader>$PROJ_DIR$\flashloader\FM33LG04x.flash</loader>
+  </pass>
+  
+</flash_board>
+
+

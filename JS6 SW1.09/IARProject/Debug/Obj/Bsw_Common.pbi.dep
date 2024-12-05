@@ -1,0 +1,9 @@
+Bsw_Common.pbi: \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\Source\ComStack\AutoSarNm\Bsw_Common.c \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\Source\ComStack\AutoSarNm/Bsw_Common.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common\Std_Types.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common/Platform_Types.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common/Compiler.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common/Compiler_Cfg.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common\compiler.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common\MemMap.h

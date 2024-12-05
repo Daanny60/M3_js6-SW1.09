@@ -1,0 +1,119 @@
+#Generating source browse information for project App_TQ04JS601
+
+
+#Abbreviations
+cc = E$:\IAR$ 8.40.2\common\bin\SourceIndexer.exe
+ll = E$:\IAR$ 8.40.2\common\bin\PbdLink.exe
+bd = E$:\IAR$ 8.40.2\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build App_Boot.pbi : index App_Boot.xcl
+build App_BootCfg.pbi : index App_BootCfg.xcl
+build App_Can.pbi : index App_Can.xcl
+build App_Demm.pbi : index App_Demm.xcl
+build App_PID.pbi : index App_PID.xcl
+build App_WheelHeat.pbi : index App_WheelHeat.xcl
+build LowPowerManage.pbi : index LowPowerManage.xcl
+build system_voltage_manage.pbi : index system_voltage_manage.xcl
+build Can_PBcfg.pbi : index Can_PBcfg.xcl
+build CanIf_Lcfg.pbi : index CanIf_Lcfg.xcl
+build CanTp_PBcfg.pbi : index CanTp_PBcfg.xcl
+build App_Com.pbi : index App_Com.xcl
+build Com_Cfg.pbi : index Com_Cfg.xcl
+build Com_Lcfg.pbi : index Com_Lcfg.xcl
+build App_Dcm.pbi : index App_Dcm.xcl
+build Dcm_Cfg.pbi : index Dcm_Cfg.xcl
+build Dcm_Lcfg.pbi : index Dcm_Lcfg.xcl
+build OsekNm.pbi : index OsekNm.xcl
+build OsekNm_App.pbi : index OsekNm_App.xcl
+build OsekNm_Cfg.pbi : index OsekNm_Cfg.xcl
+build Can.pbi : index Can.xcl
+build Can_Cbk.pbi : index Can_Cbk.xcl
+build Dem.pbi : index Dem.xcl
+build Dem_Cfg.pbi : index Dem_Cfg.xcl
+build Demm.pbi : index Demm.xcl
+build Det.pbi : index Det.xcl
+build CanIf.pbi : index CanIf.xcl
+build CanTp.pbi : index CanTp.xcl
+build CanTrcv.pbi : index CanTrcv.xcl
+build App_Ccp.pbi : index App_Ccp.xcl
+build Ccp.pbi : index Ccp.xcl
+build Ccp_Cfg.pbi : index Ccp_Cfg.xcl
+build Com.pbi : index Com.xcl
+build Dcm.pbi : index Dcm.xcl
+build Dcm_Cbk.pbi : index Dcm_Cbk.xcl
+build PduR.pbi : index PduR.xcl
+build system_fm33lg0xx.pbi : index system_fm33lg0xx.xcl
+build fm33lg0xx_fl.pbi : index fm33lg0xx_fl.xcl
+build fm33lg0xx_fl_adc.pbi : index fm33lg0xx_fl_adc.xcl
+build fm33lg0xx_fl_aes.pbi : index fm33lg0xx_fl_aes.xcl
+build fm33lg0xx_fl_atim.pbi : index fm33lg0xx_fl_atim.xcl
+build fm33lg0xx_fl_bstim16.pbi : index fm33lg0xx_fl_bstim16.xcl
+build fm33lg0xx_fl_bstim32.pbi : index fm33lg0xx_fl_bstim32.xcl
+build fm33lg0xx_fl_can.pbi : index fm33lg0xx_fl_can.xcl
+build fm33lg0xx_fl_cmu.pbi : index fm33lg0xx_fl_cmu.xcl
+build fm33lg0xx_fl_comp.pbi : index fm33lg0xx_fl_comp.xcl
+build fm33lg0xx_fl_crc.pbi : index fm33lg0xx_fl_crc.xcl
+build fm33lg0xx_fl_dac.pbi : index fm33lg0xx_fl_dac.xcl
+build fm33lg0xx_fl_divas.pbi : index fm33lg0xx_fl_divas.xcl
+build fm33lg0xx_fl_dma.pbi : index fm33lg0xx_fl_dma.xcl
+build fm33lg0xx_fl_exti.pbi : index fm33lg0xx_fl_exti.xcl
+build fm33lg0xx_fl_flash.pbi : index fm33lg0xx_fl_flash.xcl
+build fm33lg0xx_fl_gpio.pbi : index fm33lg0xx_fl_gpio.xcl
+build fm33lg0xx_fl_gptim.pbi : index fm33lg0xx_fl_gptim.xcl
+build fm33lg0xx_fl_i2c.pbi : index fm33lg0xx_fl_i2c.xcl
+build fm33lg0xx_fl_iwdt.pbi : index fm33lg0xx_fl_iwdt.xcl
+build fm33lg0xx_fl_lcd.pbi : index fm33lg0xx_fl_lcd.xcl
+build fm33lg0xx_fl_lptim16.pbi : index fm33lg0xx_fl_lptim16.xcl
+build fm33lg0xx_fl_lptim32.pbi : index fm33lg0xx_fl_lptim32.xcl
+build fm33lg0xx_fl_lpuart.pbi : index fm33lg0xx_fl_lpuart.xcl
+build fm33lg0xx_fl_pmu.pbi : index fm33lg0xx_fl_pmu.xcl
+build fm33lg0xx_fl_rng.pbi : index fm33lg0xx_fl_rng.xcl
+build fm33lg0xx_fl_rtca.pbi : index fm33lg0xx_fl_rtca.xcl
+build fm33lg0xx_fl_spi.pbi : index fm33lg0xx_fl_spi.xcl
+build fm33lg0xx_fl_svd.pbi : index fm33lg0xx_fl_svd.xcl
+build fm33lg0xx_fl_uart.pbi : index fm33lg0xx_fl_uart.xcl
+build fm33lg0xx_fl_vao.pbi : index fm33lg0xx_fl_vao.xcl
+build fm33lg0xx_fl_vrefp.pbi : index fm33lg0xx_fl_vrefp.xcl
+build fm33lg0xx_fl_wwdt.pbi : index fm33lg0xx_fl_wwdt.xcl
+build Adc_Drv.pbi : index Adc_Drv.xcl
+build DMA.pbi : index DMA.xcl
+build eeprom.pbi : index eeprom.xcl
+build eeprom_cfg.pbi : index eeprom_cfg.xcl
+build Event.pbi : index Event.xcl
+build Gpio.pbi : index Gpio.xcl
+build Memory.pbi : index Memory.xcl
+build Pll.pbi : index Pll.xcl
+build Sleep.pbi : index Sleep.xcl
+build svd.pbi : index svd.xcl
+build svd_interrupt.pbi : index svd_interrupt.xcl
+build Tim.pbi : index Tim.xcl
+build mf_config.pbi : index mf_config.xcl
+build main.pbi : index main.xcl
+build App_TQ04JS601_part0.pbi : link App_Boot.pbi App_BootCfg.pbi App_Can.pbi App_Demm.pbi App_PID.pbi App_WheelHeat.pbi LowPowerManage.pbi system_voltage_manage.pbi Can_PBcfg.pbi
+build App_TQ04JS601_part1.pbi : link CanIf_Lcfg.pbi CanTp_PBcfg.pbi App_Com.pbi Com_Cfg.pbi Com_Lcfg.pbi App_Dcm.pbi Dcm_Cfg.pbi Dcm_Lcfg.pbi OsekNm.pbi
+build App_TQ04JS601_part2.pbi : link OsekNm_App.pbi OsekNm_Cfg.pbi Can.pbi Can_Cbk.pbi Dem.pbi Dem_Cfg.pbi Demm.pbi Det.pbi CanIf.pbi
+build App_TQ04JS601_part3.pbi : link CanTp.pbi CanTrcv.pbi App_Ccp.pbi Ccp.pbi Ccp_Cfg.pbi Com.pbi Dcm.pbi Dcm_Cbk.pbi PduR.pbi
+build App_TQ04JS601_part4.pbi : link system_fm33lg0xx.pbi fm33lg0xx_fl.pbi fm33lg0xx_fl_adc.pbi fm33lg0xx_fl_aes.pbi fm33lg0xx_fl_atim.pbi fm33lg0xx_fl_bstim16.pbi fm33lg0xx_fl_bstim32.pbi fm33lg0xx_fl_can.pbi fm33lg0xx_fl_cmu.pbi
+build App_TQ04JS601_part5.pbi : link fm33lg0xx_fl_comp.pbi fm33lg0xx_fl_crc.pbi fm33lg0xx_fl_dac.pbi fm33lg0xx_fl_divas.pbi fm33lg0xx_fl_dma.pbi fm33lg0xx_fl_exti.pbi fm33lg0xx_fl_flash.pbi fm33lg0xx_fl_gpio.pbi fm33lg0xx_fl_gptim.pbi
+build App_TQ04JS601_part6.pbi : link fm33lg0xx_fl_i2c.pbi fm33lg0xx_fl_iwdt.pbi fm33lg0xx_fl_lcd.pbi fm33lg0xx_fl_lptim16.pbi fm33lg0xx_fl_lptim32.pbi fm33lg0xx_fl_lpuart.pbi fm33lg0xx_fl_pmu.pbi fm33lg0xx_fl_rng.pbi fm33lg0xx_fl_rtca.pbi
+build App_TQ04JS601_part7.pbi : link fm33lg0xx_fl_spi.pbi fm33lg0xx_fl_svd.pbi fm33lg0xx_fl_uart.pbi fm33lg0xx_fl_vao.pbi fm33lg0xx_fl_vrefp.pbi fm33lg0xx_fl_wwdt.pbi Adc_Drv.pbi DMA.pbi eeprom.pbi
+build App_TQ04JS601_part8.pbi : link eeprom_cfg.pbi Event.pbi Gpio.pbi Memory.pbi Pll.pbi Sleep.pbi svd.pbi svd_interrupt.pbi Tim.pbi
+build App_TQ04JS601_part9.pbi : link mf_config.pbi main.pbi
+build App_TQ04JS601.pbd : link App_TQ04JS601_part0.pbi App_TQ04JS601_part1.pbi App_TQ04JS601_part2.pbi App_TQ04JS601_part3.pbi App_TQ04JS601_part4.pbi App_TQ04JS601_part5.pbi App_TQ04JS601_part6.pbi App_TQ04JS601_part7.pbi App_TQ04JS601_part8.pbi App_TQ04JS601_part9.pbi
+build App_TQ04JS601.pbw : browsedata App_TQ04JS601.pbd
+
+

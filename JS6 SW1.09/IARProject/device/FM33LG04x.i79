@@ -1,0 +1,29 @@
+[FILEFORMAT]
+rev=1.6
+
+[CHIP]
+name=FM33LG04x
+endiansupport=le
+thumbsupport=true
+armsupport=false
+fpu=None
+SIMD=false
+
+JTAG=false
+SWD=true
+SWO_TraceD0=false
+
+[CORE]
+name=SC000
+
+[DDF FILE]
+name=FMSH\FM33LG04x.ddf
+
+[LINKER FILE]
+name=$TOOLKIT_DIR$\config\linker\FMSH\FM33LG04x.icf
+
+[FLASH LOADER]
+
+little=$TOOLKIT_DIR$\config\flashloader\FMSH\FM33LG04x.board
+
+

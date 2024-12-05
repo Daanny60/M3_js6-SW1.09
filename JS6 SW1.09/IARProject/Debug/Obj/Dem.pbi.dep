@@ -1,0 +1,8 @@
+Dem.pbi: \
+  E:\Project\JAC\JS6\official_edition\JS6\ SW1.09\Source\ComStack\CanInterface\Dem\Dem.c \
+  E:\Project\JAC\JS6\official_edition\JS6\ SW1.09\Source\ComStack\CanInterface\Dem/Dem.h \
+  E:\Project\JAC\JS6\official_edition\JS6\ SW1.09\IARProject\..\Source\ComStack\Common\Std_Types.h \
+  E:\Project\JAC\JS6\official_edition\JS6\ SW1.09\IARProject\..\Source\ComStack\Common/Platform_Types.h \
+  E:\Project\JAC\JS6\official_edition\JS6\ SW1.09\IARProject\..\Source\ComStack\Common/Compiler.h \
+  E:\Project\JAC\JS6\official_edition\JS6\ SW1.09\IARProject\..\Source\ComStack\Common/Compiler_Cfg.h \
+  E:\Project\JAC\JS6\official_edition\JS6\ SW1.09\Source\ComStack\CanInterface\Dem/Dem_IntErrId.h

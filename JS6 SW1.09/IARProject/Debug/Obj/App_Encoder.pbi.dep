@@ -1,0 +1,84 @@
+App_Encoder.pbi: \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\Source\App\App_Encoder.c \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\Source\App/App_Encoder.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  C:\\Program\ Files\ (x86)\\IAR\ Systems\\Embedded\ Workbench\ 8.3\\arm\\inc\\c\\DLib_Config_Normal.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\Source\App/system_voltage_manage.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\types\types.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\drv\Encoder\EncoderDrv.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc\fm33lg0xx_fl_conf.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_adc.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_def.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\CMSIS\Device\FM\FM33xx\Include\fm33lg0xx.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\CMSIS\Device\FM\FM33xx\Include/core_cm0plus.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\CMSIS\Device\FM\FM33xx\Include/core_cmInstr.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\cmsis_iar.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c/iccarm_builtin.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\CMSIS\Device\FM\FM33xx\Include/core_cmFunc.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\CMSIS\Device\FM\FM33xx\Include/system_fm33lg0xx.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\CMSIS\Device\FM\FM33xx\Include/fm33lg0xx.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33_assert.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stddef.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ysizet.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdbool.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_aes.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_atim.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_bstim16.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_bstim32.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_can.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_cdif.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_cmu.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_comp.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_crc.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_dac.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_divas.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_dma.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_exti.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_flash.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_gpio.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_gptim.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_i2c.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_iwdt.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_lcd.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_lptim16.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_lptim32.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_lpuart.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_pmu.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_rmu.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_rng.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_rtca.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_spi.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_svd.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_uart.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_vao.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_vref.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_vrefp.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_wwdt.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Com\com.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common\ComStack_Types.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common/Std_Types.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common/Platform_Types.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common/Compiler.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common/Compiler_Cfg.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Com/Com_Types.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Can_Gen\Com\Com_Cfg.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Com\Com_Types.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\CanInterface\CanIf.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\CanInterface/CanIf_Type.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\CanDriver\Can_Type.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Can_Gen\Can\Can_Cfg.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc\fm33lg0xx_fl.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\Drivers\FM33LG0xx_FL_Driver\Inc/fm33lg0xx_fl_conf.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\MF-config\Inc\mf_config.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Can_Gen\CanIf\CanIf_Cfg.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\CanDriver\Can.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\CanDriver/Can_Type.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\CanDriver/Can_Pl.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\ComStack\Common\MemMap.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\Source\App/App_Keyboard.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\IARProject\..\Source\drv\Keyboard\keyboard_config.h \
+  C:\Projects\SwitchProjects\JS6\Software\TQ04JS601\Source\App/App_Can.h

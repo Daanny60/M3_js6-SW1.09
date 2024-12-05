@@ -1,0 +1,177 @@
+/****************************************************************************************
+ *
+ * File name: main.c
+ * Project name:
+ * Edition: v1.0
+ * Data: 2022-04-19  15:22:14
+ * Author: linbo
+ * 
+ ****************************************************************************************/
+
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "mf_config.h"
+#include "fm33lg0xx_fl.h"
+
+#if defined(USE_FULL_ASSERT)
+#include "fm33_assert.h"
+#endif /* USE_FULL_ASSERT */
+
+#include "Pll.h"
+#include "Tim.h"
+#include "CanTrcv.h"
+#include "Can.h"
+#include "CanIf.h"
+#include "Com.h"
+#include "Can_Pl.h"
+#include "Gpio.h"
+#include "Pwm.h"
+#include "App_Led.h"
+#include "Sleep.h"
+#include "types.h"
+#include "CanTp.h"
+#include "Dcm.h"
+#include "Adc_Drv.h"
+#include "DMA.h"
+#include "system_voltage_manage.h"
+#include "keyboard_driver.h"
+#include "App_Keyboard.h"
+#include "App_WheelHeat.h"
+#include "EncoderDrv.h"
+#include "App_Encoder.h"
+#include "LowPowerManage.h"
+#include "Event.h"
+#include "App_Mfs.h"
+#include "eeprom.h"
+#include "eeprom_cfg.h"
+#include "Demm.h"
+#include "App_Demm.h"
+#if defined (__ICCARM__)
+__root const uint32_t u32AppValidFlag __attribute__((section(".AppValidFlag"))) = 0xe504aaaaul;
+__root uint32_t u32ReprogramFlag __attribute__((section(".ReprogramFlag")));
+#else
+
+#endif
+
+
+int main (void)
+{
+  FL_IWDT_InitTypeDef IWDT_InitStruct;
+
+
+  static SystemTimeType timer_1ms_a  = 0;
+  static SystemTimeType timer_5ms_a  = 1;
+  static SystemTimeType timer_10ms_b = 2; 
+  static SystemTimeType timer_2ms_b = 1; 
+  static SystemTimeType timer_2ms_a  = 0;
+  SystemTimeType now_time;
+
+  
+  __disable_irq();
+
+  /* 中断重映射 */
+  SCB->VTOR = 0x00008100;
+  FL_RMU_BOR_SetThreshold(RMU, FL_RMU_BOR_THRESHOLD_2P40V);
+  FL_RMU_BOR_Enable(RMU);
+  FL_Init();
+  /* XTHF 8M倍频至48M */
+  SelXTHFToPLL(FL_CMU_PLL_PSC_DIV8, 48 - 1);
+
+  SystemCoreClockUpdate();
+  EE_Init();
+  EE_Flash_Init();
+  dem_task_init();
+  BSTIM16_Init();
+  GPIO_Init();
+  ADC_Init();
+  DMA_Init();
+  ADC_Start();
+  keyboard_init();
+  LowPowerManageInit();
+  PWM_Init();
+  FL_ATIM_WriteCompareCH4(ATIM, 0);
+  EncoderDrv_Init();
+  EventInit();
+  AppLed_Init();
+  AppMfsInit();
+  Can_Init();
+  CanIf_Init();
+  (void)CanIf_SetControllerMode(0,CANIF_CS_STARTED);
+  Com_Init();
+  Com_TxStart();
+  Com_RxStart();	
+  CanNm_Init();
+  CanTp_Init(((void *) 0));
+  Dcm_Init(((void *) 0));
+  CanTrcv_Init();
+  NVIC_DisableIRQ(CAN_IRQn);
+  NVIC_SetPriority(CAN_IRQn, 0);/* 中断优先级配置 */
+  NVIC_EnableIRQ(CAN_IRQn);
+  CanNm_GotoMode(0, GOTO_AWAKE);
+    /* 默认不使用窗口 */
+  IWDT_InitStruct.iwdtWindows    = 0;
+
+    /*最长溢出时间*/
+  IWDT_InitStruct.overflowPeriod = FL_IWDT_PERIOD_125MS;
+
+  FL_IWDT_Init(IWDT, &IWDT_InitStruct);
+  FL_IWDT_EnableFreezeWhileSleep(IWDT);
+
+  __enable_irq();
+
+  for (;;)
+  {
+
+    now_time = Get_SystemTime();
+    FL_IWDT_ReloadCounter(IWDT);
+    if((SystemTimeType)(now_time - timer_1ms_a) >= 1)
+    {
+      EncoderDrv_Task();
+      timer_1ms_a = now_time;
+    }
+
+    if((SystemTimeType)(now_time - timer_5ms_a) >= 5)
+    {
+      /*user code*/
+      (void)Com_MainFunctionRx();
+      (void)Com_MainFunctionTx();
+      (void)CanNm_MainFunction();
+      (void)Dcm_MainFunction();
+      (void)CanTp_MainFunction();
+      timer_5ms_a = now_time;
+    }
+
+    if((SystemTimeType)(now_time - timer_10ms_b) >= 10)
+    {
+      
+      (void)AppLed_Task();
+      (void)system_voltage_manage_task();
+      (void)App_EncoderTask();
+      (void)LowPowerManageTask();
+      (void)App_Demm_Task();
+      (void)dem_task();
+      (void)AppMfs_IGN_ON_Task();
+      timer_10ms_b = now_time;
+    }
+
+    if((SystemTimeType)(now_time - timer_2ms_a) >= 2)
+    {
+      (void)ADC_Task();  
+      (void)keyboard_task();
+      (void)AppKeyboard_Task();
+      (void)App_WheelHaet_Task();
+      timer_2ms_a = now_time;
+    }
+
+
+    if((SystemTimeType)(now_time - timer_2ms_b) >= 2)
+    {
+      (void)EE_Flash_Task();
+      timer_2ms_b = now_time;
+    }
+  }
+
+}
+

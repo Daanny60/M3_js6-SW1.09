@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<settings>
+    <DebugChecksum>
+        <Checksum>1961647455</Checksum>
+    </DebugChecksum>
+    <Exceptions>
+        <StopOnUncaught>_ 0</StopOnUncaught>
+        <StopOnThrow>_ 0</StopOnThrow>
+    </Exceptions>
+    <Stack>
+        <FillEnabled>0</FillEnabled>
+        <OverflowWarningsEnabled>1</OverflowWarningsEnabled>
+        <WarningThreshold>90</WarningThreshold>
+        <SpWarningsEnabled>1</SpWarningsEnabled>
+        <WarnLogOnly>1</WarnLogOnly>
+        <UseTrigger>1</UseTrigger>
+        <TriggerName>main</TriggerName>
+        <LimitSize>0</LimitSize>
+        <ByteLimit>50</ByteLimit>
+    </Stack>
+    <CallStack>
+        <ShowArgs>0</ShowArgs>
+    </CallStack>
+    <Disassembly>
+        <MixedMode>1</MixedMode>
+    </Disassembly>
+    <JLinkDriver>
+        <WatchCond>_ 0</WatchCond>
+        <Watch0>_ 0 "" 0 "" 0 "" 0 "" 0 0 0 0</Watch0>
+        <Watch1>_ 0 "" 0 "" 0 "" 0 "" 0 0 0 0</Watch1>
+        <CStepIntDis>_ 0</CStepIntDis>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+    </JLinkDriver>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+        <Category>_ 0</Category>
+    </LogFile>
+    <CallStackLog>
+        <Enabled>0</Enabled>
+    </CallStackLog>
+    <CallStackStripe>
+        <ShowTiming>1</ShowTiming>
+    </CallStackStripe>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Count>0</Count>
+    </Breakpoints2>
+    <Aliases>
+        <A0>_ "D:\ken\SFH\App_SFH_NM_DIAG\ZF01SFH03SW003(HIGH)\Source\App\App_Demm.c" ""</A0>
+        <A1>_ "D:\ken\SFH\App_SFH_NM_DIAG\ZF01SFH03SW003(HIGH)\Source\Drivers\CMSIS\Device\FM\FM33xx\Include\core_cm0plus.h" ""</A1>
+        <A2>_ "D:\ken\SFH\App_SFH_NM_DIAG\ZF01SFH03SW003(HIGH)\Source\Drivers\FM33LG0xx_FL_Driver\Inc\fm33lg0xx_fl_iwdt.h" ""</A2>
+        <A3>_ "D:\ken\SFH\App_SFH_NM_DIAG\ZF01SFH03SW003(HIGH)\Source\Drivers\FM33LG0xx_FL_Driver\Inc\fm33lg0xx_fl_rmu.h" ""</A3>
+        <A4>_ "D:\ken\SFH\App_SFH_NM_DIAG\ZF01SFH03SW003(HIGH)\Source\main.c" ""</A4>
+        <A5>_ "D:\ken\SFH\App_SFH_NM_DIAG\ZF01SFH03SW006(HIGH)\Source\Drivers\CMSIS\Device\FM\FM33xx\Include\core_cm0plus.h" ""</A5>
+        <A6>_ "D:\ken\SFH\App_SFH_NM_DIAG\ZF01SFH03SW006(HIGH)\Source\Drivers\FM33LG0xx_FL_Driver\Inc\fm33lg0xx_fl_iwdt.h" ""</A6>
+        <A7>_ "D:\ken\SFH\App_SFH_NM_DIAG\ZF01SFH03SW006(HIGH)\Source\Drivers\FM33LG0xx_FL_Driver\Inc\fm33lg0xx_fl_rmu.h" ""</A7>
+        <A8>_ "D:\ken\SFH\App_SFH_NM_DIAG\ZF01SFH03SW006(HIGH)\Source\main.c" ""</A8>
+        <A9>_ "D:\ken\SFH\software30006\ZF01SFH03SW30006\Source\App\App_Demm.c" "C:\Projects\SwitchProjects\NEXT\Refs\Software\ZF01SFH03SW30006\Source\App\App_Demm.c"</A9>
+        <Count>10</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
+</settings>
