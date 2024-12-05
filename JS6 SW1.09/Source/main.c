@@ -60,7 +60,7 @@ __root const uint32_t u32AppValidCRC32 __attribute__((section(".AppValidCRC32"))
 __root uint32_t u32ReprogramFlag __attribute__((section(".ReprogramFlag")));
 //#else
 
-#endif
+#endif //
 
 
 
