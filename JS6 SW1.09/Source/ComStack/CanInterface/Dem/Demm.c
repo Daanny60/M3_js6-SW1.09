@@ -39,20 +39,20 @@
 typedef struct {
 	uint8_t storaged_unit_size; /* debug only */
 	uint8_t storage_total_dtc_numbers;		//表示需要儲存到eeprom的 dtc的總數
-	uint8_t result[TOTAL_TEST_RESULT_NUM];		//看樣子是以位表示的，每2位表示一個DTC的result
+	uint8_t result[TOTAL_TEST_RESULT_NUM];		//以位表示的方式存储每个 DTC 的结果。每 2 位表示一个 DTC 的结果
 	uint8_t res_last[TOTAL_TEST_RESULT_NUM];		//同上，是上一次的結果---??? 作用是為了 dem_get_test_result_updated服務 ，還沒有 理解透；
 	uint8_t need_to_be_written_to_eeprom[TOTAL_DTC_FLAG_NUM]; //DTC_MONITORING_CYCLE_NUM   每1位表示一個DTC
 	uint8_t not_stored_since_last_test_passed[TOTAL_DTC_FLAG_NUM];   //power up時 不需要儲存的標志
 	//uint8_t has_been_stored_since_power_up_flag[TOTAL_DTC_FLAG_NUM];
 	//uint8_t self_recover_flag[TOTAL_MAX_STORED_DTC_NUM/8+1];
-	uint8_t occurrence_counter[TOTAL_MAX_STORED_DTC_NUM];
+	uint8_t occurrence_counter[TOTAL_MAX_STORED_DTC_NUM]; //记录每个 DTC 发生的次数
 //	uint8_t self_healing_counter[TOTAL_MAX_STORED_DTC_NUM];    //20240717 modify extenddatas do not need
     uint8_t aged_counter[TOTAL_MAX_STORED_DTC_NUM];       //add,extenddata need
     uint8_t aging_counter[TOTAL_MAX_STORED_DTC_NUM];      //add,extenddata need
 	uint8_t samp_count[TOTAL_DTC_NUM];
-	unsigned b_control_dtc_setting: 1;	//set標志
-	unsigned b_set_enabled:1;	//使能
-	unsigned b_last_control_dtc_setting: 1;  //上一次未使能，当前使能，清除状态enable or
+	unsigned b_control_dtc_setting: 1;	//设置标志，表示是否设置了某个 DTC
+	unsigned b_set_enabled:1;	//使能标志，表示是否启用了某个 DTC
+	unsigned b_last_control_dtc_setting: 1;  //上一次未使能，当前使能，清除状态。用于处理 DTC 的使能状态变化
 	unsigned b_last_set_enabled:1;  //？？
 	unsigned :4;
 }demm_ctrl_t;
@@ -575,6 +575,7 @@ static void dem_init(uint8_t c_eeprom_operate_state)
 
 }
 
+/*一个dtc分两位两位放入，检查该DTC是否是表格中的DTC*/
 static dtc_handle_t dem_get_dtc_handle(const uint8_t *dtc)
 {
 	dtc_handle_t i;
@@ -634,6 +635,7 @@ static void _dem_clear_dtc(dtc_handle_t dtc_index)
 
 //err_flag_e  dem_clear_dtc( uint32 DTC, Dem_DTCFormatType DTCFormat, Dem_DTCOriginType DTCOrigin )
 /**
+ * 此函数根据提供的DTC指向地址，清除相应的故障代码它支持清除单个故障代码、组故障代码或所有故障代码具体行为取决于输入的DTC值
  * @brief  根據dtc的id；清除； 根據三字節的id
  * @param  input:
  * @param  output:
@@ -645,7 +647,7 @@ static void _dem_clear_dtc(dtc_handle_t dtc_index)
 err_flag_e  dem_clear_dtc(const uint8_t *dtc)
 {
 	dtc_handle_t i;
-	uint32_t Dtc=Make32Bit(dtc[0],dtc[1],dtc[2]);
+	uint32_t Dtc= Make32Bit(dtc[0],dtc[1],dtc[2]);
 	if(Dtc == DTC_ALL_GROUPS)			  /* 清除All Groups (all DTC's) */
 	{
 		dem_clear_all_test_result();

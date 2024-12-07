@@ -60,11 +60,11 @@
 
 /* Diagnostic State Machine */
 #define DIAG_IDLE  ((uint8)0x01) 
-#define DIAG_UDS_INDICATION  ((uint8)0x02)
-#define DIAG_UDS_PROCESSING  ((uint8)0x04)
-#define DIAG_UDS_RCRP  ((uint8)0x08)
-#define DIAG_UDS_RCRP_DONE  ((uint8)0x10)
-#define DIAG_UDS_PERIODIC_TX  ((uint8)0x20)
+#define DIAG_UDS_INDICATION  ((uint8)0x02)  //诊断状态机接收到 UDS（统一诊断服务）指示。
+#define DIAG_UDS_PROCESSING  ((uint8)0x04)  // 表示系统正在执行 UDS 请求的处理逻辑
+#define DIAG_UDS_RCRP  ((uint8)0x08)        // 表示系统已经发送了一个响应，但仍在等待确认
+#define DIAG_UDS_RCRP_DONE  ((uint8)0x10)   // 表示系统已经发送了一个响应，并且已经确认
+#define DIAG_UDS_PERIODIC_TX  ((uint8)0x20)  // 表示系统正在发送一个周期性传输数据
 
 extern volatile uint8_t Flag_diag_session;
 /* For 0x22 */
@@ -217,7 +217,7 @@ extern VAR(uint8, DCM_NOINIT_DATA)  gDynamicalDidCounter;
 *  Macro function 
 *******************************************************************************/        
 #define Set_SecLevel(x)  (gSecLevelType = (x))
-#define Set_SesCtrl(x)  (gSesCtrlType = (x))
+#define Set_SesCtrl(x)  (gSesCtrlType = (x))  //用来设置三种会话服务
 #define Set_ActiveProtocol(x)  (gActiveProtocol = (x))
 #define Clr_ActiveProtocol()  (gActiveProtocol = (0))
 #define Set_PduId(x)  (gMsgContextType.dcmRxPduId = (x))

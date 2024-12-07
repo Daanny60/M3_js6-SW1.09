@@ -43,12 +43,13 @@ typedef struct
    DemmDtcEvent_e  SystemVoltageLowFailureEvent;
    DemmDtcEvent_e  SystemVoltageHighFailureEvent;   
    DemmDtcEvent_e  HarnessFractureOrShortFailureEvent;
-   DemmDtcEvent_e  CanDisconnectedFailureEvent;
+   DemmDtcEvent_e  CanDisconnectedFailureEvent;//BCM节点丢失
    DemmDtcEvent_e  HeatOpenFailureEvent;
    DemmDtcEvent_e  HeatShortFailureEvent;
    DemmDtcEvent_e  NtcShortOrOpenFailureEvent;
    DemmDtcEvent_e  TemOver37_5FailureEvent;
-
+   DemmDtcEvent_e  CanDisconnected_EMSFailureEvent;//EMS节点丢失
+   DemmDtcEvent_e  PinISCurrentFailureEvent;//iS电流检测<0
 }AppDemmEvent_TypeDef;
  #endif
     
@@ -316,6 +317,8 @@ DemmDtcEvent_e AppDemmNtcOpenFailureEventGet(void)
 }
 #endif
 #else
+
+/*这些是用来输入dtc是否显示的的参数*/
 void AppDemmSystemVoltageLowFailureEvent(DemmDtcEvent_e event)
 {
     Event.AppDemmEvent.SystemVoltageLowFailureEvent = event;
@@ -349,6 +352,16 @@ void AppDemmTemOver37_5FailureEvent(DemmDtcEvent_e event)
 {
     Event.AppDemmEvent.TemOver37_5FailureEvent = event;
 }
+void AppDemmCanDisconnected_EMSFailureEvent(DemmDtcEvent_e event)
+{
+     Event.AppDemmEvent.CanDisconnected_EMSFailureEvent= event;
+}
+void AppDemmPinISCurrentFailureEvent(DemmDtcEvent_e event)
+{
+     Event.AppDemmEvent.PinISCurrentFailureEvent = event;
+}
+
+
 
 DemmDtcEvent_e AppDemmSystemVoltageLowFailureEventGet(void)
 {
@@ -415,6 +428,23 @@ DemmDtcEvent_e AppDemmTemOver37_5FailureEventGet(void)
     Event.AppDemmEvent.TemOver37_5FailureEvent  = DTC_TEST_EVENT_NULL;
     return (event);
 }
+
+DemmDtcEvent_e AppDemmCanDisconnected_EMSFailureEventGet(void)
+{
+    DemmDtcEvent_e event;
+    event = Event.AppDemmEvent.CanDisconnected_EMSFailureEvent ;
+    Event.AppDemmEvent.CanDisconnected_EMSFailureEvent  = DTC_TEST_EVENT_NULL;
+    return (event);
+}
+DemmDtcEvent_e AppDemmTemPinISCurrentFailureEventGet(void)
+{
+    DemmDtcEvent_e event;
+    event = Event.AppDemmEvent.PinISCurrentFailureEvent;
+    Event.AppDemmEvent.PinISCurrentFailureEvent  = DTC_TEST_EVENT_NULL;
+    return (event);
+
+}
+
 
 void dtconflag(void)
 {

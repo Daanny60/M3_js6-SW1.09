@@ -137,7 +137,7 @@ void vAppCanTask(void)
     {
       //CanTrcv_Disable();
       CanIf_SetControllerMode(0,CANIF_CS_STOPPED);
-      CanNm_Stop(0);
+      //CanNm_Stop(0);
       Com_TxStop();
       Com_RxStop();
       u8SystemVoltFaultFlag = 1;    

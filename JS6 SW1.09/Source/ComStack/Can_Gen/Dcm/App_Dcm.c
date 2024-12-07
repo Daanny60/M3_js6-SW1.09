@@ -249,90 +249,6 @@ extern uint16_t u16VehicleSpeed;//车速
 
 
 
-#if 0
-static uint8 SupportedDTCPriority[NUM_OF_DTC]={
-   0
-};
-static uint32 SupportedDTC[NUM_OF_DTC]=
-{
-    0x000001u,
-    0x911716u,
-    0x911717u,
-    0x921901u,
-    0x922001u,
-    0x92201Cu,
-    0x922051u,
-    0x922101u,
-    0x922201u,
-    0x922208u,
-    0x922301u,
-    0x922401u,
-    0x922446u,
-    0x922502u,
-    0x922508u,
-    0x923011u,
-    0x923012u,
-    0x923013u,
-    0x923211u,
-    0x923212u,
-    0x923213u,
-    0x923411u,
-    0x923412u,
-    0x923413u,
-    0x923511u,
-    0x923512u,
-    0x923513u,
-    0x923611u,
-    0x923612u,
-    0x923613u,
-    0x923A13u,
-    0x923A96u,
-    0x924612u,
-    0x924614u,
-    0x924696u,
-    0x924712u,
-    0x924714u,
-    0x924796u,
-    0x924812u,
-    0x924814u,
-    0x924896u,
-    0xC07388u,
-    0xC10200u,
-    0xC11000u,
-    0xC14000u,
-    0xC15500u,
-    0xC15600u,
-    0xD00087u,
-    0xD00161u,
-    0xD00183u,
-    0xD00200u,
-    0xD00208u,
-    0xD00308u,
-    0xD00408u,
-    0xD00508u,
-    0xD00608u,
-    0xD00708u,
-    0xD00808u,
-    0xD00908u,
-    0xD00A08u,
-    0xD00B08u,
-    0xD00C08u,
-    0xD00D08u,
-    0xD00E08u,
-    0xD00F08u,
-    0xD01008u,
-    0xD01108u,
-    0xD01208u,
-    0xD01352u,
-    0xD01408u,
-    0xD01452u,
-    0xD01508u,
-    0xD01608u,
-    0xD01708u,
-    0xD01808u,
-    0xD01908u
-};
-#endif
 uint8 DTCStatus[NUM_OF_DTC]=
 {
     0x08
@@ -445,20 +361,27 @@ FUNC(void,DCM_CODE) App_DefaultPost(Std_ReturnType Result)
 {
 
     uint8 i=0;
+    // 检查结果是否为 E_OK
     if(Result==E_OK)
     {
-        Set_SesCtrl(DCM_SESSION_DEFAULT);       
-        Flag_diag_session=0x01;                                       
+        // 设置会话控制为默认会话
+        Set_SesCtrl(DCM_SESSION_DEFAULT);
+        // 设置诊断会话标志为 0x01，表示默认会话已激活       
+        Flag_diag_session=0x01;
+        // 重置所有安全访问序列                                       
         for(i=0;i<KIND_OF_SECURITY_LEVEL;i++)
         {
             gSecurityAcessSequence[i]=0;
         }
+        // 设置安全级别为锁定状态
         gSecLevelType=DCM_SEC_LEV_LOCK;
+        // 停止 S3 服务器定时器
         gS3ServerTimerStartFlag = DCM_FLAG_DISACTIVE;
         
-         //reset routine Control
+         //重置例行控制（Routine Control）
          #if(DCM_SERVICE_31_ENABLED==STD_ON)
-         gRountineControlDidHandle=0xFFu;/* Reset */           
+         gRountineControlDidHandle=0xFFu;/* Reset */
+         // 重置所有例行控制序列           
          for(i=0;i<NUMBER_OF_RID;i++) 
          {
              gRountineControlSequence[i] = 0;
@@ -467,16 +390,16 @@ FUNC(void,DCM_CODE) App_DefaultPost(Std_ReturnType Result)
          #endif
         
         // add you code here
-       ///// CanNm_Start(0);
+        // CanNm_Start(0);
         //// CanNm_NetworkRequest(0);
         // CanNm_PassiveStartUp(0);
-        CanNm_Start(0);
+        // CanNm_Start(0); //1
         Com_TxStart();
-	Com_RxStart();
+	    Com_RxStart();
         //dem_enable_dtc_setting();
-		gDTCSwitch=1;
-        
-   dtconflag();
+		gDTCSwitch=1; // 设置 DTC 开关标志为 1，表示 DTC 已启用
+        // 调用 dtconflag 函数
+        dtconflag();
     }
     else
     {
@@ -520,7 +443,7 @@ FUNC(void,DCM_CODE) App_Programming(P2VAR(Dcm_MsgContextType,AUTOMATIC,DCM_APPL_
             #else
             pMsgContext->resDataLen=2;
             #endif
-            DsdInternal_ProcessingDone(pMsgContext);
+            DsdInternal_ProcessingDone(pMsgContext);//屏蔽处代码
             #endif
             DslInternal_RCRResponsePending(1u);
                 Clr_DiagState(DIAG_UDS_PROCESSING);
@@ -615,6 +538,7 @@ FUNC(void,DCM_CODE) App_Extended_Diagnostic(P2VAR(Dcm_MsgContextType,AUTOMATIC,D
         DsdInternal_ProcessingDoneNoResponse();
     }  
 }
+
 
 /******************************************************************************
 * Name         :App_Extended_DiagnosticSessionPost 
@@ -2644,11 +2568,11 @@ FUNC(void,DCM_CODE) App_Send_Key_L1(P2VAR(Dcm_MsgContextType,AUTOMATIC,DCM_APPL_
     }
     else if (gMsgContextType.reqData[2] == NM_MSG)
     {
-         CanNm_Start(0);  
+        // CanNm_Start(0);  //2
     }
     else if (gMsgContextType.reqData[2] == BOTH_NORMAL_AND_NM_MSG)
     {
-        CanNm_Start(0);
+        // CanNm_Start(0);//3
         Com_TxStart();
 	Com_RxStart();	   
     }
@@ -2680,11 +2604,11 @@ FUNC(void,DCM_CODE) App_Send_Key_L1(P2VAR(Dcm_MsgContextType,AUTOMATIC,DCM_APPL_
     }
     else if (gMsgContextType.reqData[2] == NM_MSG)
     {
-        CanNm_Stop(0);  
+        //CanNm_Stop(0);  
     }
     else if (gMsgContextType.reqData[2] == BOTH_NORMAL_AND_NM_MSG)
     {
-        CanNm_Stop(0);
+        //CanNm_Stop(0);
         Com_TxStop();
 	Com_RxStart();	
     }
@@ -2710,12 +2634,12 @@ FUNC(void,DCM_CODE) App_Send_Key_L1(P2VAR(Dcm_MsgContextType,AUTOMATIC,DCM_APPL_
     }
     else if (gMsgContextType.reqData[2] == NM_MSG)
     {
-         CanNm_Start(0);  
+        //  CanNm_Start(0);  //4
     }
     else if (gMsgContextType.reqData[2] == BOTH_NORMAL_AND_NM_MSG)
     {
 
-        CanNm_Start(0);
+    //    CanNm_Start(0);//5
         Com_TxStart();
         Com_RxStop();
     }
@@ -2742,11 +2666,11 @@ FUNC(void,DCM_CODE) App_Send_Key_L1(P2VAR(Dcm_MsgContextType,AUTOMATIC,DCM_APPL_
     }
     else if (gMsgContextType.reqData[2] == NM_MSG)
     {
-        CanNm_Stop(0);  
+        //CanNm_Stop(0);  
     }
     else if (gMsgContextType.reqData[2] == BOTH_NORMAL_AND_NM_MSG)
     {
-        CanNm_Stop(0);
+        //CanNm_Stop(0);
         Com_TxStop();
         Com_RxStop();
     }

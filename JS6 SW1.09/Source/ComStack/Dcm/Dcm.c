@@ -45,15 +45,22 @@
 * Local Macro and Tyedef
 *******************************************************************************/
 /* General Define */
-#define DCM_HAVE_ERRORS  (0x01u)
-#define DCM_HAVE_NO_ERRORS  (0x00u)
-#define DCM_SID_OFF_SET  (0x40u)
-#define DCM_DIVIDE_TOW  (0x01u)                 
-#define DCM_TIME_EXPIRED  (0x00u)
-#define DCM_SID_POSITION  (0x00u)
-#define DCM_AMPLIFY_8_TIMES  (0x08u)
-#define THE_OFFSET_DATA  ((uint8)0x40)
-#define DCM_COMMON_DEFINED_TASK_TIME  (0x10u) 
+#define DCM_HAVE_ERRORS  (0x01u) //存在错误
+#define DCM_HAVE_NO_ERRORS  (0x00u)//不存在错误
+/*sid偏移量*/
+#define DCM_SID_OFF_SET  (0x40u)//表示服务 ID 的偏移量，通常用于将请求的 SID 转换为响应的 SID。
+/*除法和时间相关*/
+#define DCM_DIVIDE_TOW  (0x01u) //表示除以 2                
+#define DCM_TIME_EXPIRED  (0x00u)//表示时间已过期
+/*sid位置*/
+#define DCM_SID_POSITION  (0x00u)//表示 SID 在数据帧中的位置
+/*放大倍数*/
+#define DCM_AMPLIFY_8_TIMES  (0x08u)//表示放大 8 倍
+/*偏移数据*/
+#define THE_OFFSET_DATA  ((uint8)0x40)  //表示通用定义任务的偏移量
+/*任务时间*/
+#define DCM_COMMON_DEFINED_TASK_TIME  (0x10u)  //定义的任务时间
+/*数据长度要求*/
 #define DCM_REQUIRE_DATA_LENGTH_1_BYTE  (0x01u)
 #define DCM_REQUIRE_DATA_LENGTH_2_BYTE  (0x02u)
 #define DCM_REQUIRE_DATA_LENGTH_3_BYTE  (0x03u)
@@ -61,23 +68,27 @@
 #define DCM_REQUIRE_DATA_LENGTH_5_BYTE  (0x05u)
 #define DCM_REQUIRE_DATA_LENGTH_6_BYTE  (0x06u)
 #define DCM_REQUIRE_DATA_LENGTH_7_BYTE  (0x07u)
+/*响应数据长度*/
 #define DCM_RESPONSE_DATA_LENGTH_1_BYTE  (0x01u)
 #define DCM_RESPONSE_DATA_LENGTH_2_BYTE  (0x02u)
 #define DCM_RESPONSE_DATA_LENGTH_3_BYTE  (0x03u)
 #define DCM_RESPONSE_DATA_LENGTH_4_BYTE  (0x04u)
 #define DCM_RESPONSE_DATA_LENGTH_5_BYTE  (0x05u)
-#define DCM_NUMBER_OF_CHANNEL_BUFFER_OBD_INCLUDE  (0x04u)
-#define DCM_NUMBER_OF_CHANNEL_BUFFER_WITHOUT_OBD  (0x02u)
-#define DCM_SERVICE_AND_SUB_SERVICE_REQUIRE_LENGTH  (0x02u)
-#define DCM_SERVICE_AND_SUB_SERVICE_RESPONSE_LENGTH  (0x02u)
-#define SETSUPPRESSPOSRESPONSEBITMASK  ((uint8)0x80)
-#define SUPPRESS_POS_RSP_BYTE  ((uint8)0x80)
-#define THE_LARGEST_SERVICE_ID  ((uint8)0x85)
-#define RIGHT_ROLLING_SUPPRESS_POS_RSP_BIT  (0x07u)
-#define GET_THE_SECURITY_LEVEL  (0xFEu)
-#define DCM_SESSION_TYPE_NOT_CORRECT  (0x00u)
-#define DCM_SECURITY_LEVEL_NOT_CORRECT  (0x00u)
-#define DCM_REQUEST_ADDRESS_NOT_CORRECT  (0x00u)
+/*通道缓冲区数量*/
+#define DCM_NUMBER_OF_CHANNEL_BUFFER_OBD_INCLUDE  (0x04u)//包含OBD通道
+#define DCM_NUMBER_OF_CHANNEL_BUFFER_WITHOUT_OBD  (0x02u)//不包含OBD通道
+/*服务和子服务长度*/
+#define DCM_SERVICE_AND_SUB_SERVICE_REQUIRE_LENGTH  (0x02u)//表示服务和子服务的请求长度
+#define DCM_SERVICE_AND_SUB_SERVICE_RESPONSE_LENGTH  (0x02u)//示服务和子服务的响应长度
+#define SETSUPPRESSPOSRESPONSEBITMASK  ((uint8)0x80)//表示设置抑制正响应的位掩码
+#define SUPPRESS_POS_RSP_BYTE  ((uint8)0x80)//表示抑制正响应的字节
+#define THE_LARGEST_SERVICE_ID  ((uint8)0x85)//表示最大的服务 ID
+#define RIGHT_ROLLING_SUPPRESS_POS_RSP_BIT  (0x07u)//表示右移抑制正响应位
+#define GET_THE_SECURITY_LEVEL  (0xFEu)///表示获取安全级别的值
+/*会话类型、安全级别和请求地址不正确*/
+#define DCM_SESSION_TYPE_NOT_CORRECT  (0x00u)//会话类型不正确
+#define DCM_SECURITY_LEVEL_NOT_CORRECT  (0x00u)//表示安全级别不正确
+#define DCM_REQUEST_ADDRESS_NOT_CORRECT  (0x00u)//表示请求地址不正确
 /* for negative response 0x78 */
 #define FORCERCR_RP  (0x01u)
 #define UNFORCERCR_RP  (0x00u)
@@ -3444,6 +3455,7 @@ FUNC(void,DCM_PUBLIC_CODE) DsdInternal_SetNegResponse
 * Outputs:       None
 * 
 * Limitations:   None
+是处理诊断请求的响应，并根据不同的条件决定是否发送正响应或负响应
 ********************************************************************************
 END_FUNCTION_HDR*/
 FUNC(void,DCM_PUBLIC_CODE) DsdInternal_ProcessingDone
@@ -3451,27 +3463,29 @@ FUNC(void,DCM_PUBLIC_CODE) DsdInternal_ProcessingDone
     P2VAR(Dcm_MsgContextType,AUTOMATIC,DCM_APPL_DATA) pMsgContext
 )
 {
-    PduInfoType temp = { DCM_NULL,0 };
-    Std_ReturnType result = E_OK;
+    PduInfoType temp = { DCM_NULL,0 }; //初始化一个 PduInfoType 结构体
+    Std_ReturnType result = E_OK;  //初始化返回结果为成功
 
     if((gDiagState&DIAG_UDS_RCRP_DONE) != DIAG_UDS_RCRP_DONE)
     {
         /* Suppress positive response or fobidden 0x11 and 0x12 NRC under the 
            condition of functionally-addressing */
-        if(((GetSuppressPosResponseBit() == 1)&& (gNegativeResponseCode == DCM_E_POSITIVERESPONSE)) 
+           // 如果诊断状态不是 RCRP_DONE
+        if(((GetSuppressPosResponseBit() == 1)&& (gNegativeResponseCode == DCM_E_POSITIVERESPONSE)) //抑制正响应&请求成功
           || (gMsgContextType.resDataLen == 0))
         {
-            
-            /* Start S3 Timer */
+            // 如果抑制了正响应或响应数据长度为 0
+            /* Start S3 Timer */ 
             if(gSesCtrlType != DCM_SESSION_DEFAULT)
             {
-                gS3ServerTimerStartFlag = DCM_FLAG_ACTIVE;
-                Set_S3_Server_Timer(gDcmDspNonDefaultSessionS3Server);
+                 // 如果当前会话不是默认会话
+                gS3ServerTimerStartFlag = DCM_FLAG_ACTIVE; // 启动 S3 定时器
+                Set_S3_Server_Timer(gDcmDspNonDefaultSessionS3Server);  // 设置 S3 定时器 5000ms
             }
             else
             {
             }
-            Dsd_InteralInit();
+            Dsd_InteralInit();  // 初始化内部状态
         }
         else
         {
@@ -3481,18 +3495,22 @@ FUNC(void,DCM_PUBLIC_CODE) DsdInternal_ProcessingDone
              */
             if(gMsgContextType.resDataLen > UDS_PHYS_BUFFER_SIZE) 
             {
-                DsdInternal_SetNegResponse(&gMsgContextType,DCM_E_REQUESTOUTOFRANGE);
+                DsdInternal_SetNegResponse(&gMsgContextType,DCM_E_REQUESTOUTOFRANGE); // 设置请求超出范围的负响应
             }
             else
             {
                 /* Under the situation of functionally-addressing,not send 0x31 NR */
+                // 在功能寻址且没有子功能的情况下，发送 0x31 负响应
                 if((gMsgContextType.msgAddInfo.reqType == 1)
                 && (gNegativeResponseCode == DCM_E_REQUESTOUTOFRANGE) 
                 && (gDcm_CurrentServiceSubfuncAvail == UDS_SERVICE_WITHOUT_SUB_FUNCTION)) 
                 {
                     /* Start S3 Timer */
+                    // 如果当前会话不是默认会话
                     if(gSesCtrlType != DCM_SESSION_DEFAULT)
                     {
+                        /*在返回 NRC 31 后重置 S3 定时器是为了确保系统能够继续监控请求的处理状态，
+                        并在必要时采取进一步的措施。通过重置定时器，可以防止无限等待，提高系统的稳定性和可靠性。*/
                         gS3ServerTimerStartFlag = DCM_FLAG_ACTIVE;
                         Set_S3_Server_Timer(gDcmDspNonDefaultSessionS3Server);
                     }
@@ -3511,8 +3529,8 @@ FUNC(void,DCM_PUBLIC_CODE) DsdInternal_ProcessingDone
             {
                 #if(DCM_SERVICE_22_COMBINED_DID == STD_OFF)
                 #else
-                pMsgContext->resData = gNegativeResponseBuffer;
-                pMsgContext->resDataLen = NEG_RESP_BUFFER_SIZE;
+                pMsgContext->resData = gNegativeResponseBuffer;  //// 设置响应数据为负响应缓冲区
+                pMsgContext->resDataLen = NEG_RESP_BUFFER_SIZE;  // 设置响应数据的第一个字节
                 #endif 
             }
             #if(DCM_SERVICE_2A_ENABLED == STD_ON)  
@@ -3521,31 +3539,32 @@ FUNC(void,DCM_PUBLIC_CODE) DsdInternal_ProcessingDone
                 pMsgContext->resData = gPeriodicResponseBuffer;
             }
             #endif
-            else
+            else  //回应NRC=0X78,且请求处理成功
             {
-                pMsgContext->resData = gUDS_Physical_DiagBuffer;
-                pMsgContext->resData[0] = pMsgContext->reqData[0] + DCM_SID_OFF_SET;
+                pMsgContext->resData = gUDS_Physical_DiagBuffer; // 后续的响应数据将被存储在 gUDS_Physical_DiagBuffer 中
+                pMsgContext->resData[0] = pMsgContext->reqData[0] + DCM_SID_OFF_SET;  // 正响应sid+40
             }
             
             /* Positive response or negative response */
-            temp.SduDataPtr = pMsgContext->resData;
-            temp.SduLength  = (uint16)pMsgContext->resDataLen;
-            gResponseLength = (uint16)pMsgContext->resDataLen;
+            temp.SduDataPtr = pMsgContext->resData;  // 设置数据指针
+            temp.SduLength  = (uint16)pMsgContext->resDataLen;  // 设置数据长度
+            gResponseLength = (uint16)pMsgContext->resDataLen; // 设置全局响应长度
             if(pMsgContext->dcmRxPduId != DCM_INVALID_HANDLE_OR_ID)
             {
-                result = DcmTransmit(pMsgContext->dcmRxPduId,&temp);
+                result = DcmTransmit(pMsgContext->dcmRxPduId,&temp);  // 发送响应
             }
             else
             {
             }
             
             /* FF has been correctly transmitted */
+            // 如果传输成功
             if(result == E_OK)  
             {
-                gDcm_RepeatTransmitFlag = DCM_FLAG_DISACTIVE;
+                gDcm_RepeatTransmitFlag = DCM_FLAG_DISACTIVE;  // 停止重复传输
    
                 /* Stop P2 Timer */ 
-                gP2ServerTimerStartFlag = DCM_FLAG_DISACTIVE; 
+                gP2ServerTimerStartFlag = DCM_FLAG_DISACTIVE;  // 停止 P2 定时器
                 Clr_P2_Server_Timer();
                 ClrSuppressPosResponseBit();
                 gFunctionHandler = DCM_NULL;
@@ -3554,24 +3573,24 @@ FUNC(void,DCM_PUBLIC_CODE) DsdInternal_ProcessingDone
             }
             else
             {
-                gDcm_RepeatTransmitFlag = DCM_FLAG_ACTIVE;
+                gDcm_RepeatTransmitFlag = DCM_FLAG_ACTIVE;//传输错误重复传输
                 gFunctionHandler = DCM_NULL;
                 gSubFunctionHandler = DCM_NULL;
             }
             #if(DCM_SERVICE_22_COMBINED_DID == STD_OFF)
-            ClrNegativeResponseCode();
+            ClrNegativeResponseCode();  // 清除负响应代码
             #endif
         }
-        Reset_Max_Number_Of_RCRRP();
+        Reset_Max_Number_Of_RCRRP();   // 重置最大 RCRP 数量
     }
     else
     {
-        Clr_ActiveProtocol();
-        Reset_PduId();
-        Clr_DiagState(DIAG_UDS_RCRP_DONE);
-        gFunctionHandler = DCM_NULL;
-        gSubFunctionHandler = DCM_NULL;
-        gSubFunctionPostHandler = DCM_NULL;
+        Clr_ActiveProtocol();  // 清除活动协议
+        Reset_PduId();  // 重置 PDU ID
+        Clr_DiagState(DIAG_UDS_RCRP_DONE);  // 清除诊断状态
+        gFunctionHandler = DCM_NULL;  // 清除函数处理器
+        gSubFunctionHandler = DCM_NULL;  // 清除子函数处理器
+        gSubFunctionPostHandler = DCM_NULL;  // 清除子函数后处理器
     }
 }
 
@@ -3595,7 +3614,7 @@ FUNC(void,DCM_PUBLIC_CODE) DsdInternal_ProcessingDoneNoResponse
     void
 )
 {
-    gMsgContextType.resDataLen = 0;
+    gMsgContextType.resDataLen = 0;//0 表示没有响应数据需要发送
     DsdInternal_ProcessingDone(&gMsgContextType);
 }
 

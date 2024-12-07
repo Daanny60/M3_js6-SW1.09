@@ -43,7 +43,7 @@
 ********************************************************************************/
 
 #ifdef  SWSCONFIG_HIGH
-#define NUM_OF_DTC        8u
+#define NUM_OF_DTC        10u
 #endif
 
 #ifdef  SWSCONFIG_MID
@@ -129,7 +129,7 @@
 #define REQUEST_ROUTINE_RESULT                                      0x03u
 /* For 0x3E */
 #define ZERO_SUB_FUNCTION                                           0x00u         
-/* For 0x85 */
+/* For 0x85 控制dtc开/关*/
 #define DTC_RECORD_ON                                               0x01u
 #define DTC_RECORD_OFF                                              0x02u
 #define DcmTransmit(DcmTxPduId,PduInfoPtr)                          PduR_DcmTransmit(DcmTxPduId,PduInfoPtr) 
@@ -173,10 +173,10 @@
                                                                       NUM_OF_28_SUB_FUNCTION+NUM_OF_2C_SUB_FUNCTION+\
                                                                       NUM_OF_31_SUB_FUNCTION+NUM_OF_3E_SUB_FUNCTION+\
                                                                       NUM_OF_85_SUB_FUNCTION+NUM_OF_86_SUB_FUNCTION+1u)
-#define UDS_SERVICE_WITHOUT_SUB_FUNCTION                             0u
-#define UDS_SERVICE_WITH_SUB_FUNCTION                                1u
-#define DCM_DSDSIDTABID                                              1u
-#define DCM_SUBSERVICESTART                                          0u
+#define UDS_SERVICE_WITHOUT_SUB_FUNCTION                             0u //无子功能的UDS服务
+#define UDS_SERVICE_WITH_SUB_FUNCTION                                1u //有子功能
+#define DCM_DSDSIDTABID                                              1u//用于标识 DCM（Diagnostic Communication Manager）中的某个表或 ID
+#define DCM_SUBSERVICESTART                                          0u//用于标识子服务编号的起始值
 #define DCM_SERVICE_10_ENABLED                                       STD_ON
 #if(DCM_SERVICE_10_ENABLED==STD_ON)
 /*For user defined session control subfunction*/
@@ -195,6 +195,8 @@
 #define NUM_OF_10_SUB_FUNCTION                                       3u
 #define DEFAULT_AND_EXTENDED_SEESION_HANDLE             (DCM_SESSION_DEFAULT  | DCM_SESSION_EXTENDED_DIAGNOSTIC)
 #define EXTENDED_SEESION_HANDLE                                      DCM_SESSION_EXTENDED_DIAGNOSTIC  
+/*定时器用于检测诊断请求的响应超时。当客户端发送一个诊断请求后，P2 定时器开始计时。
+如果在 P2 定时器到期前没有收到响应，客户端会认为服务器未能及时处理请求，可能会重新发送请求或采取其他措施。*/
 #define RESPONSE_WITH_P2TIMER                                        STD_ON 
 #else
 #define NUM_OF_10_SUB_FUNCTION                                       0u
@@ -355,7 +357,7 @@ typedef struct
     EcucPostSubFunctionNameDef  DcmDsdSubFunctionPost;/* self-defined */
     uint8                       DcmDsdSubServiceId;
     uint8                       DcmDsdSubServiceIdSupported;/* self-defined */
-    uint8                       DcmDsdSubServiceSecurityLevelRef;
+    uint8                       DcmDsdSubServiceSecurityLevelRef;//安全等级
     uint8                       DcmDsdSubServiceSessionLevelRef;
     uint8                       AddressingMode;/* self-defined */
 }DcmDsdSubService;
@@ -571,7 +573,7 @@ extern CONST(DcmDsdSubService, DCM_VARIABLE) gDcmDsdSubService[DCM_NUM_OF_SUB_SE
 /**************************************************************************************************
 * Link-compile parameter
 **************************************************************************************************/
-extern CONST(uint32, DCM_VARIABLE) gDcmDspNonDefaultSessionS3Server;
+extern CONST(uint32, DCM_VARIABLE) gDcmDspNonDefaultSessionS3Server;//5000ms
 extern CONST(DcmDspSessionRow, DCM_VARIABLE) gDcmDspSessionRow[KIND_OF_SESSION];
 
 #if(DCM_SERVICE_27_ENABLED==STD_ON)

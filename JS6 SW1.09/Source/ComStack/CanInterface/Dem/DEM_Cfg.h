@@ -8,10 +8,10 @@
 #include "keyboard_config.h"
 
 
-#define TOTAL_DTC_NUM   8U//(NUM_OF_DTC)    /*配置 NUM_OF_DTC */
+#define TOTAL_DTC_NUM   10U//(NUM_OF_DTC)    /*配置 NUM_OF_DTC */
 #define DTC_STATUS_USED_MASK  (0x7FU)  /*配置 DTC MASK */
 #define DTC_SNAP_SHOT_DATA_ENABLE (STD_ON) /*配置�?否支持快�? 0: 不使用snap shot data  */
-#define DTC_EXTENDED_DATA_ENABLE (STD_ON)  /*配置�?否支持擴展數�?:0: 不使用EXTENDEDt data  */
+#define DTC_EXTENDED_DATA_ENABLE (STD_OFF)  /*配置�?否支持擴展數�?:0: 不使用EXTENDEDt data  */
 
 #define DEM_DTC_STORAGE_TO_EEPROM_EN  (1)
 #define TOTAL_MAX_STORED_DTC_NUM (TOTAL_DTC_NUM)  
@@ -129,6 +129,8 @@ typedef uint16 IntEEPROM1_TAddress; /* Type of address to the EEPROM */
 #define  DTC_HEATSHORT_FAILURE_ID             5U
 #define  DTC_NTCSHORTOROPEN_FAILURE_ID             6U
 #define  DTC_TEMPOVER37_5_FAILURE_ID             7U
+#define  DTC_CANDISCONNECTED_EMS_FAILURE_ID             8U
+#define  DTC_PinISCurrent_FAILURE_ID 					9U
 
 
 #endif

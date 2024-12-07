@@ -43,9 +43,9 @@
 /*******************************************************************************
 *   Macro
 *******************************************************************************/
-#define CANIF_CFG_TOTAL_TXPDUID                      (3u)
+#define CANIF_CFG_TOTAL_TXPDUID                      (2u)
 
-#define CANIF_CFG_TOTAL_RXPDUID                      (8u)
+#define CANIF_CFG_TOTAL_RXPDUID                      (4u)
 
 #if (STD_ON == CANIF_RX_PDU_RANGE_CANID)
     #define CANIF_CFG_RANGE_CANID_RXPDUID        (1u)
@@ -119,6 +119,7 @@ CONST(CanIf_RxPduCanIdRangeType, CANIF_CONFIG_CONST)
 };
 #endif
 
+/*M3 接收信号配置*/
 CONST(CanIf_RxPduConfigType, CANIF_CONFIG_CONST)
                                      CanIfRxPduConfig[CANIF_CFG_TOTAL_RXPDUID] =
 {
@@ -128,7 +129,7 @@ CONST(CanIf_RxPduConfigType, CANIF_CONFIG_CONST)
         #if (STD_ON == CANIF_UPPER_LAYER_HANDLE)
         0,             /* CanIfRxPduUpperLayerHandle */
         #endif
-        0x560,         /* CanId*/
+        0x2CD,         /* CanId*/
         STANDARD_CAN,  /* CanIdType */
         0,             /*CanIfRxPduHrhIdRef*/
         8,             /* CanIfRxPduDlc */
@@ -170,107 +171,9 @@ CONST(CanIf_RxPduConfigType, CANIF_CONFIG_CONST)
         2,      /*CanIfRxPduNextHrh*/
         #endif
 
-    },
-    /* 2*/   /* CanIfRxPduId*/ 
-    {
-        #if (STD_ON == CANIF_UPPER_LAYER_HANDLE)
-        2,             /* CanIfRxPduUpperLayerHandle */
-        #endif
-        0x193,         /* CanId*/
-        STANDARD_CAN,  /* CanIdType */
-        0,             /*CanIfRxPduHrhIdRef*/
-        8,             /* CanIfRxPduDlc */
-        Com_RxIndication,      /* CanIfRxPduUserRxIndicationName */
-        #if(STD_ON == CANIF_PUBLIC_READRXPDU_NOTIFY_STATUS_API)
-        FALSE,         /* CanIfRxPduReadNotifyStatus */
-        #endif
-        #if(STD_ON == CANIF_PUBLIC_READRXPDU_DATA_API)
-        FALSE,         /* CanIfRxPduReadData */
-        #endif
-        #if(STD_ON == CANIF_RX_PDU_RANGE_CANID)
-        NULL_PTR,      /* CanIfRxPduRangePtr */
-        #endif
-        #if(CANIF_FILTER_TYPE_INDEX == CANIF_PRIVATE_SOFTWARE_FILTER_TYPE)
-        3,      /*CanIfRxPduNextHrh*/
-        #endif
-
-    },
-    /* 3*/   /* CanIfRxPduId*/ 
-    {
-        #if (STD_ON == CANIF_UPPER_LAYER_HANDLE)
-        3,             /* CanIfRxPduUpperLayerHandle */
-        #endif
-        0x2AB,         /* CanId*/
-        STANDARD_CAN,  /* CanIdType */
-        0,             /*CanIfRxPduHrhIdRef*/
-        8,             /* CanIfRxPduDlc */
-        Com_RxIndication,      /* CanIfRxPduUserRxIndicationName */
-        #if(STD_ON == CANIF_PUBLIC_READRXPDU_NOTIFY_STATUS_API)
-        FALSE,         /* CanIfRxPduReadNotifyStatus */
-        #endif
-        #if(STD_ON == CANIF_PUBLIC_READRXPDU_DATA_API)
-        FALSE,         /* CanIfRxPduReadData */
-        #endif
-        #if(STD_ON == CANIF_RX_PDU_RANGE_CANID)
-        NULL_PTR,      /* CanIfRxPduRangePtr */
-        #endif
-        #if(CANIF_FILTER_TYPE_INDEX == CANIF_PRIVATE_SOFTWARE_FILTER_TYPE)
-        4,      /*CanIfRxPduNextHrh*/
-        #endif
-
-    },    
-    
-     /* 4*/   /* CanIfRxPduId*/ 
-    {
-        #if (STD_ON == CANIF_UPPER_LAYER_HANDLE)
-        4,             /* CanIfRxPduUpperLayerHandle */
-        #endif
-        0x23C,         /* CanId*/
-        STANDARD_CAN,  /* CanIdType */
-        0,             /*CanIfRxPduHrhIdRef*/
-        8,             /* CanIfRxPduDlc */
-        Com_RxIndication,      /* CanIfRxPduUserRxIndicationName */
-        #if(STD_ON == CANIF_PUBLIC_READRXPDU_NOTIFY_STATUS_API)
-        FALSE,         /* CanIfRxPduReadNotifyStatus */
-        #endif
-        #if(STD_ON == CANIF_PUBLIC_READRXPDU_DATA_API)
-        FALSE,         /* CanIfRxPduReadData */
-        #endif
-        #if(STD_ON == CANIF_RX_PDU_RANGE_CANID)
-        NULL_PTR,      /* CanIfRxPduRangePtr */
-        #endif
-        #if(CANIF_FILTER_TYPE_INDEX == CANIF_PRIVATE_SOFTWARE_FILTER_TYPE)
-        5,      /*CanIfRxPduNextHrh*/
-        #endif
-
     },   
-    
-     /* 5*/   /* CanIfRxPduId*/ 
-    {
-        #if (STD_ON == CANIF_UPPER_LAYER_HANDLE)
-        0,             /* CanIfRxPduUpperLayerHandle */
-        #endif
-        0x426,         /* CanId*/
-        STANDARD_CAN,  /* CanIdType */
-        0,             /*CanIfRxPduHrhIdRef*/
-        8,             /* CanIfRxPduDlc */
-        NULL_PTR,      /* CanIfRxPduUserRxIndicationName */
-        #if(STD_ON == CANIF_PUBLIC_READRXPDU_NOTIFY_STATUS_API)
-        FALSE,         /* CanIfRxPduReadNotifyStatus */
-        #endif
-        #if(STD_ON == CANIF_PUBLIC_READRXPDU_DATA_API)
-        FALSE,         /* CanIfRxPduReadData */
-        #endif
-        #if(STD_ON == CANIF_RX_PDU_RANGE_CANID)
-         (&(CanIfRxPduCanIdRangeConfig [0])),      /* CanIfRxPduRangePtr */
-        #endif
-        #if(CANIF_FILTER_TYPE_INDEX == CANIF_PRIVATE_SOFTWARE_FILTER_TYPE)
-        6,      /*CanIfRxPduNextHrh*/
-        #endif
 
-    },  
-
-    /* 6*/   /* CanIfRxPduId*/ 
+    /* 2*/   /* CanIfRxPduId*/ 
     {
         #if (STD_ON == CANIF_UPPER_LAYER_HANDLE)
         0,             /* CanIfRxPduUpperLayerHandle */
@@ -290,7 +193,7 @@ CONST(CanIf_RxPduConfigType, CANIF_CONFIG_CONST)
         NULL_PTR,      /* CanIfRxPduRangePtr */
         #endif
         #if(CANIF_FILTER_TYPE_INDEX == CANIF_PRIVATE_SOFTWARE_FILTER_TYPE)
-        7,      /*CanIfRxPduNextHrh*/
+        3,      /*CanIfRxPduNextHrh*/
         #endif
 
     },
@@ -320,7 +223,6 @@ CONST(CanIf_RxPduConfigType, CANIF_CONFIG_CONST)
 
     }
 };
-
 #if(CANIF_FILTER_TYPE_INDEX == CANIF_PRIVATE_SOFTWARE_FILTER_TYPE)
 CONST(Can_HwHandleType, CANIF_CONFIG_CONST)
                                      CanIfHrhFirstRxPduID[CANIF_CFG_TOTAL_HRH] =
@@ -343,6 +245,7 @@ CONST(CanIf_HrhRangeCfgType, CANIF_CONFIG_CONST)
 };
 #endif
 
+/*M3 发送信号配置*/
 CONST(CanIf_TxPduConfigType, CANIF_CONFIG_CONST)
                                      CanIfTxPduConfig[CANIF_CFG_TOTAL_TXPDUID] =
 {
@@ -364,23 +267,6 @@ CONST(CanIf_TxPduConfigType, CANIF_CONFIG_CONST)
         #endif
     },
     /*1*/       /* CanIfTxPduId*/
-    {
-        #if (STD_ON == CANIF_UPPER_LAYER_HANDLE)
-        0, 							/* CanIfTxPduUpperLayerHandle*/
-        #endif
-        0x426, 						/* CanId*/
-        STANDARD_CAN,				/* CanIdType */
-        1,							/* CanIfTxPduHthIdRef */
-        8,							/* CanIfTxPduDLC */
-        CanNm_TxConfirmation,      /* CanIfRxPduUserRxIndicationName */
-        #if (STD_ON == CANIF_PUBLIC_SETDYNAMICTXID_API)
-        STATIC_TXPDU,           /* CanIfTxPduType */
-        #endif
-        #if(STD_ON == CANIF_PUBLIC_READTXPDU_NOTIFY_STATUS_API)
-        FALSE,    			/* CanIfTxPduReadNotifyStatus */
-        #endif
-    },
-    /*2*/       /* CanIfTxPduId*/
     {
         #if (STD_ON == CANIF_UPPER_LAYER_HANDLE)
         0, 							/* CanIfTxPduUpperLayerHandle*/

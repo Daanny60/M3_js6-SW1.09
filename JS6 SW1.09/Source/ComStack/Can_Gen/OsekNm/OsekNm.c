@@ -453,7 +453,7 @@ FUNC(void, OSEKNM_PUBLIC_CODE)CanNm_Init(void)
             NmTxPduInfo.SduDataPtr = &NmTxBuffer[0];
             NmTxPduInfo.SduLength = (PduLengthType)OSEKNM_DATA_LENGTH;
 
-            CanNm_Stop(nmCurChannel);
+           // CanNm_Stop(nmCurChannel);
 
             /* Set Active Mode */
             if(STD_ON == NM_DEFAULT_ACTIVE)

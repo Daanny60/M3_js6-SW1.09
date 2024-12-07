@@ -74,8 +74,6 @@ void HardFault_Handler(void)
 
 int main (void)
 {
- 
-
 
   static SystemTimeType timer_1ms_a  = 0;
   static SystemTimeType timer_5ms_a  = 1;
@@ -148,7 +146,7 @@ int main (void)
       /*user code*/
       (void)Com_MainFunctionRx();
       (void)Com_MainFunctionTx();
-      (void)CanNm_MainFunction();
+      //(void)CanNm_MainFunction();
       (void)Dcm_MainFunction();
       (void)CanTp_MainFunction();
        timer_5ms_a = now_time;

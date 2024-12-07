@@ -85,20 +85,20 @@ typedef uint8 Dcm_IdContextType; /* Need change */
 typedef struct
 {
     uint8 reqType; /* 0=physical request; 1=functional request */
-    uint8 suppressPosResponse;/* 0=no; 1=yes;*/
-    uint8 cancelOperation;/* 0=no;1=cancel pending operation */
+    uint8 suppressPosResponse;/* 0=no不抑制正响应; 1=yes抑制正响应;*/
+    uint8 cancelOperation;/* 0=no不取消挂起的操作;1=cancel pending operation 取消挂起的操作 */
 }Dcm_MsgAddInfoType;
 
 typedef struct 
 {
-    Dcm_MsgType reqData;
+    Dcm_MsgType reqData; //请求数据
     Dcm_MsgLenType reqDataLen;
-    Dcm_MsgType resData;
+    Dcm_MsgType resData;  //响应数据
     Dcm_MsgLenType resDataLen;
-    Dcm_MsgAddInfoType msgAddInfo;
-    Dcm_MsgLenType resMaxDataLen;
-    Dcm_IdContextType idContext;
-    PduIdType dcmRxPduId;
+    Dcm_MsgAddInfoType msgAddInfo; //用于存储与消息相关的附加信息，如会话类型、安全级别等。
+    Dcm_MsgLenType resMaxDataLen;//响应数据的最大长度
+    Dcm_IdContextType idContext;//用于存储与消息 ID 相关的上下文信息，如会话 ID、事务 ID 等
+    PduIdType dcmRxPduId;  //接收pdu的id
 }Dcm_MsgContextType;
 typedef uint8 Dcm_ResetModeType;
 
@@ -149,8 +149,8 @@ typedef enum
 
 #define DCM_SESSION_EXTENDED					DCM_SESSION_EXTENDED_DIAGNOSTIC
 /* Dcm Flag status */
-#define DCM_FLAG_ACTIVE                                     (0x01u)
-#define DCM_FLAG_DISACTIVE                                  (0x00u)
+#define DCM_FLAG_ACTIVE                                     (0x01u)  //启动
+#define DCM_FLAG_DISACTIVE                                  (0x00u)  //停止
 
 /* Dcm_SecLevelType */
 #define DCM_SEC_LEV_LOCK      (0x01u)
@@ -166,45 +166,45 @@ typedef enum
 #define DCM_INVALID_HANDLE_OR_ID  ((uint8)0xFF)
 /* Negative Response Service Id */
 #define DCM_NEGATIVE_RES_SERVICE_ID                    (0x7Fu)
-/* Dcm_NegativeResponseCodeType */
-#define DCM_E_POSITIVERESPONSE                         (0x00u)
-#define DCM_E_GENERALREJECT                            (0x10u)
-#define DCM_E_SERVICENOTSUPPORTED                      (0x11u)
-#define DCM_E_SUBFUNCTIONNOTSUPPORTED                  (0x12u)
-#define DCM_E_INCORRECTMESSAGELENGTHORINVALIDFORMAT    (0x13u)
-#define DCM_E_BUSYREPEATREQUEST                        (0x21u)
-#define DCM_E_CONDITIONSNOTCORRECT                     (0x22u)
-#define DCM_E_REQUESTSEQUENCEERROR                     (0x24u)
-#define DCM_E_REQUESTOUTOFRANGE                        (0x31u)
-#define DCM_E_SECURITYACCESSDENIED                     (0x33u)
-#define DCM_E_INVALIDKEY                               (0x35u)
-#define DCM_E_EXCEEDNUMBEROFATTEMPTS                   (0x36u)
-#define DCM_E_REQUIREDTIMEDELAYNOTEXPIRED              (0x37u)
-#define DCM_E_UPLOADDOWNLOADNOTACCEPTED                (0x70u)
-#define DCM_E_TRANSFERDATASUSPENDED                    (0x71u)
-#define DCM_E_GENERALPROGRAMMINGFAILURE                (0x72u)
-#define DCM_E_WRONGBLOCKSEQUENCECOUNTER                (0x73u)
-#define DCM_E_REQUESTCORRECTLYRECEIVED_RESPONSEPENDING (0x78u)
-#define DCM_E_SUBFUNCTIONNOTSUPPORTEDINACTIVESESSION   (0x7Eu)
-#define DCM_E_SERVICENOTSUPPORTEDINACTIVESESSION       (0x7Fu)
-#define DCM_E_RPMTOOHIGH                               (0x81u)
-#define DCM_E_RPMTOOLOW                                (0x82u)
-#define DCM_E_ENGINEISRUNNING                          (0x83u)
-#define DCM_E_ENGINEISNOTRUNNING                       (0x84u)
-#define DCM_E_ENGINERUNTIMETOOLOW                      (0x85u)
-#define DCM_E_TEMPERATURETOOHIGH                       (0x86u)
-#define DCM_E_TEMPERATURETOOLOW                        (0x87u)
-#define DCM_E_VEHICLESPEEDTOOHIGH                      (0x88u)
-#define DCM_E_VEHICLESPEEDTOOLOW                       (0x89u)
-#define DCM_E_THROTTLE_PEDALTOOHIGH                    (0x8Au)
-#define DCM_E_THROTTLE_PEDALTOOLOW                     (0x8Bu)
-#define DCM_E_TRANSMISSIONRANGENOTINNEUTRAL            (0x8Cu)
-#define DCM_E_TRANSMISSIONRANGENOTINGEAR               (0x8Du)
-#define DCM_E_BRAKESWITCH_NOTCLOSED                    (0x8Fu)
-#define DCM_E_SHIFTERLEVERNOTINPARK                    (0x90u)
-#define DCM_E_TORQUECONVERTERCLUTCHLOCKED              (0x91u)
-#define DCM_E_VOLTAGETOOHIGH                           (0x92u)
-#define DCM_E_VOLTAGETOOLOW                            (0x93u)
+/* Dcm_NegativeResponseCodeType  负响应码*/
+#define DCM_E_POSITIVERESPONSE                         (0x00u)  //请求处理成功
+#define DCM_E_GENERALREJECT                            (0x10u)  ///请求被拒绝 
+#define DCM_E_SERVICENOTSUPPORTED                      (0x11u) //请求的服务不支持
+#define DCM_E_SUBFUNCTIONNOTSUPPORTED                  (0x12u)//请求的子功能不支持
+#define DCM_E_INCORRECTMESSAGELENGTHORINVALIDFORMAT    (0x13u)//消息长度不正确或格式不正确
+#define DCM_E_BUSYREPEATREQUEST                        (0x21u)//系统忙，重复请求
+#define DCM_E_CONDITIONSNOTCORRECT                     (0x22u)//条件不匹配
+#define DCM_E_REQUESTSEQUENCEERROR                     (0x24u)//请求顺序错误
+#define DCM_E_REQUESTOUTOFRANGE                        (0x31u)//请求超出范围
+#define DCM_E_SECURITYACCESSDENIED                     (0x33u)//安全访问被拒绝
+#define DCM_E_INVALIDKEY                               (0x35u)//密钥无效
+#define DCM_E_EXCEEDNUMBEROFATTEMPTS                   (0x36u)//尝试次数过多
+#define DCM_E_REQUIREDTIMEDELAYNOTEXPIRED              (0x37u)//必需时间未过期
+#define DCM_E_UPLOADDOWNLOADNOTACCEPTED                (0x70u)//上传/下载不支持
+#define DCM_E_TRANSFERDATASUSPENDED                    (0x71u)//传输数据暂停
+#define DCM_E_GENERALPROGRAMMINGFAILURE                (0x72u)//程序化失败
+#define DCM_E_WRONGBLOCKSEQUENCECOUNTER                (0x73u)//块序列计数器错误
+#define DCM_E_REQUESTCORRECTLYRECEIVED_RESPONSEPENDING (0x78u)//请求正确接收，响应正在处理 
+#define DCM_E_SUBFUNCTIONNOTSUPPORTEDINACTIVESESSION   (0x7Eu)//子功能不支持
+#define DCM_E_SERVICENOTSUPPORTEDINACTIVESESSION       (0x7Fu)//服务不支持
+#define DCM_E_RPMTOOHIGH                               (0x81u)//RPM 过高
+#define DCM_E_RPMTOOLOW                                (0x82u)//RPM 过低
+#define DCM_E_ENGINEISRUNNING                          (0x83u)//引擎在运行
+#define DCM_E_ENGINEISNOTRUNNING                       (0x84u)//引擎不在运行
+#define DCM_E_ENGINERUNTIMETOOLOW                      (0x85u)//引擎运行时间太短
+#define DCM_E_TEMPERATURETOOHIGH                       (0x86u)//温度过高
+#define DCM_E_TEMPERATURETOOLOW                        (0x87u)//温度过低
+#define DCM_E_VEHICLESPEEDTOOHIGH                      (0x88u)//速度过高
+#define DCM_E_VEHICLESPEEDTOOLOW                       (0x89u)//速度过低
+#define DCM_E_THROTTLE_PEDALTOOHIGH                    (0x8Au)// 油门踏板过高
+#define DCM_E_THROTTLE_PEDALTOOLOW                     (0x8Bu)// 油门踏板过低
+#define DCM_E_TRANSMISSIONRANGENOTINNEUTRAL            (0x8Cu)// 变速箱不在中档
+#define DCM_E_TRANSMISSIONRANGENOTINGEAR               (0x8Du)// 变速箱不在档位
+#define DCM_E_BRAKESWITCH_NOTCLOSED                    (0x8Fu)// 刹车开关未关闭
+#define DCM_E_SHIFTERLEVERNOTINPARK                    (0x90u)// 档位开关未置入P档
+#define DCM_E_TORQUECONVERTERCLUTCHLOCKED              (0x91u)// verterter 离合器锁定
+#define DCM_E_VOLTAGETOOHIGH                           (0x92u)// 电压太高
+#define DCM_E_VOLTAGETOOLOW                            (0x93u)// 电压太低
 /* Dcm_CommunicationModeType */                        
 #define DCM_ENABLE_RX_TX_NORM            (0x00u)
 #define DCM_ENABLE_RX_DISABLE_TX_NORM    (0x01u)

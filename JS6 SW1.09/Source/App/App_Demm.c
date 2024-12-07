@@ -523,12 +523,49 @@ static inline void AppDemmTemOver37_5FailureProcess(void)
 
     }
 }
+static inline void  AppDemmCanDisconnected_EMSFailureProcess(void)
+{
+    DemmDtcEvent_e  event;
+    event = AppDemmCanDisconnected_EMSFailureEventGet();
+    if (event == DTC_TEST_EVENT_FAILED)
+    {
+        dem_set_test_result(DTC_CANDISCONNECTED_EMS_FAILURE_ID  , DTC_TEST_STATE_FAILED);
+    }
+    else if (event == DTC_TEST_EVENT_PASSED)
+    {
+        dem_set_test_result(DTC_CANDISCONNECTED_EMS_FAILURE_ID  , DTC_TEST_STATE_PASSED);
+    }
+    else
+    {
+
+    }
+
+}
+static inline void  AppDemmTemPinISCurrentFailureProcess(void)
+{
+    DemmDtcEvent_e  event;
+    event = AppDemmTemPinISCurrentFailureEventGet();
+    if (event == DTC_TEST_EVENT_FAILED)
+    {
+        dem_set_test_result(DTC_PinISCurrent_FAILURE_ID  , DTC_TEST_STATE_FAILED);
+    }
+    else if (event == DTC_TEST_EVENT_PASSED)
+    {
+        dem_set_test_result(DTC_PinISCurrent_FAILURE_ID  , DTC_TEST_STATE_PASSED);
+    }
+    else
+    {
+
+    }
+
+}
+
 
 #endif
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 typedef void (*AppDemmProcessFunType) (void);
-
+/*DTC 处理函数表*/
 const AppDemmProcessFunType AppDemmProcessFun[TOTAL_DTC_NUM] = 
 {
 #if(0)
@@ -572,6 +609,9 @@ const AppDemmProcessFunType AppDemmProcessFun[TOTAL_DTC_NUM] =
    AppDemmHeatShortFailureProcess,
    AppDemmNtcShortOrOpenFailureProcess,
    AppDemmTemOver37_5FailureProcess,
+   AppDemmCanDisconnected_EMSFailureProcess,
+   AppDemmTemPinISCurrentFailureProcess,
+
 #endif
 
 
@@ -601,7 +641,7 @@ static void vMonitorDtcConditionTask(void)
     //Voltage=Normal(9-16V) 
     if(mvsystemvoltage >= 9000 && mvsystemvoltage <= 16000)
     {
-        u8conditionVolt = 1;
+        u8conditionVolt = 1; // 点火状态满足条件
     }
     else
     {
